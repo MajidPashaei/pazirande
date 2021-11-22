@@ -1,0 +1,157 @@
+@{
+    ViewData["Title"] = "بخش کاربران";
+}
+
+
+
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>محتوا</h1>
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">پذیرنده</li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="/Pazirande/New">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <div>
+                                    <p class="lead text-white">ثبت پذیرنده جدید</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <i class="iconsminds-folder-add-- text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="/Pazirande/all">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <div>
+                                    <p class="lead text-white">پذیرنده های ثبت شده</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <i class="pr-2 iconsminds-folder-cloud text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="/Pazirande/Edit">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <div>
+                                    <p class="lead text-white">ویرایش پذیرنده</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <i class="iconsminds-folder-edit text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="/Pazirande/wait">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <i class="iconsminds-sand-watch-2 text-white"></i>
+                                <div>
+                                    <p class="lead text-white">5 پذیرنده</p>
+                                    <p class="text-small text-white">درانتظار تایید است</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div role="progressbar"
+                                    class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="20"
+                                    data-show-percent="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="/Pazirande/Ok">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <i class="iconsminds-big-data text-white"></i>
+                                <div>
+                                    <p class="lead text-white">4 پذیرنده</p>
+                                    <p class="text-small text-white">تایید شده است</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div role="progressbar"
+                                    class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="20"
+                                    data-show-percent="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="/Pazirande/No">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <i class="iconsminds-unlike text-white"></i>
+                                <div>
+                                    <p class="lead text-white">8 پذیرنده</p>
+                                    <p class="text-small text-white">عدم تایی شده است</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div role="progressbar"
+                                    class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="10" aria-valuemax="20"
+                                    data-show-percent="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</main>

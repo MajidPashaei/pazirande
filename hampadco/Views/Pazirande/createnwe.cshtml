@@ -1,0 +1,246 @@
+@{
+    ViewData["Title"] = "اپلود مدارک";
+}
+@model ViewModelLayer.Portal.Vm_Pazirande;
+
+<main>
+    <form method="POST" action="/Account/UploadImg" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>محتوا</h1>
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page"> تکمیل اطلاعات  </li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-4 text-danger">پر کردن تمامی فیلد ها الزامیست</h5>
+                            @if (ViewBag.User != null)
+                            {
+                                foreach (var item in ViewBag.User)
+                                {
+                                    if (item.Customer_Type == "حقیقی" && item.Customer_National == "ایرانی")
+                                    {
+                                        
+                                        <Form method="POST" action="/oazirande/Setpazirandex" enctype="multipart/form-data">
+						                    <input class="d-none" asp-for="Type_Moshtari"  value="حقیقی">
+						                    <input class="d-none" asp-for="Pazirande_Atba"  value="0">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد ملی</label>
+                                                    <input required type="text" class="form-control" value="@item.National_Code"  asp-for="Code_Meli" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره شناسنامه </label>
+                                                    <input required type="text" class="form-control" value="@item.Certificate_Code"  asp-for="Shomare_Shenasname" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام</label>
+                                                    <input required type="text" class="form-control" value="@item.Name_fa" asp-for="Name" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">فامیلی</label>
+                                                    <input required type="text" class="form-control" value="@item.Family_fa" asp-for="Family" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تاریخ تولد </label>
+                                                    <input required type="text" class="form-control" value="@item.BirthDay" asp-for="Tarikh_Tavalod" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر</label>
+                                                    <input required type="text" class="form-control" value="@item.FatherName_fa" asp-for="Name_Pedar" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">جنسیت</label>
+                                                    <input required type="text" class="form-control" value="@item.Gender" asp-for="Jensiat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن همراه</label>
+                                                    <input required type="text" class="form-control" value="@item.Mobile" asp-for="Mobail" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آدرس</label>
+                                                    <input required type="text" class="form-control" value="@item.Address" asp-for="Address" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام لاتین</label>
+                                                    <input required type="text" class="form-control" value="@item.Name_en" asp-for="Name_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی لاتین</label>
+                                                    <input required type="text" class="form-control" value="@item.Family_en" asp-for="Family_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر لاتین</label>
+                                                    <input required type="text" class="form-control" value="@item.FatherName_en" asp-for="Pedar_EN" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شناسه بانکی</label>
+                                                    <input required type="text" class="form-control" asp-for="Shenase_Bank" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد شعبه </label>
+                                                    <input required type="text" class="form-control" asp-for="Code_Shobe" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره حساب</label>
+                                                    <input required type="text" class="form-control" asp-for="Shomare_Hesab" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره شبا</label>
+                                                    <input required type="text" class="form-control" asp-for="Shomare_Sheba" >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شهرستان</label>
+                                                    <input required type="text" class="form-control" asp-for="Code_Shaparaki_shahr" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">منطقه شهری</label>
+                                                    <input required type="text" class="form-control" asp-for="Mantage_Shahri" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد پسستی</label>
+                                                    <input required type="text" class="form-control" value="@item.Post" asp-for="Code_Posti" disabled >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن</label>
+                                                    <input required type="text" class="form-control" value="@item.Phone_Code @item.Phone" asp-for="TelePhone" disabled >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره فکس</label>
+                                                    <input required type="text" class="form-control" asp-for="Fax" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">صنف</label>
+                                                    <input required type="text" class="form-control" asp-for="Code_Takmily_Senf" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">عنوان محل کسب</label>
+                                                    <input required type="text" class="form-control" asp-for="Onvan_Mahal_Kasb"  >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">عنوان لاتین محل کسب</label>
+                                                    <input required type="text" class="form-control" asp-for="Onvan_Latin_Kasb"  >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نوع مالکیت </label>
+                                                    <input required type="text" class="form-control" asp-for="Shenase_Malekyat" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">ادرس لاتین</label>
+                                                    <input required type="text" class="form-control" asp-for="Address_Latin" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نوع محل کسب</label>
+                                                    <input required type="text" class="form-control" asp-for="Shenase_Mahal_kasb"  >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره جواز کسب</label>
+                                                    <input required type="text" class="form-control" asp-for="Shomare_Javaz_kasb"  >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">مرجع صادر کننده مجوز فعالیت</label>
+                                                    <input required type="text" class="form-control" asp-for="Marja_Saderkonande_Mojavez" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تارخ صدور جواز کسب</label>
+                                                    <input required type="text" class="form-control" asp-for="Tarikh_Sodor_Javaz" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تاریخ پایان جواز کسب</label>
+                                                    <input required type="text" class="form-control" asp-for="Tarikh_Payan_Etebar"  >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره قرارداد اجاره </label>
+                                                    <input  type="text" class="form-control" asp-for="Shomare_Garardad_Ejare"  >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تاریخ اتمام اجاره</label>
+                                                    <input  type="text" class="form-control" asp-for="Tarikh_Etmam_Ejare" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد رهگیری ثبت نام مالیاتی</label>
+                                                    <input required type="text" class="form-control" asp-for="Code_Rahgiri" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نوع قرارداد حساب</label>
+                                                    <input required type="text" class="form-control" asp-for="Type_Garardad_Hesab"  >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نوع واگذاری ذستگاه</label>
+                                                    <input required type="text" class="form-control" asp-for="Shenase_Type_Vagozari"  >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نوع ودیعه</label>
+                                                    <input  type="text" class="form-control" asp-for="Type_Vadieh" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">مبلغ فروش </label>
+                                                    <input required type="text" class="form-control" asp-for="Mablag_Frosh" >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره سند ودیعه</label>
+                                                    <input  type="text" class="form-control" asp-for="Shomare_Sanad"  >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">معرف</label>
+                                                    <input required type="text" class="form-control" asp-for="Moaref"  >
+                                                </div>
+                                            </div>
+                                            <a href="/Admin/Pazirandeghan/Index" class="btn btn-success  mt-3 " style="width: min-content;">
+				                                بازگشت
+			                                </a>
+                                            <button type="submit" class="btn btn-primary  mt-3">ثبت</button>
+                                        </form>
+                                    }
+
+                                }
+                            }
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</main>

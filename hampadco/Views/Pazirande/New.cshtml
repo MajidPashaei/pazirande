@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "ثبت کاربر جدید";
+}
+@model  ViewModelLayer.Portal.Vm_PazirandeUser;
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>محتوا</h1>
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page"> جستوجو برای ثبت پذیرنده  </li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-4 text-danger">کد ملی کاربر ثبت شده را وارد نمایید</h5>
+                        <Form method="POST" action="/pazirande/createnwe" enctype="multipart/form-data">
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="inputEmail4">کد ملی</label>
+                                    <input required type="number" class="form-control" asp-for="National_Code" placeholder="کد ملی">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary  mt-3">مرحله بعد</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,464 @@
+﻿@{
+    ViewData["Title"] = "کارتابل شخصی";
+}
+
+<main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+
+                    <h1>محتوا</h1>
+                    <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                        <ol class="breadcrumb pt-0">
+                            <li class="breadcrumb-item">
+                                <a href="#">صفحه اصلی</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#"></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">داده ها</li>
+                        </ol>
+                    </nav>
+                    <div class="separator mb-5"></div>
+
+
+                </div>
+                <div class="col-lg-12 col-xl-6">
+
+                    <div class="icon-cards-row">
+                        <div class="glide dashboard-numbers">
+                            <div class="glide__track" data-glide-el="track">
+                                <ul class="glide__slides">
+                                    <li class="glide__slide">
+                                        <a href="/Account/NewAccount" class="card">
+                                            <div class="card-body text-center">
+                                                <i class="iconsminds-add-user"></i>
+                                                <p class="card-text mb-0">کاربر جدید</p>
+                                                <p class="lead text-center">16</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="glide__slide">
+                                        <a href="/Account/Account" class="card">
+                                            <div class="card-body text-center">
+                                                <i class="iconsminds-mens"></i>
+                                                <p class="card-text mb-0">کاربران ثبت شده</p>
+                                                <p class="lead text-center">32</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="glide__slide">
+                                        <a href="/Account/EditAccount" class="card">
+                                            <div class="card-body text-center">
+                                                <i class="iconsminds-male mr-2 text-grey align-text-bottom d-inline-block"></i>
+                                                <p class="card-text mb-0">ویراش کاربر</p>
+                                                <p class="lead text-center">2</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mb-4">
+                            <div class="card">
+                                <div class="position-absolute card-top-buttons">
+                                    <button class="btn btn-header-light icon-button" type="button">
+                                        <i class="simple-icon-refresh"></i>
+                                    </button>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">ارتباط با پشتیبانی</h5>
+                                    <div class="dashboard-quick-post">
+                                        <form>
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">عنوان</label>
+                                                <div class="col-sm-9">
+                                                    <input type="email" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">محتوا</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">مجموعه</label>
+                                                <div class="col-sm-9">
+                                                    <label class="w-100">
+                                                        <select class="form-control select2-single" data-width="100%">
+                                                            <option label="&nbsp;">&nbsp;</option>
+                                                            <option>فنی</option>
+                                                            <option>مدیریت</option>
+                                                            <option>بازرگانی</option>
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row mb-0">
+                                                <div class="col-sm-12">
+                                                    <button type="submit"
+                                                        class="btn btn-primary float-right">ارسال</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-12 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">آخرین کاربران ثبت شده</h5>
+                            <table class="data-table data-table-standard responsive nowrap"
+                                data-order="[[ 1, &quot;desc&quot; ]]">
+                                <thead>
+                                    <tr>
+                                        <th>نام</th>
+                                        <th>نام خانوادگی</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">کیک عروسی با گل ماکارون</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">1452</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">کیک پنیری با کلوچه های شکلاتی</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">1420</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">چیزکیک خانگی با توت تازه</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">1360</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">چیزکیک با توت تازه</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">1310</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">قرص چای با پرتقال تازه</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">1245</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">کیک پنیری با کلوچه های شکلاتی</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">1100</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">چیزکیک خانگی با توت تازه</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">1003</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">چیزکیک خانگی با توت تازه</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">952</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">چیزکیک با توت تازه</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">924</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">قرص چای با پرتقال تازه</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">842</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">کیک پنیری با کلوچه های شکلاتی</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">810</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="list-item-heading">چیزکیک خانگی با توت تازه</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">605</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+
+  
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="/Pazirande/New">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <div>
+                                    <p class="lead text-white">ثبت پذیرنده جدید</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <i class="iconsminds-folder-add-- text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="/Pazirande/all">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <div>
+                                    <p class="lead text-white">پذیرنده های ثبت شده</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <i class="pr-2 iconsminds-folder-cloud text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="/Pazirande/Edit">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <div>
+                                    <p class="lead text-white">ویرایش پذیرنده</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <i class="iconsminds-folder-edit text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="/Pazirande/wait">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <i class="iconsminds-sand-watch-2 text-white"></i>
+                                <div>
+                                    <p class="lead text-white">5 پذیرنده</p>
+                                    <p class="text-small text-white">درانتظار تایید است</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div role="progressbar"
+                                    class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="20"
+                                    data-show-percent="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="/Pazirande/Ok">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <i class="iconsminds-big-data text-white"></i>
+                                <div>
+                                    <p class="lead text-white">4 پذیرنده</p>
+                                    <p class="text-small text-white">تایید شده است</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div role="progressbar"
+                                    class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="20"
+                                    data-show-percent="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="/Pazirande/No">
+                    <div class="card mb-4 progress-banner">
+                        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                            <div>
+                                <i class="iconsminds-unlike text-white"></i>
+                                <div>
+                                    <p class="lead text-white">8 پذیرنده</p>
+                                    <p class="text-small text-white">عدم تایی شده است</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div role="progressbar"
+                                    class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="10" aria-valuemax="20"
+                                    data-show-percent="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">اخرین گزارش پذیرنده ها</h5>
+
+                            <div class="scroll dashboard-list-with-user">
+                                <div class="d-flex flex-row mb-3 pb-3 border-bottom">
+                                    <a href="#">
+                                        <img alt="Profile Picture" src="img/profiles/l-1.jpg"
+                                            class="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall" />
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="#">
+                                            <p class="font-weight-medium mb-0">مطلبی که گذاشتی خیلی مفید بود مرسی</p>
+                                            <p class="text-muted mb-0 text-small">مطهره تقوی | کیک چای با تکه های پرتغال | 17 آذر 1399 - 04:45</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row mb-3 pb-3 border-bottom">
+                                    <a href="#">
+                                        <img alt="Profile Picture" src="img/profiles/l-7.jpg"
+                                            class="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall" />
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="#">
+                                            <p class="font-weight-medium mb-0">از خوندن این مقاله ات خیلی لذت بردم. لطفا همینطور ادامه بده</p>
+                                            <p class="text-muted mb-0 text-small">فاطمه محمدزاده | چیزکیک با کوکی های شکلاتی | 15 آبان 1399 - 01:18</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row mb-3 pb-3 border-bottom">
+                                    <a href="#">
+                                        <img alt="Profile Picture" src="img/profiles/l-6.jpg"
+                                            class="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall" />
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="#">
+                                            <p class="font-weight-medium mb-0">ببین خیلی خسته شدیم از بس مطالب تکراری گذاشتی! یکم خلاق باش</p>
+                                            <p class="text-muted mb-0 text-small">مهتاب شعبانی | کیک های خونگی | 26 مهر 1399 - 11:14</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row mb-3 pb-3 border-bottom">
+                                    <a href="#">
+                                        <img alt="Profile Picture" src="img/profiles/l-3.jpg"
+                                            class="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall" />
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="#">
+                                            <p class="font-weight-medium mb-0">منم اینو امتحان کردم و بچه هام خیلی دوست داشتن!</p>
+                                            <p class="text-muted mb-0 text-small">نرگس مهاجری | کیک چای با تکه های پرتغال | 17 شهریور 1399 - 09:20</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row mb-3 pb-3 border-bottom">
+                                    <a href="#">
+                                        <img alt="Profile Picture" src="img/profiles/l-5.jpg"
+                                            class="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall" />
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="#">
+                                            <p class="font-weight-medium mb-0">خواندن این مقاله بسیار لذت بخش بود. لطفا آنها را ادامه دهید.</p>
+                                            <p class="text-muted mb-0 text-small">مریم رضایی | چیزکیک با توت تازه | 16 شهریور 1399 - 16:45</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row mb-3 pb-3 border-bottom">
+                                    <a href="#">
+                                        <img alt="Profile Picture" src="img/profiles/l-4.jpg"
+                                            class="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall" />
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="#">
+                                            <p class="font-weight-medium mb-0">جالب نبود اصلا! مزش عجیبه</p>
+                                            <p class="text-muted mb-0 text-small">بنیامین امینی | 27 مهر 1399 - 15:00</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </main>
