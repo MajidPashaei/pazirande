@@ -50,5 +50,10 @@ namespace Namespace
           ViewBag.User=user;
           return View();
         }
+        public IActionResult Setpazirandex()
+        {
+          return View();
+        }
+        
     }
 }
