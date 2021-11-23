@@ -11,9 +11,12 @@ using DataLayer.Context;
 using DataLayer.Entities.Portal;
 using ViewModelLayer.Portal;
 using Extensions;
+using faraboom.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Namespace
 {
+    [Authorize]
     public class Accountcontroller : Controller
     {
         public static string msg;
@@ -67,7 +70,7 @@ namespace Namespace
                 {
                     Tbl_PazirandeUser tpu = new Tbl_PazirandeUser();
 
-                    // tpu.User_Name = User.Identity.GetId() ;
+                    tpu.User_Name = User.Identity.GetId() ;
                     tpu.Customer_Number = vpu.Customer_Number ;
                     tpu.Customer_Group = vpu.Customer_Group ;
                     tpu.Customer_Type = vpu.Customer_Type;

@@ -67,6 +67,11 @@ namespace hampadco
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapAreaControllerRoute (
+                    name: "Areas",
+                    areaName:"Admin",
+                    pattern: "Admin/{controller=AdminHome}/{action=Index}/{id?}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Login}/{action=Login}/{id?}");

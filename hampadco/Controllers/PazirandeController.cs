@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DataLayer.Context;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
 
 namespace Namespace
 {
+    [Authorize]
     public class PazirandeController : Controller
     {
         public static string msg;

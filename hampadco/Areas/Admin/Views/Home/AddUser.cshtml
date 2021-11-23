@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "ثبت کاربر جدید";
+}
+@model  ViewModelLayer.Portal.Vm_User;
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>محتوا</h1>
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">ثبت نمایندگی  </li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="card mb-4">
+                    <div class="card-body">
+                      <div class="alert alert-dark rounded mb-0" role="alert">
+                               @if (ViewBag.Msg!=  null)
+                               {
+                                   @ViewBag.Msg
+                               }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+

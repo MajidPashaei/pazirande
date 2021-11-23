@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\SearchToUpload.cshtml",
       "TargetPath": "Views\\Account\\SearchToUpload.cshtml",
       "FileKind": "mvc"
@@ -14422,8 +14427,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_partial_Menu.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_partial_Menu.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditUsers.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditUsers.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\Khareji_Hogogi.cshtml",
       "TargetPath": "Views\\Account\\Khareji_Hogogi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14452,8 +14472,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\AddUser.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\AddUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\All.cshtml",
       "TargetPath": "Views\\Pazirande\\All.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\AllUser.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\AllUser.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14477,6 +14507,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_partial_Nav.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_partial_Nav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\No.cshtml",
       "TargetPath": "Views\\Pazirande\\No.cshtml",
       "FileKind": "mvc"
@@ -14484,6 +14519,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\NewAccount.cshtml",
       "TargetPath": "Views\\Account\\NewAccount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\GoTOEdit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\GoTOEdit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14512,8 +14552,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Wait.cshtml",
       "TargetPath": "Views\\Pazirande\\Wait.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14537,8 +14587,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditUser.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\NewUser.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\NewUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\pazirande.cshtml",
       "TargetPath": "Views\\Home\\pazirande.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Accounts.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Accounts.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14554,6 +14624,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     }
   ],
