@@ -856,7 +856,20 @@ e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\GoToEditAcoount.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditIraniHagigi.cshtml.g.cs
 >>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
+<<<<<<< HEAD
 d:\pazirande\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditAccount.cshtml.g.cs
 d:\pazirande\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditIraniHagigi.cshtml.g.cs
 d:\pazirande\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditIraniHogogi.cshtml.g.cs
 d:\pazirande\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\GoToEditAcoount.cshtml.g.cs
+=======
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Confirmed.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\DetailsRegistered.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Disapproval.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditIraniHogogi.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\NewRegistered.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ShowDisapproval.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Account\SetUser.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Account\UploadImg.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\AllPaZirandeh.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\Set_Edit.cshtml.g.cs
+>>>>>>> 2472f185abb495aa744226c79e10bc28eb0c9bb4

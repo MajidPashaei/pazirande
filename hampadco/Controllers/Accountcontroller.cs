@@ -60,7 +60,7 @@ namespace Namespace
         {
             if ( db.Tbl_PazirandeUsers.Any( a => a.National_Code == vpu.National_Code ) )
             {
-                ViewBag.er = $" این کاربر با کد ملی { vpu.National_Code } قبلا ثبت شده است . ";
+                ViewBag.msg = $" این کاربر با کد ملی { vpu.National_Code } قبلا ثبت شده است . ";
             }
             else
             {
@@ -123,8 +123,8 @@ namespace Namespace
                 }
                 catch (System.Exception ex)
                 {
-                    ViewBag.er = " خطا در ثبت . " ;
-                    ViewBag.ex = ex ;
+                    ViewBag.msg = " خطا در ثبت . " ;
+                    ViewBag.msg = ex ;
                 }
             }
 
@@ -267,20 +267,18 @@ namespace Namespace
 
                 db.Tbl_PazirandeUsers.Update(tpu);
                 db.SaveChanges();
-                ViewBag.msg = $" کاربر با کد ملی  { vpu.National_Code }  ثبت شد . ";
+                ViewBag.msg = $"مدارک کاربر با کد ملی  { vpu.National_Code }  ثبت شد . ";
             }
             catch (System.Exception ex)
             {
-                ViewBag.er = " خطا در ثبت . ";
-                ViewBag.ex = ex;
+                ViewBag.msg = " خطا در ثبت . ";
+                ViewBag.msg = ex;
             }
 
             return View();
         }
-        public IActionResult EditUser( Vm_PazirandeUser vpu , string n_c )
+        public IActionResult EditUser( Vm_PazirandeUser vpu)
         {
-            var nc = vpu.National_Code;
-            var x = n_c;
             return View();
         }
     }

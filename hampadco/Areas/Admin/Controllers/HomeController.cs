@@ -11,11 +11,16 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
+<<<<<<< HEAD
 
 using Microsoft.AspNetCore.Authorization;
 using Extensions;
 using faraboom.Models;
 
+=======
+using Extensions;
+using faraboom.Models;
+>>>>>>> 2472f185abb495aa744226c79e10bc28eb0c9bb4
 
 namespace Namespace
 {
@@ -46,28 +51,29 @@ namespace Namespace
         {
             return View();
         }
-
         public IActionResult Disapproval(int id)
         {
             ViewBag.Id=id;
             return View();
         }
-
         public IActionResult ShowDisapproval()
         {
             var R = db.Tbl_Pazirandes.Where(a => a.Status == "2").ToList();
             ViewBag.R = R;
-
             return View();
         }
-
+        public IActionResult AllPaZirandeh()
+        {
+            var R = db.Tbl_Pazirandes.ToList();
+            ViewBag.R = R;
+            return View();
+        }
         public IActionResult Confirmed()
         {
             var T = db.Tbl_Pazirandes.Where(a => a.Status == "1").ToList();
             ViewBag.T = T;
             return View();
         }
-
         // عدم تایید شده ها
         public IActionResult AddDisapproval(Vm_Pazirande v)
         {
@@ -76,10 +82,8 @@ namespace Namespace
             A.Status = "2";
             db.Tbl_Pazirandes.Update (A);
             db.SaveChanges();
-
             return View("index");
         }
-
         //تایید شده ها
         public IActionResult AddConfirmed(int id)
         {
@@ -88,27 +92,21 @@ namespace Namespace
             db.Tbl_Pazirandes.Update (q);
             db.SaveChanges();
             ms = "پذیرنده مورد نظر تایید شد";
-
             return RedirectToAction("index", "home", new { Areas = "Admin" });
         }
-
         ///ثبت شده های جدید
         public IActionResult NewRegistered()
         {
             ViewBag.All = db.Tbl_Pazirandes.ToList();
             return View();
         }
-
         ///نمایش کلی و جزئیات ثبت شده های جدید
         public IActionResult DetailsRegistered(int id)
         {
             var s = db.Tbl_Pazirandes.Where(a => a.Id == id).ToList();
-
             ViewBag.Pazirande = s;
-
             return View();
         }
-
         public IActionResult AddUser(Vm_User user)
         {
             if (db.Tbl_Users.Any(a => a.NationalCode == user.NationalCode))
@@ -146,18 +144,20 @@ namespace Namespace
             ViewBag.Msg = "کاربر با کد ملی وارد شده با موفقیت ثبت شد";
             return View();
         }
-
         public IActionResult AllUser()
         {
             ViewBag.All = db.Tbl_Users.ToList();
             return View();
         }
+<<<<<<< HEAD
         public IActionResult Accounts()
         {
             ViewBag.All = db.Tbl_PazirandeUsers.ToList();
             return View();
         }
 
+=======
+>>>>>>> 2472f185abb495aa744226c79e10bc28eb0c9bb4
         public IActionResult UserOff(int id)
         {
             var s = db.Tbl_Users.Where(a => a.Id == id).SingleOrDefault();
@@ -166,7 +166,6 @@ namespace Namespace
             db.SaveChanges();
             return RedirectToAction("AllUser");
         }
-
         public IActionResult UserOn(int id)
         {
             var s = db.Tbl_Users.Where(a => a.Id == id).SingleOrDefault();
@@ -175,12 +174,10 @@ namespace Namespace
             db.SaveChanges();
             return RedirectToAction("AllUser");
         }
-
         public IActionResult EditUser()
         {
             return View();
         }
-
         public IActionResult GoToEdit(Vm_User user)
         {
             var s =
