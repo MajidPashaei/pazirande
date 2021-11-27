@@ -14517,6 +14517,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\pazirande\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\GoToEditAcoount.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\GoToEditAcoount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\pazirande\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\EditIraniHogogi.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditIraniHogogi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\pazirande\\pazirande\\hampadco\\Views\\Account\\Irani_Hogogi.cshtml",
       "TargetPath": "Views\\Account\\Irani_Hogogi.cshtml",
       "FileKind": "mvc"
@@ -14599,6 +14609,16 @@
     {
       "FilePath": "d:\\pazirande\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\Index.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\pazirande\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\EditAccount.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditAccount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\pazirande\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\EditIraniHagigi.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditIraniHagigi.cshtml",
       "FileKind": "mvc"
     },
     {

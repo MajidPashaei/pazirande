@@ -1,0 +1,132 @@
+@{
+    ViewData["Title"] = "پذیرندگان ثبت شده";
+}
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>محتوا</h1>
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page"> کاربران ثبت شده </li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <a class="btn pt-0 pl-0 d-inline-block d-md-none" data-toggle="collapse" href="#displayOptions"
+                                role="button" aria-expanded="true" aria-controls="displayOptions">
+                                نمایش گزینه ها
+                                <i class="simple-icon-arrow-down align-middle"></i>
+                            </a>
+                            <div class="collapse dont-collapse-sm" id="displayOptions">
+                                <div class="d-block d-md-inline-block">
+                                    <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
+                                        <input class="form-control" type="text" id="searchArticles" onkeyup="searchArticles()" placeholder="Search Table">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+
+                        <div class="row">
+                            <div class="col-12 mb-4 data-table-rows data-tables-hide-filter">
+                                <table id="articles" class="container-fluid responsive  nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>ردیف</th>
+                                            <th>نام</th>
+                                            <th>نام خانوادگی</th>
+                                            <th>کد ملی</th>
+                                            <th>نوع مشتری</th>
+                                            <th>تبعه</th>
+                                            <th>عملیات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (ViewBag.all != null)
+                                        {
+                                            int i=1;
+                                            foreach (var item in ViewBag.all)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <p class="list-item-heading">@i</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted">@item.Name</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted">@item.Family</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted">@item.Code_Meli</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted">@item.Type_Moshtari</p>
+                                                    </td>
+                                                    @if (item.Pazirande_Atba == 0 )
+                                                    {
+                                                        <td>
+                                                            <p class="text-muted">ایرانی</p>
+                                                        </td>
+                                                    }
+                                                    @if (item.Pazirande_Atba == 1 )
+                                                    {
+                                                        <td>
+                                                            <p class="text-muted">غیرایرانی</p>
+                                                        </td>
+                                                    }
+                                                    <td>
+                                                       <a href="/AccPazirandeount/Edit/@item.Code_Meli" class="btn btn-info">ویرایش</a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+function searchArticles() {
+    search('searchArticles', 'articles');
+}
+    
+function search(searchInput, searchTable) {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById(searchInput);
+    filter = input.value.toUpperCase();
+    table = document.getElementById(searchTable);
+    tr = table.getElementsByTagName("tr");
+    
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+</script>

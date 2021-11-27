@@ -1,84 +1,169 @@
-@{
-    ViewData["Title"] = "اپلود مدارک";
-}
 @model ViewModelLayer.Portal.Vm_PazirandeUser;
 
 <main>
     <form method="POST" action="/Account/UploadImg" enctype="multipart/form-data">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
 
-                <h1>محتوا</h1>
-                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
-                    <ol class="breadcrumb pt-0">
-                        <li class="breadcrumb-item">
-                            <a href="#">صفحه اصلی</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page"> اپلود مدارک </li>
-                    </ol>
-                </nav>
-                <div class="separator mb-5"></div>
+                    <h1>محتوا</h1>
+                    <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                        <ol class="breadcrumb pt-0">
+                            <li class="breadcrumb-item">
+                                <a href="#">صفحه اصلی</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page"> اپلود مدارک </li>
+                        </ol>
+                    </nav>
+                    <div class="separator mb-5"></div>
 
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="container-fluid">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="mb-4 text-danger">مشخصات فرد را برای اطمینان چک نمایید</h5>
-
-                        @if (ViewBag.info != null)
-                        {
-                            foreach (var item in ViewBag.info)
-                            {
-                                <p>نام : @item.Name_fa </p>
-                                <p> نام خانوادگی : @item.Family_fa</p>
-                                <p>کد ملی : @item.National_Code </p>
-                                <input class="d-none" asp-for="National_Code" value="@item.National_Code">
-
-                            }
-                        }
-                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="container-fluid">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="mb-4 text-danger">مدارک ذکر شده را اپلود نمایید</h5>
-                            @if (ViewBag.info != null)
-                            {
-                                foreach (var item in ViewBag.info)
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            @{
+                                if (ViewBag.info != null)
                                 {
-                                    if (item.Customer_Type == "حقیقی" && item.Customer_National == "ایرانی")
+                                    foreach (var item in ViewBag.info)
                                     {
-                                        <div class="form-row">
-                                            <div class="form-group col-md-3">
-                                                <label for="inputEmail4">آپلود تصویر کارت ملی</label>
-                                                <input type="file" accept="image/x-png,image/jpg" asp-for="NationalCard_Image1" placeholder=" آپلود تصویر کارت ملی " required>
-                                            </div>
-                                            <div class="form-group col-md-3">
-                                                <label for="inputEmail4"> آپلود تصویر پشت کارت ملی</label>
-                                                <input type="file" accept="image/x-png,image/jpg" asp-for="NationalCard_Image2" placeholder=" آپلود تصویر کارت ملی " required>
-                                            </div>
-                                            <div class="form-group col-md-3">
-                                                <label for="inputEmail4">آپلود تصویر شناسنامه </label>
-                                                <input type="file" accept="image/x-png,image/jpg" asp-for="Certificate_Image" placeholder=" آپلود تصویر کارت ملی " required>
-                                            </div>
-							            </div>
+                                        <h5 class="mb-4 text-danger">مشخصات فرد را برای اطمینان چک نمایید</h5>
+                                        <p> نام : <span style="font-weight:bold"> @item.Name_fa </span> </p>
+                                        <p> نام خانوادگی : <span style="font-weight:bold"> @item.Family_fa </span> </p>
+                                        <p> کد ملی : <span style="font-weight:bold"> @item.National_Code </span> </p>
+                                        <input class="d-none" asp-for="National_Code" value="@item.National_Code">
                                     }
-
+                                }
+                                else if (ViewBag.msg != null)
+                                {
+                                    <h5 class="mb-4 text-danger">@ViewBag.msg</h5>
+                                    <a class="btn btn-primary mt-3" href="/Account/SearchToUpload"> بازگشت </a>
                                 }
                             }
-                             <button type="submit" class="btn btn-primary  mt-3">آپلود</button>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
+            @if (ViewBag.info != null)
+            {
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="mb-4 text-danger">مدارک ذکر شده را اپلود نمایید</h5>
+                                @if (ViewBag.info != null)
+                                {
+                                    foreach (var item in ViewBag.info)
+                                    {
+                                        if (item.Customer_Type == "حقیقی" && item.Customer_National == "ایرانی")
+                                        {
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آپلود تصویر کارت ملی</label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="NationalCard_Image1" placeholder=" آپلود تصویر کارت ملی " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> آپلود تصویر پشت کارت ملی</label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="NationalCard_Image2" placeholder=" آپلود تصویر کارت ملی " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آپلود تصویر شناسنامه </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Certificate_Image" placeholder=" آپلود تصویر کارت ملی " required>
+                                                </div>
+        					                </div>
+                                        }
+
+                                        else if (item.Customer_Type == "حقوقی" && item.Customer_National == "ایرانی")
+                                        {
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آپلود تصویر کارت ملی</label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="NationalCard_Image1" placeholder=" آپلود تصویر کارت ملی " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> آپلود تصویر پشت کارت ملی</label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="NationalCard_Image2" placeholder=" آپلود تصویر کارت ملی " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آپلود تصویر شناسنامه </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Certificate_Image" placeholder=" آپلود تصویر کارت ملی " required>
+                                                </div>
+        					                </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تصویر آخرین روزنامه رسمی </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Newspaper_Image" placeholder=" تصویر آخرین روزنامه رسمی " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> تصویر صفحات اساسنامه </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Statute_Image" placeholder=" تصویر صفحات اساسنامه " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> تصویر آگهی تاسیس </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Establishment_Image" placeholder=" تصویر آگهی تاسیس " required>
+                                                </div>
+        					                </div>
+                                        }
+
+                                        else if (item.Customer_Type == "حقیقی" && item.Customer_National == "غیر ایرانی")
+                                        {
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> آپلود تصویر گذرنامه </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Passport_Image" placeholder=" آپلود تصویر گذرنامه " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> آپلود تصویر کارت آمایش </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="ArrangementCard_Image" placeholder=" آپلود تصویر کارت آمایش " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> آپلود تصویر مجوز کار </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="WorkPermit_Image" placeholder=" آپلود تصویر مجوز کار " required>
+                                                </div>
+        					                </div>
+                                        }
+
+                                        else if (item.Customer_Type == "حقوقی" && item.Customer_National == "غیر ایرانی")
+                                        {
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> آپلود تصویر گذرنامه </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Passport_Image" placeholder=" آپلود تصویر گذرنامه " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> آپلود تصویر کارت آمایش </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="ArrangementCard_Image" placeholder=" آپلود تصویر کارت آمایش " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> آپلود تصویر مجوز کار </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="WorkPermit_Image" placeholder=" آپلود تصویر مجوز کار " required>
+                                                </div>
+        					                </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تصویر آخرین روزنامه رسمی </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Newspaper_Image" placeholder=" تصویر آخرین روزنامه رسمی " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> تصویر صفحات اساسنامه </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Statute_Image" placeholder=" تصویر صفحات اساسنامه " required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4"> تصویر آگهی تاسیس </label>
+                                                    <input type="file" accept="image/x-png,image/jpg" asp-for="Establishment_Image" placeholder=" تصویر آگهی تاسیس " required>
+                                                </div>
+        					                </div>
+                                        }
+                                    }
+                                }
+                                <a class="btn btn-success mt-3" href="/Account/SearchToUpload"> بازگشت </a>
+                                <button type="submit" class="btn btn-primary  mt-3">آپلود</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
-    </div>
     </form>
 </main>

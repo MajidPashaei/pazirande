@@ -418,6 +418,7 @@ e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditUser.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\GoToEdit.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditUsers.cshtml.g.cs
+<<<<<<< HEAD
 d:\pazirande\pazirande\hampadco\bin\Debug\netcoreapp3.1\appsettings.Development.json
 d:\pazirande\pazirande\hampadco\bin\Debug\netcoreapp3.1\appsettings.json
 d:\pazirande\pazirande\hampadco\bin\Debug\netcoreapp3.1\hampadco.exe
@@ -848,3 +849,10 @@ d:\pazirande\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\Se
 d:\pazirande\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Disapproval.cshtml.g.cs
 d:\pazirande\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Confirmed.cshtml.g.cs
 d:\pazirande\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ShowDisapproval.cshtml.g.cs
+=======
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Account\SearchToEdit.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\Set_Pazirande.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditAccount.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\GoToEditAcoount.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditIraniHagigi.cshtml.g.cs
+>>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71

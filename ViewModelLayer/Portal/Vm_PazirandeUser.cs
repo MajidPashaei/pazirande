@@ -70,6 +70,7 @@ namespace ViewModelLayer.Portal
         public string arrangementcard_image { get; set; }  //------- تصویر کارت آمایش
         public IFormFile WorkPermit_Image { get; set; }  //---------- تصویر مجوز کار
         public string workpermit_image { get; set; }  //---------- تصویر مجوز کار
+        
         public DateTime Set_Date{ get; set; }
         public string setdate{ get; set; }
         public string Status { get; set; }

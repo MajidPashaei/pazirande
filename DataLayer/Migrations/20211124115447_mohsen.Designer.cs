@@ -4,14 +4,16 @@ using DataLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(HampadcoContext))]
-    partial class HampadcoContextModelSnapshot : ModelSnapshot
+    [Migration("20211124115447_mohsen")]
+    partial class mohsen
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,12 +76,6 @@ namespace DataLayer.Migrations
                     b.Property<string>("Code_Takmily_Senf")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-=======
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
                     b.Property<string>("Emkan_Lagv")
                         .HasColumnType("nvarchar(max)");
 
@@ -125,12 +121,6 @@ namespace DataLayer.Migrations
                     b.Property<string>("Moaref")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Mobail")
-                        .HasColumnType("nvarchar(max)");
-
-=======
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
                     b.Property<string>("Mobail_Masol_Fani")
                         .HasColumnType("nvarchar(max)");
 
@@ -140,12 +130,9 @@ namespace DataLayer.Migrations
                     b.Property<string>("Mobaile_Fani_Pos")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-=======
                     b.Property<string>("Mobile")
                         .HasColumnType("nvarchar(max)");
 
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -203,13 +190,8 @@ namespace DataLayer.Migrations
                     b.Property<string>("Shenase_Mahal_kasb")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<int>("Shenase_Malekyat")
-                        .HasColumnType("int");
-=======
                     b.Property<string>("Shenase_Malekyat")
                         .HasColumnType("nvarchar(max)");
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
 
                     b.Property<string>("Shenase_Meli")
                         .HasColumnType("nvarchar(max)");
@@ -265,12 +247,6 @@ namespace DataLayer.Migrations
                     b.Property<string>("Shomare_Terminal")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
-
-=======
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
                     b.Property<DateTime>("Tarikh_Etbar")
                         .HasColumnType("datetime2");
 
@@ -325,12 +301,9 @@ namespace DataLayer.Migrations
                     b.Property<string>("Type_Vadieh")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-=======
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
 
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
                     b.Property<string>("Zamine_Faliat")
                         .HasColumnType("nvarchar(max)");
 

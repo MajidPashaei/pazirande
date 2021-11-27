@@ -20,23 +20,26 @@ namespace ViewModelLayer.Portal
         public string Name { get; set; }
         public string Family { get; set; }
         public DateTime Tarikh_Tavalod { get; set; }
+        public string tarikh_tavalod { get; set; }
         public string Name_Pedar { get; set; }
         public string Jensiat { get; set; }
-        public string Mobail { get; set; }
+        public string Mobile { get; set; }
         public string Address { get; set; }
         public string Name_EN { get; set; }
         public string Family_EN { get; set; }
         public string Pedar_EN { get; set; }
         public string Name_Sherkat { get; set; }
-        public DateTime Tarikh_Tasis_sherkat { get; set; }
+        public DateTime Tarikh_Tasis_Sherkat { get; set; }
+        public string tarikh_tasis_sherkat { get; set; }
         public string Name_EN_Sherkat { get; set; }
         public string Code_Egtesadi { get; set; }
         public string Name_Tejari { get; set; }
         public string Shomare_Sabt { get; set; }
-        public int Pazirande_Atba { get; set; }
+        public bool Pazirande_Atba { get; set; }
         public string Code_Faragir { get; set; }
         public string Code_Gozarname { get; set; }
         public DateTime Tarikh_Etbar { get; set; }
+        public string tarikh_etbar { get; set; }
         public string Melyat { get; set; }
         public string Shenase_Onvan_Nemayandegi { get; set; }
         public string Shenase_Bazaryab_Nemayandegi { get; set; }
@@ -57,7 +60,7 @@ namespace ViewModelLayer.Portal
         public string Code_Takmily_Senf { get; set; }
         public string Onvan_Mahal_Kasb { get; set; }
         public string Onvan_Latin_Kasb { get; set; }
-        public int Shenase_Malekyat { get; set; }
+        public string Shenase_Malekyat { get; set; }
         public string Address_Shaparaki { get; set; }
         public string Address_Latin { get; set; }
         public string Shenase_Mahal_kasb { get; set; }
@@ -85,12 +88,17 @@ namespace ViewModelLayer.Portal
         public string Shomare_Terminal { get; set; }
         public string Serial_Dastgah { get; set; }
         public DateTime Tarikh_Nasb { get; set; }
+        public string tarikh_nasb { get; set; }
         public string Shomare_Marja { get; set; }
         public DateTime Tarikh_Tarif_Switch { get; set; }
+        public string tarikh_tarif_switch { get; set; }
         public DateTime Tarikh_Tarif_Shaparak { get; set; }
+        public string tarikh_tarif_shaparak { get; set; }
         public string Nemad_Elektroniki { get; set; }
         public DateTime Tarikh_Etmam_Etebar { get; set; }
+        public string tarikh_etmam_etebar { get; set; }
         public DateTime Tarikh_Sodor_Nemad { get; set; }
+        public string tarikh_sodor_nemad { get; set; }
         public string Type_Nemad { get; set; }
         public string Server_Frosh { get; set; }
         public string IPGAccessPort { get; set; }

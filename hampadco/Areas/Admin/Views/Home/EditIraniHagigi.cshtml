@@ -14,7 +14,7 @@
                         <li class="breadcrumb-item">
                             <a href="#">صفحه اصلی</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">ثبت کاربر ایرانی حقیقی</li>
+                        <li class="breadcrumb-item active" aria-current="page">ویرایش کاربر ایرانی حقیقی</li>
                     </ol>
                 </nav>
                 <div class="separator mb-5"></div>
@@ -25,28 +25,29 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="mb-4 text-danger">پر کرد ن تمامی فیلد ها اجباری میباشد</h5>
-                        <Form method="POST" action="/Account/SetUser" enctype="multipart/form-data">
+                        <Form method="POST" action="/admin/home/UpdateAccount" enctype="multipart/form-data">
 						    <input class="d-none" asp-for="Customer_Type" placeholder=" نوع مشتری : " value="حقیقی">
+						    <input class="d-none" asp-for="Id" placeholder=" تبعه : " value="@Model.Id">
 						    <input class="d-none" asp-for="Customer_National" placeholder=" تبعه : " value="ایرانی">
                             <b class="text-secondary"> اطلاعات شخص حقیقی درخواست کننده : </b>
                             <div class="form-row mt-2">
                                 <div class="form-group col-md-3">
                                     <label for="inputEmail4">نام</label>
-                                    <input required type="text" class="form-control" asp-for="Name_fa" placeholder="نام">
+                                    <input required type="text" class="form-control" value="@Model.Name_fa" asp-for="Name_fa" placeholder="نام">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputEmail4">نام خانوادگی</label>
-                                    <input required type="text" class="form-control" asp-for="Family_fa"
+                                    <input required type="text" class="form-control" value="@Model.Family_fa" asp-for="Family_fa"
                                         placeholder="نام خانوادگی">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputPassword4">نام پدر</label>
-                                    <input required type="text" class="form-control"  asp-for="FatherName_fa"
+                                    <input required type="text" class="form-control" value="@Model.FatherName_fa"  asp-for="FatherName_fa"
                                         placeholder="نام پدر">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputPassword4">شماره شناسنامه</label>
-                                    <input required type="number" class="form-control"  asp-for="Certificate_Code" 
+                                    <input required type="number" class="form-control" value="@Model.Certificate_Code"  asp-for="Certificate_Code" 
                                         placeholder="شماره شناسنامه">
                                 </div>
                             </div>
@@ -54,22 +55,22 @@
                             <div class="form-row">
                                 <div class="form-group col-md-2">
                                     <label for="inputEmail4">بخش عددی شناسنامه</label>
-                                    <input required type="number" class="form-control" asp-for="Certificate_NumSerial"  
-                                        placeholder="شماره تلفن همراه">
+                                    <input required type="number" value="@Model.Certificate_NumSerial" class="form-control" asp-for="Certificate_NumSerial"  
+                                        placeholder="بخش عددی شناسنامه">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputPassword4">بحش حرفی شناسنامه</label>
-                                    <input required type="text" class="form-control"  asp-for="Certificate_Letters" 
-                                        placeholder="کد ملی">
+                                    <input required type="text" class="form-control" value="@Model.Certificate_Letters"  asp-for="Certificate_Letters" 
+                                        placeholder="بحش حرفی شناسنامه">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputPassword4">سریال شناسنامه</label>
-                                    <input required type="number" class="form-control"  asp-for="Certificate_Serial" 
-                                        placeholder="محل تولد">
+                                    <input required type="number" class="form-control" value="@Model.Certificate_Serial"  asp-for="Certificate_Serial" 
+                                        placeholder="سریال شناسنامه">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputEmail4">کد ملی</label>
-                                    <input required type="number" class="form-control"   asp-for="National_Code" 
+                                    <input required type="number" class="form-control"  value="@Model.National_Code"  asp-for="National_Code" 
                                         placeholder="کد ملی">
                                 </div>
                                 <div class="form-group col-md-3">
@@ -88,17 +89,17 @@
                             <div class="form-row">
                                 <div class="form-group col-md-1">
                                     <label for="inputPassword4">محل تولد</label>
-                                    <input required type="text" class="form-control"   asp-for="Birth_Place" 
+                                    <input required type="text" class="form-control"  value="@Model.Birth_Place"  asp-for="Birth_Place" 
                                         placeholder="محل تولد">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputPassword4">تاریخ تولد</label>
-                                    <input required type="text" class="form-control" asp-for="birthday" 
+                                    <input required type="text" class="form-control" value="@Model.BirthDay" asp-for="birthday" 
                                         placeholder="تاریخ تولد (1378/10/01)">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="Gender">جنسیت</label>
-                                    <select  asp-for="Gender" class="form-control" style="width: 100%;" required>
+                                    <select  asp-for="Gender" class="form-control"  style="width: 100%;" required>
                                         <option>انتخاب جنسیت</option>
                                         <option value="مرد">مرد</option>
                                         <option value="  زن">زن</option>
@@ -106,22 +107,22 @@
                                 </div>
                                 <div class="form-group col-md-1">
                                     <label for="inputPassword4">کد تلفن ثابت</label>
-                                    <input required type="number" class="form-control"  asp-for="Phone_Code" 
+                                    <input required type="number" class="form-control" value="@Model.Phone_Code"  asp-for="Phone_Code" 
                                         placeholder="کد تلفن ثابت">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputPassword4">شماره تلفن ثابت</label>
-                                    <input required type="number" class="form-control"  asp-for="Phone" 
+                                    <input required type="number" class="form-control" value="@Model.Phone"   asp-for="Phone" 
                                         placeholder="شماره تلفن ثابت">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputPassword4">شماره همراه</label>
-                                    <input required type="number" class="form-control"  asp-for="Mobile" 
+                                    <input required type="number" class="form-control" value="@Model.Mobile" asp-for="Mobile" 
                                         placeholder="شماره همراه">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputPassword4">ایمیل</label>
-                                    <input required type="email" class="form-control" asp-for="Email" 
+                                    <input required type="email" class="form-control" value="@Model.Email" asp-for="Email" 
                                         placeholder="ایمیل">
                                 </div>
                             </div>
@@ -222,28 +223,28 @@
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputEmail4">کد پستی</label>
-                                    <input required type="number" class="form-control" asp-for="Post" 
+                                    <input required type="number" value="@Model.Post" class="form-control" asp-for="Post" 
                                         placeholder="کد پستی">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress">آدرس</label>
-                                    <input type="text" class="form-control" asp-for="Address" placeholder="آدرس">
+                                    <input type="text" class="form-control" value="@Model.Address" asp-for="Address" placeholder="آدرس">
                                 </div>
                             </div>
                             <hr>
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="inputEmail4">نام لاتین</label>
-                                    <input required type="text" class="form-control" asp-for="Name_en" placeholder="نام">
+                                    <input required type="text" class="form-control" value="@Model.Name_en" asp-for="Name_en" placeholder="نام">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputEmail4">نام خانوادگی لاتین</label>
-                                    <input required type="text" class="form-control"  asp-for="Family_en"
+                                    <input required type="text" class="form-control" value="@Model.Family_en"  asp-for="Family_en"
                                         placeholder="نام خانوادگی">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputPassword4">نام پدر لاتین</label>
-                                    <input required type="text" class="form-control" asp-for="FatherName_en" 
+                                    <input required type="text" class="form-control" value="@Model.FatherName_en" asp-for="FatherName_en" 
                                         placeholder="نام پدر">
                                 </div>
                             </div>
