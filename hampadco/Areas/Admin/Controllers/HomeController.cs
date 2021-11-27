@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using DataLayer.Context;
 using DataLayer.Entities;
 using DataLayer.Entities.Portal;
+using Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
-<<<<<<< HEAD
-=======
+
 using Microsoft.AspNetCore.Authorization;
 using Extensions;
 using faraboom.Models;
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
+
 
 namespace Namespace
 {
@@ -95,7 +95,7 @@ namespace Namespace
         ///ثبت شده های جدید
         public IActionResult NewRegistered()
         {
-            ViewBag.All = db.Tbl_Pazirandes.Where(a => a.Status == "0").ToList();
+            ViewBag.All = db.Tbl_Pazirandes.ToList();
             return View();
         }
 
@@ -152,16 +152,12 @@ namespace Namespace
             ViewBag.All = db.Tbl_Users.ToList();
             return View();
         }
-<<<<<<< HEAD
-
         public IActionResult Accounts()
         {
             ViewBag.All = db.Tbl_PazirandeUsers.ToList();
             return View();
         }
 
-=======
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
         public IActionResult UserOff(int id)
         {
             var s = db.Tbl_Users.Where(a => a.Id == id).SingleOrDefault();
@@ -233,11 +229,6 @@ namespace Namespace
             return View();
         }
         
-        public IActionResult Accounts()
-        {
-            ViewBag.All=db.Tbl_PazirandeUsers.ToList();
-            return View();
-        }
         public IActionResult EditAccount()
         {
 

@@ -10,15 +10,13 @@ namespace DataLayer.Entities.Portal
     {
         [Key]
         public int Id { get; set; }
-<<<<<<< HEAD
 
         public string Status { get; set; }
 
         public string Description { get; set; }
 
-=======
         public string UserName { get; set; }
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
+
         public string Type_Moshtari { get; set; }
 
         public string Code_Meli { get; set; }
@@ -36,13 +34,8 @@ namespace DataLayer.Entities.Portal
         public string Name_Pedar { get; set; }
 
         public string Jensiat { get; set; }
-<<<<<<< HEAD
 
-        public string Mobail { get; set; }
-
-=======
         public string Mobile { get; set; }
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
         public string Address { get; set; }
 
         public string Name_EN { get; set; }
@@ -110,13 +103,7 @@ namespace DataLayer.Entities.Portal
         public string Onvan_Mahal_Kasb { get; set; }
 
         public string Onvan_Latin_Kasb { get; set; }
-<<<<<<< HEAD
-
-        public int Shenase_Malekyat { get; set; }
-
-=======
         public string Shenase_Malekyat { get; set; }
->>>>>>> a928f8bc5365591a7c4e0fa0908e14d5a0b18e71
         public string Address_Shaparaki { get; set; }
 
         public string Address_Latin { get; set; }
