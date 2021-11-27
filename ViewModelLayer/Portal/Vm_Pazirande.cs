@@ -8,7 +8,12 @@ namespace ViewModelLayer.Portal
    {
         [Key]
         public int Id { get; set; }
+
+        
         public string Type_Moshtari { get; set; }
+            public string Status { get; set; }
+
+        public string Description { get; set; }
         public string Code_Meli { get; set; }
         public string Shenase_Meli { get; set; }
         public string Shomare_Shenasname { get; set; }

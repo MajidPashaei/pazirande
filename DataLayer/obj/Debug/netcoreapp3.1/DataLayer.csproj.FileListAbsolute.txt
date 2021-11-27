@@ -8,3 +8,16 @@ e:\Hampadco-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInput
 e:\Hampadco-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
 e:\Hampadco-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
 e:\Hampadco-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\pazirande\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\pazirande\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\pazirande\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\pazirande\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\pazirande\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\pazirande\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+d:\pazirande\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+d:\pazirande\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\pazirande\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\pazirande\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\pazirande\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\pazirande\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\pazirande\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache

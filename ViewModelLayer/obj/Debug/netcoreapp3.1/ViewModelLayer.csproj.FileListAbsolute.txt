@@ -9,3 +9,16 @@ e:\Hampadco-master\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.Assembl
 e:\Hampadco-master\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CopyComplete
 e:\Hampadco-master\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.dll
 e:\Hampadco-master\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.pdb
+d:\pazirande\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.deps.json
+d:\pazirande\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.dll
+d:\pazirande\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.pdb
+d:\pazirande\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\pazirande\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.AssemblyReference.cache
+d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.AssemblyInfoInputs.cache
+d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.AssemblyInfo.cs
+d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CoreCompileInputs.cache
+d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CopyComplete
+d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.dll
+d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.pdb

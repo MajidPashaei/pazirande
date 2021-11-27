@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "بخش کاربران";
+}
+@model ViewModelLayer.Portal.Vm_Pazirande
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>محتوا</h1>
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">توضیحات</li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="position-absolute card-top-buttons">
+                        <button class="btn btn-header-light icon-button" type="button">
+                            <i class="simple-icon-refresh"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">لطفا دلیل عدم تایید خود را بنویسید</h5>
+                        <div class="dashboard-quick-post">
+                            <form action="/admin/home/AddDisapproval">
+                            <input type="text" class="d-none" value="@ViewBag.Id" asp-for="Id">
+                            <input class="form-control" rows="100" type="text" asp-for="Description">
+                                       
+                                <button type="submit" class="btn btn-success">ارسال</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
