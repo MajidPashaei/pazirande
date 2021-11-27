@@ -25,7 +25,10 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="mb-4 text-danger"> @ViewBag.msg </h5>
-                            <p class="d-none">@ViewBag.ex</p>
+                            @if(ViewBag.ex != null)
+                            {
+                                <p class="d-none">@ViewBag.ex</p>
+                            }
                         </div>
                     </div> 
                 </div>   

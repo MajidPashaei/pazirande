@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(HampadcoContext))]
-    [Migration("20211125172941_vnv")]
-    partial class vnv
+    [Migration("20211127101630_one")]
+    partial class one
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -124,9 +124,6 @@ namespace DataLayer.Migrations
                     b.Property<string>("Moaref")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Mobail")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Mobail_Masol_Fani")
                         .HasColumnType("nvarchar(max)");
 
@@ -134,6 +131,9 @@ namespace DataLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Mobaile_Fani_Pos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mobile")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -193,8 +193,8 @@ namespace DataLayer.Migrations
                     b.Property<string>("Shenase_Mahal_kasb")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Shenase_Malekyat")
-                        .HasColumnType("int");
+                    b.Property<string>("Shenase_Malekyat")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Shenase_Meli")
                         .HasColumnType("nvarchar(max)");
@@ -305,6 +305,9 @@ namespace DataLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type_Vadieh")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Zamine_Faliat")
