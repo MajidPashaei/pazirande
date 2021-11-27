@@ -11,16 +11,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
-<<<<<<< HEAD
-
-using Microsoft.AspNetCore.Authorization;
-using Extensions;
 using faraboom.Models;
 
-=======
-using Extensions;
-using faraboom.Models;
->>>>>>> 2472f185abb495aa744226c79e10bc28eb0c9bb4
 
 namespace Namespace
 {
@@ -71,7 +63,7 @@ namespace Namespace
         public IActionResult Confirmed()
         {
             var T = db.Tbl_Pazirandes.Where(a => a.Status == "1").ToList();
-            ViewBag.T = T;
+            ViewBag.R = T;
             return View();
         }
         // عدم تایید شده ها
@@ -149,15 +141,12 @@ namespace Namespace
             ViewBag.All = db.Tbl_Users.ToList();
             return View();
         }
-<<<<<<< HEAD
         public IActionResult Accounts()
         {
             ViewBag.All = db.Tbl_PazirandeUsers.ToList();
             return View();
         }
 
-=======
->>>>>>> 2472f185abb495aa744226c79e10bc28eb0c9bb4
         public IActionResult UserOff(int id)
         {
             var s = db.Tbl_Users.Where(a => a.Id == id).SingleOrDefault();
