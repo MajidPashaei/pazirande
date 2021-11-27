@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
 using Microsoft.AspNetCore.Authorization;
+using Extensions;
+using faraboom.Models;
 
 namespace Namespace
 {
@@ -73,11 +75,6 @@ namespace Namespace
         public IActionResult AllUser()
         {
             ViewBag.All=db.Tbl_Users.ToList();
-            return View();
-        }
-        public IActionResult Accounts()
-        {
-            ViewBag.All=db.Tbl_PazirandeUsers.ToList();
             return View();
         }
         public IActionResult UserOff(int id)
@@ -147,5 +144,166 @@ namespace Namespace
             ViewBag.Msg="کاربر با کد ملی وارد شده با موفقیت ویرایش شد"; 
             return View();
         }
+        
+        public IActionResult Accounts()
+        {
+            ViewBag.All=db.Tbl_PazirandeUsers.ToList();
+            return View();
+        }
+        public IActionResult EditAccount()
+        {
+
+            return View();
+        }
+        public IActionResult GoToEditAccount(Vm_PazirandeUser l)
+        {
+            var c=db.Tbl_PazirandeUsers.Where(a=>a.National_Code==l.National_Code).SingleOrDefault();
+            if (c != null)
+            {
+                
+           
+            if (c.Customer_Type=="حقیقی" && c.Customer_National=="ایرانی")
+            {
+                return RedirectToAction("EditIraniHagigi", new{Id=c.National_Code});
+            }
+            if (c.Customer_Type=="حقوقی" && c.Customer_National=="ایرانی")
+            {
+                return RedirectToAction("EditIraniHogogi", new{Id=c.National_Code});
+            }
+            if (c.Customer_Type=="حقیقی" && c.Customer_National=="غیر ایرانی")
+            {
+                return RedirectToAction("EditAtbaHagigi", new{Id=c.National_Code});
+            }
+            if (c.Customer_Type=="حقوقی" && c.Customer_National=="غیر ایرانی")
+            {
+                return RedirectToAction("EditAtbaHogogi", new{Id=c.National_Code});
+            } 
+
+            }
+            return View();
+        }
+        public IActionResult EditIraniHogogi(string Id)
+        {
+            var c=db.Tbl_PazirandeUsers.Where(a=>a.National_Code==Id).SingleOrDefault();
+            Vm_PazirandeUser f=new Vm_PazirandeUser();
+            f.CompanyName_fa=c.CompanyName_fa;
+            f.CompanyName_en=c.CompanyName_en;
+            f.Brand_Name=c.Brand_Name;
+            f.establishing_date=c.Establishing_Date.ToPersianDateString();
+            f.Company_Id=c.Company_Id;
+            f.Economic_Code=c.Economic_Code;
+            f.Phone=c.Phone;
+            f.Post=c.Post;
+            f.Name_fa=c.Name_fa;
+            f.Family_fa=c.Family_fa;
+            f.FatherName_fa=c.FatherName_fa;
+            f.Certificate_Code=c.Certificate_Code;
+            f.National_Code=c.National_Code;
+            f.birthday=c.BirthDay.ToPersianDateString();
+            f.Gender=c.Gender;
+            f.Phone_Code=c.Phone_Code;
+            f.Mobile=c.Mobile;
+            f.State=c.State;
+            f.City=c.City;
+            f.Name_en=c.Name_en;
+            f.Family_en=c.Family_en;
+            f.FatherName_en=c.FatherName_en;
+            f.Company_Registration=c.Company_Registration;
+            
+            return View(f);
+        }
+
+        public IActionResult EditIraniHagigi(string Id)
+        {
+            var c=db.Tbl_PazirandeUsers.Where(a=>a.National_Code==Id).SingleOrDefault();
+
+            Vm_PazirandeUser f=new Vm_PazirandeUser();
+            f.Id=c.Id;
+            f.Customer_Type=c.Customer_Type;
+            f.Customer_National=c.Customer_National;
+            f.Name_fa=c.Name_fa;
+            f.Family_fa=c.Family_fa;
+            f.FatherName_fa=c.FatherName_fa;
+            f.Certificate_Code=c.Certificate_Code;
+            f.Certificate_NumSerial=c.Certificate_NumSerial;
+            f.Certificate_Letters=c.Certificate_Letters;
+            f.Certificate_Serial=c.Certificate_Serial;
+            f.National_Code=c.National_Code;
+            f.Education=c.Education;
+            f.Birth_Place=c.Birth_Place;
+            f.birthday=c.BirthDay.ToPersianDateString();
+            f.Gender=c.Gender;
+            f.Phone_Code=c.Phone_Code;
+            f.Phone=c.Phone;
+            f.Mobile=c.Mobile;
+            f.Email=c.Email;
+            f.State=c.State;
+            f.City=c.City;
+            f.Post=c.Post;
+            f.Address=c.Address;
+            f.Name_en=c.Name_en;
+            f.Family_en=c.Family_en;
+            f.FatherName_en=c.Family_en;
+
+            return View(f);
+        }
+        public IActionResult UpdateAccount(Vm_PazirandeUser vpu)
+        {
+            var tpu=db.Tbl_PazirandeUsers.Where(a=>a.Id==vpu.Id).SingleOrDefault();
+                    tpu.Customer_Number = vpu.Customer_Number ;
+                    tpu.Customer_Group = vpu.Customer_Group ;
+                    tpu.Customer_Type = vpu.Customer_Type;
+                    tpu.Customer_National = vpu.Customer_National;
+                    tpu.Name_fa = vpu.Name_fa ;
+                    tpu.Name_en = vpu.Name_en ;
+                    tpu.Family_fa = vpu.Family_fa ;
+                    tpu.Family_en = vpu.Family_en ;
+                    tpu.FatherName_fa = vpu.FatherName_fa ;
+                    tpu.FatherName_en = vpu.FatherName_en ;
+                    tpu.Gender = vpu.Gender ;
+                    tpu.National_Code = vpu.National_Code ;
+                    tpu.Certificate_Code = vpu.Certificate_Code ;
+                    tpu.Certificate_Serial = vpu.Certificate_Serial ;
+                    tpu.Certificate_NumSerial = vpu.Certificate_NumSerial ;
+                    tpu.Certificate_Letters = vpu.Certificate_Letters ;
+                    tpu.Education = vpu.Education ;
+                    tpu.Address = vpu.Address ;
+                    tpu.Birth_Place = vpu.Birth_Place ;
+                    tpu.Email = vpu.Email ;
+                    tpu.BirthDay = vpu.birthday.ToGeorgianDateTime() ;
+                    tpu.Mobile = vpu.Mobile ;
+                    tpu.Phone = vpu.Phone ;
+                    tpu.Phone_Code = vpu.Phone_Code ;
+                    tpu.State = vpu.State ;
+                    tpu.City = vpu.City ;
+                    tpu.Post = vpu.Post ;
+                    tpu.Company_Id = vpu.Company_Id ;
+                    if (vpu.establishing_date != null)
+                    {
+                        tpu.Establishing_Date = vpu.establishing_date.ToGeorgianDateTime() ;
+                    }
+                    tpu.CompanyName_fa = vpu.CompanyName_fa ;
+                    tpu.CompanyName_en = vpu.CompanyName_en ;
+                    tpu.Brand_Name = vpu.Brand_Name ;
+                    tpu.Company_Registration = vpu.Company_Registration ;
+                    tpu.Economic_Code = vpu.Economic_Code ;
+                    tpu.Comprehensive_Code = vpu.Comprehensive_Code ;
+                    tpu.Passport_Code = vpu.Passport_Code ;
+                    if (vpu.passport_validity != null)
+                    {
+                        tpu.Passport_Validity = vpu.passport_validity.ToGeorgianDateTime() ;
+                    }
+                    tpu.Nationality = vpu.Nationality ;
+                    db.Tbl_PazirandeUsers.Update(tpu);
+                    db.SaveChanges();
+                    
+                    ViewBag.msg = $" کاربر با کد ملی  { vpu.National_Code }  آپدیت شد . ";
+                    
+            return View();
+        }
+        
+        
+        
+        
     }
 }

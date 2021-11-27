@@ -418,3 +418,8 @@ e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditUser.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\GoToEdit.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditUsers.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Account\SearchToEdit.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\Set_Pazirande.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditAccount.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\GoToEditAcoount.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\EditIraniHagigi.cshtml.g.cs

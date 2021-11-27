@@ -14482,6 +14482,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\SearchToEdit.cshtml",
+      "TargetPath": "Views\\Account\\SearchToEdit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\AllUser.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\AllUser.cshtml",
       "FileKind": "mvc"
@@ -14517,13 +14522,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Set_Pazirande.cshtml",
+      "TargetPath": "Views\\Pazirande\\Set_Pazirande.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\NewAccount.cshtml",
       "TargetPath": "Views\\Account\\NewAccount.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\GoTOEdit.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\GoTOEdit.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\GoToEdit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\GoToEdit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14557,6 +14567,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditIraniHagigi.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditIraniHagigi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Wait.cshtml",
       "TargetPath": "Views\\Pazirande\\Wait.cshtml",
       "FileKind": "mvc"
@@ -14569,6 +14584,16 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\Users.cshtml",
       "TargetPath": "Views\\Home\\Users.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditAccount.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditAccount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\GoToEditAcoount.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\GoToEditAcoount.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14614,6 +14639,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\ForgetPassword.cshtml",
       "TargetPath": "Views\\Login\\ForgetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditIraniHogogi.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditIraniHogogi.cshtml",
       "FileKind": "mvc"
     },
     {

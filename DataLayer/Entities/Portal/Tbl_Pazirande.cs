@@ -10,6 +10,7 @@ namespace DataLayer.Entities.Portal
    {
         [Key]
         public int Id { get; set; }
+        public string UserName { get; set; }
         public string Type_Moshtari { get; set; }
         public string Code_Meli { get; set; }
         public string Shenase_Meli { get; set; }
@@ -19,7 +20,7 @@ namespace DataLayer.Entities.Portal
         public DateTime Tarikh_Tavalod { get; set; }
         public string Name_Pedar { get; set; }
         public string Jensiat { get; set; }
-        public string Mobail { get; set; }
+        public string Mobile { get; set; }
         public string Address { get; set; }
         public string Name_EN { get; set; }
         public string Family_EN { get; set; }
@@ -54,7 +55,7 @@ namespace DataLayer.Entities.Portal
         public string Code_Takmily_Senf { get; set; }
         public string Onvan_Mahal_Kasb { get; set; }
         public string Onvan_Latin_Kasb { get; set; }
-        public int Shenase_Malekyat { get; set; }
+        public string Shenase_Malekyat { get; set; }
         public string Address_Shaparaki { get; set; }
         public string Address_Latin { get; set; }
         public string Shenase_Mahal_kasb { get; set; }

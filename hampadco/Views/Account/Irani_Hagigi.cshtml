@@ -28,7 +28,8 @@
                         <Form method="POST" action="/Account/SetUser" enctype="multipart/form-data">
 						    <input class="d-none" asp-for="Customer_Type" placeholder=" نوع مشتری : " value="حقیقی">
 						    <input class="d-none" asp-for="Customer_National" placeholder=" تبعه : " value="ایرانی">
-                            <div class="form-row">
+                            <b class="text-secondary"> اطلاعات شخص حقیقی درخواست کننده : </b>
+                            <div class="form-row mt-2">
                                 <div class="form-group col-md-3">
                                     <label for="inputEmail4">نام</label>
                                     <input required type="text" class="form-control" asp-for="Name_fa" placeholder="نام">
@@ -45,7 +46,7 @@
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputPassword4">شماره شناسنامه</label>
-                                    <input required type="text" class="form-control"  asp-for="Certificate_Code" 
+                                    <input required type="number" class="form-control"  asp-for="Certificate_Code" 
                                         placeholder="شماره شناسنامه">
                                 </div>
                             </div>
@@ -93,7 +94,7 @@
                                 <div class="form-group col-md-2">
                                     <label for="inputPassword4">تاریخ تولد</label>
                                     <input required type="text" class="form-control" asp-for="birthday" 
-                                        placeholder="تاریخ تولد(1378/10/01)">
+                                        placeholder="تاریخ تولد (1378/10/01)">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="Gender">جنسیت</label>
@@ -221,12 +222,12 @@
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputEmail4">کد پستی</label>
-                                    <input required type="text" class="form-control"   asp-for="Post" 
+                                    <input required type="number" class="form-control" asp-for="Post" 
                                         placeholder="کد پستی">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="inputAddress">ادرس</label>
-                                    <input type="text" class="form-control" asp-for="Address"   placeholder="ادرس">
+                                    <label for="inputAddress">آدرس</label>
+                                    <input type="text" class="form-control" asp-for="Address" placeholder="آدرس">
                                 </div>
                             </div>
                             <hr>
@@ -246,7 +247,7 @@
                                         placeholder="نام پدر">
                                 </div>
                             </div>
-                            <a href="/Admin/Pazirandeghan/Index" class="btn btn-success  mt-3 " style="width: min-content;">
+                            <a href="/Account/NewAccount" class="btn btn-success  mt-3 " style="width: min-content;">
 				                بازگشت
 			                </a>
                             <button type="submit" class="btn btn-primary  mt-3">ثبت</button>
