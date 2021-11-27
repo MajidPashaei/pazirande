@@ -22,3 +22,16 @@ d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csp
 d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CopyComplete
 d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.dll
 d:\pazirande\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.pdb
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.deps.json
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.dll
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.pdb
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.AssemblyReference.cache
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.AssemblyInfoInputs.cache
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.AssemblyInfo.cs
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CoreCompileInputs.cache
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CopyComplete
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.dll
+c:\Users\nikatak-4\Desktop\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.pdb

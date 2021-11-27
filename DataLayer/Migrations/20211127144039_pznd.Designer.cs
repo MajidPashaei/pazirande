@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(HampadcoContext))]
-    [Migration("20211127101630_one")]
-    partial class one
+    [Migration("20211127144039_pznd")]
+    partial class pznd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

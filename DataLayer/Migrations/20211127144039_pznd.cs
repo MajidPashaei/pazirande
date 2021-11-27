@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataLayer.Migrations
 {
-    public partial class one : Migration
+    public partial class pznd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
