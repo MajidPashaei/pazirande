@@ -9,6 +9,7 @@ using faraboom.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
+using System.Globalization;
 
 namespace Namespace
 {

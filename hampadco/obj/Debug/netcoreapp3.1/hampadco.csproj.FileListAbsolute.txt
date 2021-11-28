@@ -1311,3 +1311,5 @@ c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.p
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.genruntimeconfig.cache
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetails.cshtml.g.cs
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetailsRad.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetails.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetailsRad.cshtml.g.cs
