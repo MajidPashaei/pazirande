@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {}
+    "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+    "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
+        "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
-        "outputPath": "E:\\Hampadco-master\\DataLayer\\obj\\",
+        "outputPath": "e:\\Hampadco-master\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"

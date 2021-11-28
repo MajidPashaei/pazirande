@@ -60,7 +60,7 @@ namespace hampadco.Controllers
         }
         public IActionResult ForgetPassword()
         {
-            return RedirectToAction("Login");
+            return RedirectToAction();
         }
         
     }

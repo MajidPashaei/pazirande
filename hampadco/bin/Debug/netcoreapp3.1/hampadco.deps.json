@@ -28,6 +28,7 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
+          "PersianDateTime.Core": "1.0.8",
           "ViewModelLayer": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -938,6 +939,17 @@
         },
         "compile": {
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PersianDateTime.Core/1.0.8": {
+        "runtime": {
+          "lib/netstandard2.0/PersianDateTime.Core.dll": {
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/PersianDateTime.Core.dll": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -3563,6 +3575,13 @@
       "sha512": "sha512-ebWzW9j2nwxQeBo59As2TYn7nYr9BHicqqCwHOD1Vdo+50HBtLPuqdiCYJcLdTRknpYis/DSEOQz5KmZxwrIAg==",
       "path": "newtonsoft.json/10.0.1",
       "hashPath": "newtonsoft.json.10.0.1.nupkg.sha512"
+    },
+    "PersianDateTime.Core/1.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fLZk7KB1ely2vAmWvXVzxnTyFjZ2wPL+9mzk5jQ3TqtcshflOJ6g5WjJSAOp5Z4CniRqrDmbmREu2Z629QYgjw==",
+      "path": "persiandatetime.core/1.0.8",
+      "hashPath": "persiandatetime.core.1.0.8.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

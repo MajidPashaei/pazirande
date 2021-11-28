@@ -5896,11 +5896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
+      "projectUniqueName": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
       "projectName": "ViewModelLayer",
-      "projectPath": "E:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
+      "projectPath": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
       "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
-      "outputPath": "E:\\Hampadco-master\\ViewModelLayer\\obj\\",
+      "outputPath": "e:\\Hampadco-master\\ViewModelLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5914,8 +5914,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
+            "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
             }
           }
         }

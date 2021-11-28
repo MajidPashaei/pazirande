@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {}
+    "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {}
   },
   "projects": {
-    "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+    "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
+        "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
-        "outputPath": "E:\\Hampadco-master\\DataLayer\\obj\\",
+        "outputPath": "e:\\Hampadco-master\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -74,14 +74,14 @@
         }
       }
     },
-    "E:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {
+    "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
         "projectName": "ViewModelLayer",
-        "projectPath": "E:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
+        "projectPath": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
         "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
-        "outputPath": "E:\\Hampadco-master\\ViewModelLayer\\obj\\",
+        "outputPath": "e:\\Hampadco-master\\ViewModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -95,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "E:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
+              "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
               }
             }
           }

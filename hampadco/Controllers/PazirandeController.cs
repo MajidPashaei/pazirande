@@ -129,15 +129,16 @@ namespace Namespace
             var quser = db.Tbl_Pazirandes.SingleOrDefault( a => a.Code_Meli == vp.Code_Meli );
             if (quser != null)
             {
-                try
-                {
                     quser.Type_Moshtari = vp.Type_Moshtari;
                     quser.Code_Meli = vp.Code_Meli;
                     quser.Shenase_Meli = vp.Shenase_Meli;
                     quser.Shomare_Shenasname = vp.Shomare_Shenasname;
                     quser.Name = vp.Name;
                     quser.Family = vp.Family;
-                    quser.Tarikh_Tavalod = vp.tarikh_tavalod.ToGeorgianDateTime();
+                    if (vp.tarikh_tavalod != null)
+                    {
+                        quser.Tarikh_Tavalod = vp.tarikh_tavalod.ToGeorgianDateTime();
+                    }
                     quser.Name_Pedar = vp.Name_Pedar;
                     quser.Jensiat = vp.Jensiat;
                     quser.Mobile = vp.Mobile;
@@ -146,7 +147,10 @@ namespace Namespace
                     quser.Family_EN = vp.Family_EN;
                     quser.Pedar_EN = vp.Pedar_EN;
                     quser.Name_Sherkat = vp.Name_Sherkat;
-                    quser.Tarikh_Tasis_sherkat = vp.tarikh_tasis_sherkat.ToGeorgianDateTime();
+                    if (vp.tarikh_tasis_sherkat != null)
+                    {
+                        quser.Tarikh_Tasis_sherkat = vp.tarikh_tasis_sherkat.ToGeorgianDateTime();
+                    }
                     quser.Name_EN_Sherkat = vp.Name_EN_Sherkat;
                     quser.Code_Egtesadi = vp.Code_Egtesadi;
                     quser.Name_Tejari = vp.Name_Tejari;
@@ -157,7 +161,10 @@ namespace Namespace
                     quser.Melyat = vp.Melyat;
                     quser.Code_Posti = vp.Code_Posti;
                     quser.TelePhone = vp.TelePhone;
-                    quser.Tarikh_Etbar = vp.tarikh_etbar.ToGeorgianDateTime();
+                    if (vp.tarikh_etbar != null)
+                    {
+                        quser.Tarikh_Etbar = vp.tarikh_etbar.ToGeorgianDateTime();
+                    }
                     quser.Shenase_Onvan_Nemayandegi = vp.Shenase_Onvan_Nemayandegi;
                     quser.Shenase_Bazaryab_Nemayandegi = vp.Shenase_Bazaryab_Nemayandegi;
                     quser.Shenase_Porojeh = vp.Shenase_Porojeh;
@@ -181,10 +188,19 @@ namespace Namespace
                     quser.Shenase_Mahal_kasb = vp.Shenase_Mahal_kasb;
                     quser.Shomare_Javaz_kasb = vp.Shomare_Javaz_kasb;
                     quser.Marja_Saderkonande_Mojavez = vp.Marja_Saderkonande_Mojavez;
-                    quser.Tarikh_Sodor_Javaz = vp.Tarikh_Sodor_Javaz.ToGeorgianDateTime();
-                    quser.Tarikh_Payan_Etebar = vp.Tarikh_Payan_Etebar.ToGeorgianDateTime();
+                    if (vp.Tarikh_Sodor_Javaz != null)
+                    {
+                        quser.Tarikh_Sodor_Javaz = vp.Tarikh_Sodor_Javaz.ToGeorgianDateTime();
+                    }
+                    if (vp.Tarikh_Payan_Etebar != null)
+                    {
+                        quser.Tarikh_Payan_Etebar = vp.Tarikh_Payan_Etebar.ToGeorgianDateTime();
+                    }
                     quser.Shomare_Garardad_Ejare = vp.Shomare_Garardad_Ejare;
-                    quser.Tarikh_Etmam_Ejare = vp.Tarikh_Etmam_Ejare.ToGeorgianDateTime();
+                    if (vp.Tarikh_Etmam_Ejare != null)
+                    {
+                         quser.Tarikh_Etmam_Ejare = vp.Tarikh_Etmam_Ejare.ToGeorgianDateTime();
+                    }
                     quser.Code_Rahgiri = vp.Code_Rahgiri;
                     quser.Type_Garardad_Hesab = vp.Type_Garardad_Hesab;
                     quser.Shenase_Type_Vagozari = vp.Shenase_Type_Vagozari;
@@ -197,12 +213,7 @@ namespace Namespace
                     db.SaveChanges();
 
                     ViewBag.msg = " ثبت با موفقیت انجام شد . ";
-                }
-                catch (System.Exception ex)
-                {
-                    ViewBag.msg = " خطا در ثبت .";
-                    ViewBag.ex = ex;
-                }
+                
             }
             else
             {
@@ -231,115 +242,82 @@ namespace Namespace
         public IActionResult Set_Pazirande(Vm_Pazirande vp)
         {
             var quser = db.Tbl_PazirandeUsers.SingleOrDefault(a => a.National_Code == vp.Code_Meli);
-            try
-            {
-                Tbl_Pazirande tp = new Tbl_Pazirande()
-                {
-                    UserName = User.Identity.GetId(),
-                    Type_Moshtari = quser.Customer_Type ,
-                    Code_Meli = quser.National_Code ,
-                    Shenase_Meli = quser.Company_Id ,
-                    Shomare_Shenasname = quser.Certificate_Code ,
-                    Name = quser.Name_fa ,
-                    Family = quser.Family_fa ,
-                    Tarikh_Tavalod = quser.BirthDay ,
-                    Name_Pedar = quser.FatherName_fa ,
-                    Jensiat = quser.Gender ,
-                    Mobile = quser.Mobile ,
-                    Address = quser.Address ,
-                    Name_EN = quser.Name_en ,
-                    Family_EN = quser.Family_en ,
-                    Pedar_EN = quser.FatherName_en ,
-                    Name_Sherkat = quser.CompanyName_fa ,
-                    Tarikh_Tasis_sherkat = quser.Establishing_Date ,
-                    Name_EN_Sherkat = quser.CompanyName_en ,
-                    Code_Egtesadi = quser.Economic_Code ,
-                    Name_Tejari = quser.Brand_Name ,
-                    Shomare_Sabt = quser.Company_Registration ,
-                    Pazirande_Atba = vp.Pazirande_Atba ,
-                    Code_Faragir = quser.Comprehensive_Code ,
-                    Code_Gozarname = quser.Passport_Code ,
-                    Tarikh_Etbar = quser.Passport_Validity ,
-                    Melyat = quser.Nationality ,
-                    Code_Posti = quser.Post ,
-                    TelePhone = quser.Phone ,
-                    Shenase_Onvan_Nemayandegi = vp.Shenase_Onvan_Nemayandegi ,
-                    Shenase_Bazaryab_Nemayandegi = vp.Shenase_Bazaryab_Nemayandegi ,
-                    Shenase_Porojeh = vp.Shenase_Porojeh ,
-                    Shenase_Switch = vp.Shenase_Switch ,
-                    Shenase_Type_Dargah = "POS" ,
-                    Shenase_Type_Dastgah = "POS" ,
-                    Shenase_Model_Dastgah = "G2" ,
-                    Shenase_Bank = vp.Shenase_Bank ,
-                    Code_Shobe = vp.Code_Shobe ,
-                    Shomare_Hesab = vp.Shomare_Hesab ,
-                    Shomare_Sheba = vp.Shomare_Sheba ,
-                    Code_Shaparaki_shahr = vp.Code_Shaparaki_shahr ,
-                    Mantage_Shahri = vp.Mantage_Shahri ,
-                    Fax = vp.Fax ,
-                    Code_Takmily_Senf = vp.Code_Takmily_Senf ,
-                    Onvan_Mahal_Kasb = vp.Onvan_Mahal_Kasb ,
-                    Onvan_Latin_Kasb = vp.Onvan_Latin_Kasb ,
-                    Shenase_Malekyat = vp.Shenase_Malekyat ,
-                    Address_Shaparaki = vp.Address_Shaparaki ,
-                    Address_Latin = vp.Address_Latin ,
-                    Shenase_Mahal_kasb = vp.Shenase_Mahal_kasb ,
-                    Shomare_Javaz_kasb = vp.Shomare_Javaz_kasb ,
-                    Marja_Saderkonande_Mojavez = vp.Marja_Saderkonande_Mojavez ,
-                    Tarikh_Sodor_Javaz = vp.Tarikh_Sodor_Javaz.ToGeorgianDateTime() ,
-                    Tarikh_Payan_Etebar = vp.Tarikh_Payan_Etebar.ToGeorgianDateTime() ,
-                    Shomare_Garardad_Ejare = vp.Shomare_Garardad_Ejare ,
-                    Tarikh_Etmam_Ejare = vp.Tarikh_Etmam_Ejare.ToGeorgianDateTime() ,
-                    Code_Rahgiri = vp.Code_Rahgiri ,
-                    Type_Garardad_Hesab = vp.Type_Garardad_Hesab ,
-                    Shenase_Type_Vagozari = vp.Shenase_Type_Vagozari ,
-                    Type_Vadieh = vp.Type_Vadieh ,
-                    Shomare_Sanad = vp.Shomare_Sanad ,
-                    Mablag_Frosh = vp.Mablag_Frosh ,
-                    Moaref = vp.Moaref ,
-
-                    // Phone_Moaref = vp.Name_EN ,
-                    // Tedad_Agsat = vp.Name_EN ,
-                    // Mablag_Agsat = vp.Name_EN ,
-                    // Mobail_Motasel = vp.Name_EN ,
-                    // Name_Fani_Pos = vp.Name_EN ,
-                    // Mobaile_Fani_Pos = vp.Name_EN ,
-                    // Telephone_Fani_Pos = vp.Name_EN ,
-                    // Shomare_Pazirande = vp.Name_EN ,
-                    // Shomare_Terminal = vp.Name_EN ,
-                    // Serial_Dastgah = vp.Name_EN ,
-                    // -- Tarikh_Nasb = vp.Name_EN ,
-                    // Shomare_Marja = vp.Name_EN ,
-                    // -- Tarikh_Tarif_Switch = vp.Name_EN ,
-                    // -- Tarikh_Tarif_Shaparak = vp.Name_EN ,
-                    // Nemad_Elektroniki = vp.Name_EN ,
-                    // -- Tarikh_Etmam_Etebar = vp.Name_EN ,
-                    // -- Tarikh_Sodor_Nemad = vp.Name_EN ,
-                    // Type_Nemad = vp.Name_EN ,
-                    // Server_Frosh = vp.Name_EN ,
-                    // IPGAccessPort = vp.Name_EN ,
-                    // IPGCallBackAddress = vp.Name_EN ,
-                    // Address_Post_Sherkat = vp.Name_EN ,
-                    // Mahsolat_Frosh = vp.Name_EN ,
-                    // Address_Post = vp.Name_EN ,
-                    // Family_Masol_Fani = vp.Name_EN ,
-                    // Mobail_Masol_Fani = vp.Name_EN ,
-                    // Name_Fani_Masol_Fani = vp.Name_EN ,
-                    // Code_Meli_Masol_Fani = vp.Name_EN ,
-                    // Address_Site = vp.Name_EN ,
-                    // Emkan_Lagv = vp.Name_EN ,
-                    // Zamine_Faliat = vp.Name_EN ,
-                };
+                Tbl_Pazirande tp = new Tbl_Pazirande();
+                    tp.UserName = User.Identity.GetId();
+                    tp.Type_Moshtari = quser.Customer_Type ;
+                    tp.Code_Meli = quser.National_Code ;
+                    tp.Shenase_Meli = quser.Company_Id ;
+                    tp.Shomare_Shenasname = quser.Certificate_Code ;
+                    tp.Name = quser.Name_fa ;
+                    tp.Family = quser.Family_fa ;
+                    tp.Tarikh_Tavalod = quser.BirthDay ;
+                    tp.Name_Pedar = quser.FatherName_fa ;
+                    tp.Jensiat = quser.Gender ;
+                    tp.Mobile = quser.Mobile ;
+                    tp.Address = quser.Address ;
+                    tp.Name_EN = quser.Name_en ;
+                    tp.Family_EN = quser.Family_en ;
+                    tp.Pedar_EN = quser.FatherName_en ;
+                    tp.Name_Sherkat = quser.CompanyName_fa ;
+                    tp.Tarikh_Tasis_sherkat = quser.Establishing_Date ;
+                    tp.Name_EN_Sherkat = quser.CompanyName_en ;
+                    tp.Code_Egtesadi = quser.Economic_Code ;
+                    tp.Name_Tejari = quser.Brand_Name ;
+                    tp.Shomare_Sabt = quser.Company_Registration ;
+                    tp.Pazirande_Atba = vp.Pazirande_Atba ;
+                    tp.Code_Faragir = quser.Comprehensive_Code ;
+                    tp.Code_Gozarname = quser.Passport_Code ;
+                    tp.Tarikh_Etbar = quser.Passport_Validity ;
+                    tp.Melyat = quser.Nationality ;
+                    tp.Code_Posti = quser.Post ;
+                    tp.TelePhone = quser.Phone ;
+                    tp.Shenase_Onvan_Nemayandegi = vp.Shenase_Onvan_Nemayandegi ;
+                    tp.Shenase_Bazaryab_Nemayandegi = vp.Shenase_Bazaryab_Nemayandegi ;
+                    tp.Shenase_Porojeh = vp.Shenase_Porojeh ;
+                    tp.Shenase_Switch = vp.Shenase_Switch ;
+                    tp.Shenase_Type_Dargah = "POS" ;
+                    tp.Shenase_Type_Dastgah = "POS" ;
+                    tp.Shenase_Model_Dastgah = "G2" ;
+                    tp.Shenase_Bank = vp.Shenase_Bank ;
+                    tp.Code_Shobe = vp.Code_Shobe ;
+                    tp.Shomare_Hesab = vp.Shomare_Hesab ;
+                    tp.Shomare_Sheba = vp.Shomare_Sheba ;
+                    tp.Code_Shaparaki_shahr = vp.Code_Shaparaki_shahr ;
+                    tp.Mantage_Shahri = vp.Mantage_Shahri ;
+                    tp.Fax = vp.Fax ;
+                    tp.Code_Takmily_Senf = vp.Code_Takmily_Senf ;
+                    tp.Onvan_Mahal_Kasb = vp.Onvan_Mahal_Kasb ;
+                    tp.Onvan_Latin_Kasb = vp.Onvan_Latin_Kasb ;
+                    tp.Shenase_Malekyat = vp.Shenase_Malekyat ;
+                    tp.Address_Shaparaki = vp.Address_Shaparaki ;
+                    tp.Address_Latin = vp.Address_Latin ;
+                    tp.Shenase_Mahal_kasb = vp.Shenase_Mahal_kasb ;
+                    tp.Shomare_Javaz_kasb = vp.Shomare_Javaz_kasb ;
+                    tp.Marja_Saderkonande_Mojavez = vp.Marja_Saderkonande_Mojavez ;
+                    if (vp.Tarikh_Sodor_Javaz != null)
+                    {
+                        tp.Tarikh_Sodor_Javaz = vp.Tarikh_Sodor_Javaz.ToGeorgianDateTime() ;
+                    }
+                    if (vp.Tarikh_Payan_Etebar != null)
+                    {
+                        tp.Tarikh_Payan_Etebar = vp.Tarikh_Payan_Etebar.ToGeorgianDateTime() ;
+                    }
+                    tp.Shomare_Garardad_Ejare = vp.Shomare_Garardad_Ejare ;
+                    if (vp.Tarikh_Etmam_Ejare != null)
+                    {
+                        tp.Tarikh_Etmam_Ejare = vp.Tarikh_Etmam_Ejare.ToGeorgianDateTime() ;
+                    }
+                    tp.Code_Rahgiri = vp.Code_Rahgiri ;
+                    tp.Type_Garardad_Hesab = vp.Type_Garardad_Hesab ;
+                    tp.Shenase_Type_Vagozari = vp.Shenase_Type_Vagozari ;
+                    tp.Type_Vadieh = vp.Type_Vadieh ;
+                    tp.Shomare_Sanad = vp.Shomare_Sanad ;
+                    tp.Mablag_Frosh = vp.Mablag_Frosh ;
+                    tp.Moaref = vp.Moaref ;
                 db.Tbl_Pazirandes.Add(tp);
                 db.SaveChanges();
                 ViewBag.msg = "ثبت با موفقیت انجام شد . ";
-            }
-            catch (System.Exception ex)
-            {
-                ViewBag.ex = ex;
-                ViewBag.msg = " خطا در ثبت . ";
-            }
-
+            
             return View();
         }
     }

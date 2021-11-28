@@ -481,6 +481,39 @@ namespace DataLayer.Migrations
                     b.ToTable("Tbl_PazirandeUsers");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Portal.Tbl_Support", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("To")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("User")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tbl_Supports");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.Tbl_User", b =>
                 {
                     b.Property<int>("Id")

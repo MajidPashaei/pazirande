@@ -8,16 +8,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using hampadco.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using ViewModelLayer.Portal;
+using DataLayer.Entities.Portal;
+using faraboom.Models;
+using DataLayer.Context;
+using Microsoft.AspNetCore.Hosting;
 
 namespace hampadco.Controllers
 {
     [Authorize]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger)
+        public static string msg;
+        public readonly HampadcoContext db;
+        public readonly IWebHostEnvironment _env;
+        public HomeController(HampadcoContext _db, IWebHostEnvironment env)
         {
-            _logger = logger;
+            db = _db;
+            _env = env;
         }
         public IActionResult Index()
         {
@@ -37,8 +47,25 @@ namespace hampadco.Controllers
         }
         public IActionResult support()
         {
+            
+         ViewBag.All=db.Tbl_Supports.Where(a=>a.User==User.Identity.GetId()).ToList();
           return View();
         }
+        public IActionResult SetSupport(VM_Support s)
+        {
+            var i=db.Tbl_Users.SingleOrDefault(a=>a.UserName==User.Identity.GetId());
+            Tbl_Support f=new Tbl_Support();
+            f.User=User.Identity.GetId();
+            f.Title=s.Title;
+            f.Description=s.Description;
+            f.To=s.To;
+            f.Phone=i.Phone;
+            db.Tbl_Supports.Add(f);
+            db.SaveChanges();
+            ViewBag.msg="تیکت با موفقیت ثبت شد";
+            return View();
+        }
+        
         public IActionResult Learn()
         {
             return View();
@@ -46,7 +73,8 @@ namespace hampadco.Controllers
         
         public IActionResult Exit()
         {
-            return View();
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Login");
         } 
     }
 }

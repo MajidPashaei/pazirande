@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataLayer.Migrations
 {
-    public partial class pznd : Migration
+    public partial class kkkk : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -178,6 +178,24 @@ namespace DataLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Tbl_Supports",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    User = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(nullable: true),
+                    Phone = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
+                    Image = table.Column<string>(nullable: true),
+                    To = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tbl_Supports", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Tbl_Users",
                 columns: table => new
                 {
@@ -208,6 +226,9 @@ namespace DataLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "Tbl_PazirandeUsers");
+
+            migrationBuilder.DropTable(
+                name: "Tbl_Supports");
 
             migrationBuilder.DropTable(
                 name: "Tbl_Users");

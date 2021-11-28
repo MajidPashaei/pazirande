@@ -14667,6 +14667,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\SetSupport.cshtml",
+      "TargetPath": "Views\\Home\\SetSupport.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Accounts.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\Accounts.cshtml",
       "FileKind": "mvc"
