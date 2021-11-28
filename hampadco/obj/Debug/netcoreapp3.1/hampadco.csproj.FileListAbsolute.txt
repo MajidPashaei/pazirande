@@ -1311,5 +1311,12 @@ c:\Users\nikatak-4\Desktop\pazirande\hampadco\bin\Debug\netcoreapp3.1\refs\Syste
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.csproj.CopyComplete
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.genruntimeconfig.cache
+<<<<<<< HEAD
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\ViewDetails.cshtml.g.cs
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\ViewDetailsRad.cshtml.g.cs
+=======
+c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetails.cshtml.g.cs
+c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetailsRad.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetails.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetailsRad.cshtml.g.cs
+>>>>>>> b48f9839fce176aaa213a6554d61bb251478391a

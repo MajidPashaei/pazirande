@@ -8,7 +8,11 @@ using Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
+<<<<<<< HEAD
 using faraboom.Models;
+=======
+using System.Globalization;
+>>>>>>> b48f9839fce176aaa213a6554d61bb251478391a
 
 namespace Namespace
 {
