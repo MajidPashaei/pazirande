@@ -34,7 +34,7 @@
                                             <div class="card-body text-center">
                                                 <i class="iconsminds-add-user"></i>
                                                 <p class="card-text mb-0">کاربر جدید</p>
-                                                <p class="lead text-center">16</p>
+
                                             </div>
                                         </a>
                                     </li>
@@ -43,7 +43,7 @@
                                             <div class="card-body text-center">
                                                 <i class="iconsminds-mens"></i>
                                                 <p class="card-text mb-0">کاربران ثبت شده</p>
-                                                <p class="lead text-center">32</p>
+                                            
                                             </div>
                                         </a>
                                     </li>
@@ -52,7 +52,7 @@
                                             <div class="card-body text-center">
                                                 <i class="iconsminds-male mr-2 text-grey align-text-bottom d-inline-block"></i>
                                                 <p class="card-text mb-0">ویراش کاربر</p>
-                                                <p class="lead text-center">2</p>
+                                        
                                             </div>
                                         </a>
                                     </li>
@@ -124,105 +124,31 @@
                                     <tr>
                                         <th>نام</th>
                                         <th>نام خانوادگی</th>
+                                        <th>شماره تماس</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
+                        @if (ViewBag.All != null)
+                            {
+                               
+                                foreach (var item in ViewBag.All)
+                                {
                                     <tr>
                                         <td>
-                                            <p class="list-item-heading">کیک عروسی با گل ماکارون</p>
+                                            <p class="list-item-heading">@item.Name_fa</p>
                                         </td>
                                         <td>
-                                            <p class="text-muted">1452</p>
+                                            <p class="text-muted">@item.Family_fa</p>
+                                        </td>
+                                         <td>
+                                            <p class="text-muted">@item.Mobile</p>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">کیک پنیری با کلوچه های شکلاتی</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">1420</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">چیزکیک خانگی با توت تازه</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">1360</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">چیزکیک با توت تازه</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">1310</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">قرص چای با پرتقال تازه</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">1245</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">کیک پنیری با کلوچه های شکلاتی</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">1100</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">چیزکیک خانگی با توت تازه</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">1003</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">چیزکیک خانگی با توت تازه</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">952</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">چیزکیک با توت تازه</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">924</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">قرص چای با پرتقال تازه</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">842</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">کیک پنیری با کلوچه های شکلاتی</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">810</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="list-item-heading">چیزکیک خانگی با توت تازه</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-muted">605</p>
-                                        </td>
-                                    </tr>
+                                }
+                            }
+
+                              
                                 </tbody>
                             </table>
                         </div>
@@ -300,43 +226,56 @@
 
 
             <div class="row">
+      @if (ViewBag.A != null)
+                            {
+                               
                 <div class="col-lg-4">
                     <a href="/Pazirande/wait">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
                             <div>
                                 <i class="iconsminds-sand-watch-2 text-white"></i>
+                          
+                               
                                 <div>
-                                    <p class="lead text-white">5 پذیرنده</p>
+                                    <p class="lead text-white">@ViewBag.A پذیرنده</p>
                                     <p class="text-small text-white">درانتظار تایید است</p>
                                 </div>
+                                
+                                
                             </div>
 
                             <div>
                                 <div role="progressbar"
                                     class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="20"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="@ViewBag.A " aria-valuemax="@ViewBag.koli"
                                     data-show-percent="false">
                                 </div>
                             </div>
                         </div>
                     </div></a>
                 </div>
+                }
+                        @if (ViewBag.B != null)
+                            {
                 <div class="col-lg-4">
                     <a href="/Pazirande/Ok">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
                             <div>
                                 <i class="iconsminds-big-data text-white"></i>
+                            
+                              
                                 <div>
-                                    <p class="lead text-white">4 پذیرنده</p>
+                                    <p class="lead text-white">@ViewBag.B پذیرنده</p>
                                     <p class="text-small text-white">تایید شده است</p>
                                 </div>
+                           
                             </div>
                             <div>
-                                <div role="progressbar"
+                                <div  role="progressbar"
                                     class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="20"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="@ViewBag.B " aria-valuemax="@ViewBag.koli"
                                     data-show-percent="false">
                                 </div>
                             </div>
@@ -344,21 +283,26 @@
                     </div>
                     </a>
                 </div>
+                 }
+         @if (ViewBag.C != null)
+                            {
                 <div class="col-lg-4">
                     <a href="/Pazirande/No">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
                             <div>
                                 <i class="iconsminds-unlike text-white"></i>
+                            
                                 <div>
-                                    <p class="lead text-white">8 پذیرنده</p>
+                                    <p class="lead text-white">@ViewBag.C پذیرنده</p>
                                     <p class="text-small text-white">عدم تایی شده است</p>
                                 </div>
+                            
                             </div>
                             <div>
                                 <div role="progressbar"
                                     class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="10" aria-valuemax="20"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="@ViewBag.C" aria-valuemax="@ViewBag.koli"
                                     data-show-percent="false">
                                 </div>
                             </div>
@@ -366,6 +310,7 @@
                     </div>
                     </a>
                 </div>
+                }
             </div>
 
 
@@ -431,6 +376,7 @@
                                         <img alt="Profile Picture" src="img/profiles/l-5.jpg"
                                             class="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall" />
                                     </a>
+
                                     <div class="pl-3">
                                         <a href="#">
                                             <p class="font-weight-medium mb-0">خواندن این مقاله بسیار لذت بخش بود. لطفا آنها را ادامه دهید.</p>

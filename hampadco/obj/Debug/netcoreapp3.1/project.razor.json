@@ -14587,6 +14587,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\nikatak-4\\Desktop\\pazirande\\hampadco\\Views\\Pazirande\\ViewDetailsRad.cshtml",
+      "TargetPath": "Views\\Pazirande\\ViewDetailsRad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\nikatak-4\\Desktop\\pazirande\\hampadco\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -14694,6 +14699,11 @@
     {
       "FilePath": "c:\\Users\\nikatak-4\\Desktop\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\ViewDetails.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\ViewDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\nikatak-4\\Desktop\\pazirande\\hampadco\\Views\\Pazirande\\ViewDetails.cshtml",
+      "TargetPath": "Views\\Pazirande\\ViewDetails.cshtml",
       "FileKind": "mvc"
     },
     {

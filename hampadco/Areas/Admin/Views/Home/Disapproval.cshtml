@@ -35,10 +35,51 @@
                         <h5 class="card-title">لطفا دلیل عدم تایید خود را بنویسید</h5>
                         <div class="dashboard-quick-post">
                             <form action="/admin/home/AddDisapproval">
-                            <input type="text" class="d-none" value="@ViewBag.Id" asp-for="Id">
-                            <input class="form-control" rows="100" type="text" asp-for="Description">
-                                       
-                                <button type="submit" class="btn btn-success">ارسال</button>
+                                @* <input type="text" class="d-none" value="@ViewBag.Id" asp-for="Id">
+                                    <input class="form-control" rows="100" type="text" asp-for="Description">
+
+                                    <button type="submit" class="btn btn-success">ارسال</button> *@
+                                <div class="col-sm-12 col-12">
+                                    <section class="full-editor">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">توضیحات کامل</h4>
+                                                    </div>
+                                                    <div class="card-content collapse show">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <div id="full-wrapper">
+                                                                        <div id="full-container">
+                                                                            <input type="hidden" id="jdr"
+                                                                                asp-for="Description">
+                                                                            <div class="editor" id="description">
+                                                                                @* @if(Model.DescreptionPro != null)
+                                                                                    {
+                                                                                    @Html.Raw(Model.DescreptionPro)
+                                                                                    }
+                                                                                *@
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p id="mss" class="alert alert-success" style="display: none;">متن با موفقیت
+                                            ارسال شد.</p>
+                                        <p id="mss_danger" class="alert alert-danger" style="display: none;">متنی برای
+                                            ارسال وجو ندارد.</p>
+                                        <a onclick="sabt()" class="btn btn-info mr-1 mb-1" style="color: white;">ارسال
+                                            متن </a>
+                                    </section>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -46,5 +87,34 @@
             </div>
         </div>
     </div>
+<script>
+     function  sabt()
+    
+     {
+     
+      if(document.getElementById("description").innerText != '')
+      {
+        document.getElementById('jdr').value = document.getElementById("description").innerHTML;
+        $('#mss').css("display", "block");
+         
+      }
+       else
+        $('#mss_danger').css("display", "block");
+          
+      
+     }
+</script>
 
+</section>
+<!-- Basic Inputs end -->
+<script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
 </main>

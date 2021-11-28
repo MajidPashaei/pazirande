@@ -1,0 +1,638 @@
+@{
+    ViewData["Title"] = "اپلود مدارک";
+}
+@using Extensions;
+@using hampadco.Models; 
+@model ViewModelLayer.Portal.Vm_Pazirande;
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>محتوا</h1>
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page"> تکمیل اطلاعات  </li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+            </div>
+        </div>
+              @if (ViewBag.msg != null)
+  {
+      <span class="alert alert-success">@ViewBag.msg</span>
+  }
+  
+         @if (ViewBag.msg != null)
+  {
+      <span class="alert alert-success">@ViewBag.msg</span>
+  }
+  
+        @if(ViewBag.msg != null)
+        {
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="mb-4 text-danger"> @ViewBag.msg </h5>
+                        </div>
+                    </div> 
+                </div>   
+            </div>  
+        }
+        @if (ViewBag.Pazirande != null)
+        {
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                         
+                         
+                                @if (ViewBag.Pazirande != null)
+                                {
+                                    foreach (var item in ViewBag.Pazirande)
+                                    {
+                                        if (item.Type_Moshtari == "حقیقی" && item.Pazirande_Atba ==  false)
+                                        {                                            
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد ملی</label>
+                                                    <input   type="text" class="form-control"    value="@item.Code_Meli" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره شناسنامه </label>
+                                                    <input   type="text" class="form-control"   value="@item.Shomare_Shenasname" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی</label>
+                                                    <input   type="text" class="form-control"  value="@item.Family" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تاریخ تولد </label>
+                                                    <input   type="text" class="form-control"  value="@item.Tarikh_Tavalod" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name_Pedar" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">جنسیت</label>
+                                                    <input   type="text" class="form-control"   value="@item.Jensiat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن همراه</label>
+                                                    <input   type="text" class="form-control"   value="@item.Mobile" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آدرس</label>
+                                                    <input   type="text" class="form-control"   value="@item.Address" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Family_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Pedar_EN" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد پستی</label>
+                                                    <input   type="text" class="form-control"   value="@item.Code_Posti" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن</label>
+                                                    <input   type="text" class="form-control"   value="@item.TelePhone" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شهرستان</label>
+                                                    <input   type="text" class="form-control"   value="@item.Code_Shaparaki_shahr" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">منطقه شهری</label>
+                                                    <input   type="text" class="form-control"  value="@item.Mantage_Shahri" disabled >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        }
+                                        else if (item. Type_Moshtari == "حقوقی" && item.Pazirande_Atba == " 0")
+                                        {
+		    				                <input class="d-none"  value="@item.Code_Meli"  value="@item.National_Code">
+		    				                <input class="d-none"  value="@item.Pazirande_Atba" value= false>
+                                            
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد ملی</label>
+                                                    <input   type="text" class="form-control"    value="@item.Code_Meli" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شماره شناسنامه </label>
+                                                    <input   type="text" class="form-control"    value="@item.Shomare_Shenasname" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی</label>
+                                                    <input   type="text" class="form-control"   value="@item.Family" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تاریخ تولد </label>
+                                                    @* @{ string birthday = item.BirthDay.ToPersianDateString();} *@
+                                                    <input   type="text" class="form-control"   value="@item.Tarikh_Tavalod" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name_Pedar" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">جنسیت</label>
+                                                    <input   type="text" class="form-control"  value="@item.Jensiat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن همراه</label>
+                                                    <input   type="text" class="form-control"   value="@item.Mobile" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آدرس</label>
+                                                    <input   type="text" class="form-control"   value="@item.Address" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام لاتین</label>
+                                                    <input   type="text" class="form-control"  value="@item.Name_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Family_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Pedar_EN" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد پستی</label>
+                                                    <input   type="text" class="form-control"   value="@item.Code_Posti" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن</label>
+                                                    <input   type="text" class="form-control"  value="@item.TelePhone" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شهرستان</label>
+                                                    <input   type="text" class="form-control"   value="@item.Code_Shaparaki_shahr" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">منطقه شهری</label>
+                                                    <input   type="text" class="form-control"  value="@item.Mantage_Shahri" >
+                                                </div>
+                                            </div>
+                                            <hr>   
+                                            <div class="form-row mt-2">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام شرکت</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="نام شرکت"  value="@item.Name_Sherkat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">نام لاتین شرکت</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="نام لاتین شرکت"  value="@item.Name_EN_Sherkat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام تجاری</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="نام تجاری"  value="@item.Name_Tejari" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">تاریخ تاسیس شرکت</label>
+                                                    <input   type="text" class="form-control"  
+                                                        placeholder="تاریخ تاسیس شرکت (1378/10/01)"  value="@item.Tarikh_Tasis_Sherkat" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>   
+                                            <div class="form-row mt-2">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">شماره ثبت شرکت</label>
+                                                    <input   type="number" class="form-control" 
+                                                        placeholder="شماره ثبت شرکت"  value="@item.Shomare_Sabt" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">کد اقتصادی</label>
+                                                    <input   type="number" class="form-control" 
+                                                        placeholder="کد اقتصادی"  value="@item.Code_Egtesadi" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        }
+                                        else if (item. Type_Moshtari == "حقیقی" && item.Pazirande_Atba ==false)
+                                        {
+		    				                <input class="d-none"  value="@item.Code_Meli"  >
+		    				                <input class="d-none"  value="@item.Pazirande_Atba" value="1">
+                                    
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام</label>
+                                                    <input   type="text" class="form-control" value="@item.Name" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی</label>
+                                                    <input   type="text" class="form-control"   value="@item.Family" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name_Pedar" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">جنسیت</label>
+                                                    <input   type="text" class="form-control"  value="@item.Jensiat" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تاریخ تولد </label>
+                                                    <input   type="text" class="form-control"   value="@item.Tarikh_Tavalod" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن</label>
+                                                    <input   type="text" class="form-control" value="@item.TelePhone" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن همراه</label>
+                                                    <input   type="text" class="form-control"   value="@item.Mobile" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد پستی</label>
+                                                    <input   type="text" class="form-control" value="@item.Code_Posti" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آدرس</label>
+                                                    <input   type="text" class="form-control"  value="@item.Address" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Family_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Pedar_EN" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد شاپرکی شهر</label>
+                                                    <input    class="form-control" type="number"  value="@item.Code_Shaparaki_shahr" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">منطقه شهری</label>
+                                                    <input   type="text" class="form-control"  value="@item.Mantage_Shahri" >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row mt-2">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد فراگیر اتباع خارجی</label>
+                                                    <input   type="number" class="form-control" 
+                                                        placeholder="کد فراگیر اتباع خارجی"  value="@item.Code_Faragir" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد گذرنامه</label>
+                                                    <input   type="number" class="form-control"
+                                                        placeholder="کد گذرنامه"  value="@item.Code_Gozarname" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">ملیت</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="ملیت"  value="@item.Melyat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">تاریخ اعتبار گذرنامه</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="تاریخ اعتبار گذرنامه (1378/10/01)"  value="@item.Tarikh_Etbar" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        }
+                                        else if (item. Type_Moshtari == "حقوقی" && item.Pazirande_Atba == false)
+                                        {
+		    				                <input class="d-none"  value="@item.Code_Meli"  >
+		    				                <input class="d-none"  value="@item.Pazirande_Atba" value="1">
+                                    
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام</label>
+                                                    <input   type="text" class="form-control"  value="@item.Name" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی</label>
+                                                    <input   type="text" class="form-control"   value="@item.Family" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name_Pedar" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">جنسیت</label>
+                                                    <input   type="text" class="form-control"  value="@item.Jensiat" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تاریخ تولد </label>
+                                                    <input   type="text" class="form-control"  value="@item.Tarikh_Tavalod" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن</label>
+                                                    <input   type="text" class="form-control"   value="@item.TelePhone" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">تلفن همراه</label>
+                                                    <input   type="text" class="form-control"   value="@item.Mobile" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد پستی</label>
+                                                    <input   type="text" class="form-control"   value="@item.Code_Posti" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">آدرس</label>
+                                                    <input   type="text" class="form-control"   value="@item.Address" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Name_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام خانوادگی لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Family_EN" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام پدر لاتین</label>
+                                                    <input   type="text" class="form-control"   value="@item.Pedar_EN" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">شهرستان</label>
+                                                    <input   type="text" class="form-control"  value="@item.Code_Shaparaki_shahr" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">منطقه شهری</label>
+                                                    <input   type="text" class="form-control"  value="@item.Mantage_Shahri" disabled >
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row mt-2">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد فراگیر اتباع خارجی</label>
+                                                    <input   type="number" class="form-control"
+                                                        placeholder="کد فراگیر اتباع خارجی"  value="@item.Code_Faragir" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">کد گذرنامه</label>
+                                                    <input   type="number" class="form-control" 
+                                                        placeholder="کد گذرنامه"  value="@item.Code_Gozarname" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">ملیت</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="ملیت"  value="@item.Melyat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">تاریخ اعتبار گذرنامه</label>
+                                                    <input   type="text" class="form-control"  
+                                                        placeholder="تاریخ اعتبار گذرنامه (1378/10/01)"  value="@item.Tarikh_Etbar" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row mt-2">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام شرکت</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="نام شرکت"  value="@item.Name_Sherkat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">نام لاتین شرکت</label>
+                                                    <input   type="text" class="form-control"  
+                                                        placeholder="نام لاتین شرکت"  value="@item.Name_EN_Sherkat" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputEmail4">نام تجاری</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="نام تجاری"  value="@item.Name_Tejari" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">تاریخ تاسیس شرکت</label>
+                                                    <input   type="text" class="form-control" 
+                                                        placeholder="تاریخ تاسیس شرکت (1378/10/01)"  value="@item.Tarikh_Tasis_Sherkat" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row mt-2">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">شماره ثبت شرکت</label>
+                                                    <input   type="number" class="form-control" 
+                                                        placeholder="شماره ثبت شرکت"  value="@item.Shomare_Sabt" disabled>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputPassword4">کد اقتصادی</label>
+                                                    <input   type="number" class="form-control"
+                                                        placeholder="کد اقتصادی"  value="@item.Code_Egtesadi" disabled>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        }
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">شناسه بانکی</label>
+                                                <input   type="text" class="form-control"  value="@item.Shenase_Bank"  disabled>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">کد شعبه </label>
+                                                <input   type="text" class="form-control"  value="@item.Code_Shobe" disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">شماره حساب</label>
+                                                <input   type="text" class="form-control"  value="@item.Shomare_Hesab" disabled>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">شماره شبا</label>
+                                                <input   type="text" class="form-control"  value="@item.Shomare_Sheba" disabled >
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">شماره فکس</label>
+                                                <input   type="text" class="form-control"  value="@item.Fax"  disabled>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">صنف</label>
+                                                <input   type="text" class="form-control"  value="@item.Code_Takmily_Senf" disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">عنوان محل کسب</label>
+                                                <input   type="text" class="form-control"  value="@item.Onvan_Mahal_Kasb" disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">عنوان لاتین محل کسب</label>
+                                                <input   type="text" class="form-control"  value="@item.Onvan_Latin_Kasb" disabled >
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">نوع مالکیت </label>
+                                                <input   class="form-control"  value="@item.Shenase_Malekyat"  disabled>
+                                                
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">ادرس لاتین</label>
+                                                <input   type="text" class="form-control"  value="@item.Address_Latin" disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">نوع محل کسب</label>
+                                                <input   class="form-control"  value="@item.Shenase_Mahal_kasb" disabled >
+                                                  
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">شماره جواز کسب</label>
+                                                <input   type="text" class="form-control"  value="@item.Shomare_Javaz_kasb" disabled >
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">مرجع صادر کننده مجوز فعالیت</label>
+                                                <input   type="text" class="form-control"  value="@item.Marja_Saderkonande_Mojavez" disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">تارخ صدور جواز کسب</label>
+                                                <input   type="text" class="form-control"  value="@item.Tarikh_Sodor_Javaz" disabled>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">تاریخ پایان جواز کسب</label>
+                                                <input   type="text" class="form-control"  value="@item.Tarikh_Payan_Etebar" disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">شماره قرارداد اجاره </label>
+                                                <input  type="text" class="form-control"  value="@item.Shomare_Garardad_Ejare" disabled >
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">تاریخ اتمام اجاره</label>
+                                                <input  type="text" class="form-control"  value="@item.Tarikh_Etmam_Ejare" disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">کد رهگیری ثبت نام مالیاتی</label>
+                                                <input   type="text" class="form-control"  value="@item.Code_Rahgiri" disabled>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">نوع قرارداد حساب</label>
+                                                <input   class="form-control"  value="@item.Type_Garardad_Hesab" disabled >
+                                            
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">نوع واگذاری دستگاه</label>
+                                                <input   class="form-control"  value="@item.Shenase_Type_Vagozari" disabled >
+                                                
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">نوع ودیعه</label>
+                                                <input   class="form-control"  value="@item.Type_Vadieh" disabled>
+                                              
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">مبلغ فروش </label>
+                                                <input   type="text" class="form-control"  value="@item.Mablag_Frosh"disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">شماره سند ودیعه</label>
+                                                <input  type="text" class="form-control"  value="@item.Shomare_Sanad" disabled >
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="inputEmail4">معرف</label>
+                                                <input   type="text" class="form-control"  value="@item.Moaref" disabled >
+                                            </div>
+
+                                             <div class="form-group col-md-3">
+                                                <label for="inputEmail4">دلیل عدم تایید</label>
+                                                <input   type="text" class="form-control"  value="@item.Description" disabled >
+                                            </div>
+                                        </div>
+
+                                
+                                    }
+                                }
+                              
+            
+                
+
+                                                     
+                  
+          
+                
+                    
+
+                
+                  
+
+
+                   
+                              
+                             
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</main>

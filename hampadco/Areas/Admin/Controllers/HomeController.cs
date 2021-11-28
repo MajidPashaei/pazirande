@@ -85,6 +85,7 @@ namespace Namespace
         {
             var T = db.Tbl_Pazirandes.Where(a => a.Status == "1").ToList();
             ViewBag.T = T;
+            
             return View();
         }
 
@@ -114,7 +115,7 @@ namespace Namespace
         ///ثبت شده های جدید
         public IActionResult NewRegistered()
         {
-            ViewBag.All = db.Tbl_Pazirandes.Where(a => a.Status == "1").ToList();
+            ViewBag.All = db.Tbl_Pazirandes.ToList();
             return View();
         }
 
