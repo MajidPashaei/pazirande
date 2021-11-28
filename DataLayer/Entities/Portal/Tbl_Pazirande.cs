@@ -103,7 +103,10 @@ namespace DataLayer.Entities.Portal
         public string Onvan_Mahal_Kasb { get; set; }
 
         public string Onvan_Latin_Kasb { get; set; }
+<<<<<<< HEAD
+=======
 
+>>>>>>> b48f9839fce176aaa213a6554d61bb251478391a
         public string Shenase_Malekyat { get; set; }
         public string Address_Shaparaki { get; set; }
 

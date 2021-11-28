@@ -14582,6 +14582,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\ViewDetails.cshtml",
+      "TargetPath": "Views\\Pazirande\\ViewDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Ok.cshtml",
       "TargetPath": "Views\\Pazirande\\Ok.cshtml",
       "FileKind": "mvc"
@@ -14639,6 +14644,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\Khareji_Hagigi.cshtml",
       "TargetPath": "Views\\Account\\Khareji_Hagigi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\ViewDetailsRad.cshtml",
+      "TargetPath": "Views\\Pazirande\\ViewDetailsRad.cshtml",
       "FileKind": "mvc"
     },
     {
