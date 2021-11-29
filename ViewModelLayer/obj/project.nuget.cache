@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/rPZqFjKT1e2lpXylCT6adMD8wm+ailIQrJwm0Hx62U1mrBnK0xbFYd+w9K+qilbVqaAejB4x9JIdCm7/2Sv0A==",
+  "dgSpecHash": "aDh2u0SzyZg56JuCt9y5UbaNMLXs+rVbz+H7dX6zlDtUpL5h4pljgUelHUaVXFuPANIE4Hl96xy43oUVRVr1Gw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\nikatak-4\\Desktop\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
+  "projectFilePath": "d:\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nikatak-4\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\nikatak-4\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

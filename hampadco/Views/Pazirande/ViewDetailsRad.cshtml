@@ -603,8 +603,10 @@
                                             </div>
 
                                              <div class="form-group col-md-3">
-                                                <label for="inputEmail4">دلیل عدم تایید</label>
-                                                <input   type="text" class="form-control"  value="@item.Description" disabled >
+                                                
+                                                     <label style="font-weight: bold;" for="inputEmail4">دلیل عدم تایید:</label>
+                                                @* <input   type="text" class="form-control "  value="@item.Description" disabled > *@
+                                                <p>@item.Description</p>
                                             </div>
                                         </div>
 
