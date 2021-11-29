@@ -144,6 +144,10 @@
             "PersianDateTime.Core": {
               "target": "Package",
               "version": "[1.0.8, )"
+            },
+            "kavenegar": {
+              "target": "Package",
+              "version": "[1.2.4, )"
             }
           },
           "imports": [

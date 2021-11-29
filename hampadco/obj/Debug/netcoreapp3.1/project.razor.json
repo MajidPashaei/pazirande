@@ -14412,6 +14412,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\pazirande\\hampadco\\Views\\Login\\SetPass.cshtml",
+      "TargetPath": "Views\\Login\\SetPass.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\pazirande\\hampadco\\Views\\Login\\CheekRCode.cshtml",
+      "TargetPath": "Views\\Login\\CheekRCode.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\pazirande\\hampadco\\Views\\Pazirande\\No.cshtml",
       "TargetPath": "Views\\Pazirande\\No.cshtml",
       "FileKind": "mvc"
@@ -14439,6 +14449,11 @@
     {
       "FilePath": "d:\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\AllPaZirandeh.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\AllPaZirandeh.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\pazirande\\hampadco\\Views\\Pazirande\\GoEdit.cshtml",
+      "TargetPath": "Views\\Pazirande\\GoEdit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14699,6 +14714,11 @@
     {
       "FilePath": "d:\\pazirande\\hampadco\\Areas\\Admin\\Views\\Shared\\_partial_Nav.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Shared\\_partial_Nav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\pazirande\\hampadco\\Views\\Login\\CheekPassword.cshtml",
+      "TargetPath": "Views\\Login\\CheekPassword.cshtml",
       "FileKind": "mvc"
     },
     {

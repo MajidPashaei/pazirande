@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <a href="/Pazirande/New">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
@@ -44,7 +44,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <a href="/Pazirande/all">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
@@ -63,8 +63,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4">
-                <a href="/Pazirande/Edit">
+            @* <div class="col-lg-4">
+                <a href="/Pazirande/GoEdit">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
                             <div>
@@ -81,77 +81,96 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> *@
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <a href="/Pazirande/wait">
+        
+            <div class="row">
+                @if (ViewBag.A != null)
+                            {
+                               
+                <div class="col-lg-4">
+                    <a href="/Pazirande/wait">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
                             <div>
                                 <i class="iconsminds-sand-watch-2 text-white"></i>
+                          
+                               
                                 <div>
-                                    <p class="lead text-white">5 پذیرنده</p>
+                                    <p class="lead text-white">@ViewBag.A پذیرنده</p>
                                     <p class="text-small text-white">درانتظار تایید است</p>
                                 </div>
+                                
+                                
                             </div>
 
                             <div>
                                 <div role="progressbar"
                                     class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="20"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="@ViewBag.A " aria-valuemax="@ViewBag.koli"
                                     data-show-percent="false">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4">
-                <a href="/Pazirande/Ok">
+                    </div></a>
+                </div>
+                }
+                @if (ViewBag.B != null)
+                {
+                <div class="col-lg-4">
+                    <a href="/Pazirande/Ok">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
                             <div>
                                 <i class="iconsminds-big-data text-white"></i>
+                            
+                              
                                 <div>
-                                    <p class="lead text-white">4 پذیرنده</p>
+                                    <p class="lead text-white">@ViewBag.B پذیرنده</p>
                                     <p class="text-small text-white">تایید شده است</p>
                                 </div>
+                           
                             </div>
                             <div>
-                                <div role="progressbar"
+                                <div  role="progressbar"
                                     class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="20"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="@ViewBag.koli " aria-valuemax="@ViewBag.B"
                                     data-show-percent="false">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="col-lg-4">
-                <a href="/Pazirande/No">
+                    </a>
+                </div>
+                }
+                @if (ViewBag.C != null)
+                {
+                <div class="col-lg-4">
+                    <a href="/Pazirande/No">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
                             <div>
                                 <i class="iconsminds-unlike text-white"></i>
+                            
                                 <div>
-                                    <p class="lead text-white">8 پذیرنده</p>
+                                    <p class="lead text-white">@ViewBag.C پذیرنده</p>
                                     <p class="text-small text-white">عدم تایی شده است</p>
                                 </div>
+                            
                             </div>
                             <div>
                                 <div role="progressbar"
                                     class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="10" aria-valuemax="20"
+                                    data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="@ViewBag.C" aria-valuemax="@ViewBag.koli"
                                     data-show-percent="false">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </a>
+                    </a>
+                </div>
+                }
             </div>
-        </div>
 
     </div>
 </main>

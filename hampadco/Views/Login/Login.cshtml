@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="/css/vendor/bootstrap-float-label.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/Css/dore.light.bluenavy.min.css" />
+
+    @* //--------------------------------------------- *@
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body class="background show-spinner no-footer">
@@ -40,16 +47,19 @@
                                 <span class="logo-single"></span>
                             </a>
                             <h6 class="mb-4">ورود</h6>
-                            <form action="Login/Check" method="post">
+                            <form action="/Login/Check" method="post">
                                 <label class="form-group has-float-label mb-4">
-                                    <input asp-for="UserName"  class="form-control" />
+                                    <input asp-for="UserName" class="form-control">
                                     <span>نام کاربری</span>
                                 </label>
-
                                 <label class="form-group has-float-label mb-4">
-                                    <input asp-for="Password" class="form-control" type="password" placeholder="" />
+                                    <input asp-for="Password" class="form-control" type="password" placeholder=""/>
                                     <span>کلمه عبور</span>
                                 </label>
+                                
+                                   @* <img src="/login/GetCaptchaImage" alt="">
+                                   <input type="text"  placeholder=" کد امنیتی   " required> *@
+
                                 <div class="d-flex justify-content-between align-items-center">
                                     <a href="/login/forgetpassword">رمز عبورت یادت رفته؟</a>
                                     <button class="btn btn-primary btn-lg btn-shadow" type="submit">ورود</button>
@@ -65,6 +75,15 @@
     <script src="/js/vendor/bootstrap.bundle.min.js"></script>
     <script src="/js/dore.script.js"></script>
     <script src="/js/scripts.single.theme.js"></script>
+
+    
+    <script src="~/captcha/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/captcha/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/captcha/js/site.js" asp-append-version="true"></script>
+    <script src="~/captcha/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/captcha/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/captcha/js/jquery.unobtrusive-ajax.js"></script>
+
 </body>
 
 </html>
