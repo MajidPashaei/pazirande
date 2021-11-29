@@ -14422,6 +14422,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\CheekRCode.cshtml",
+      "TargetPath": "Views\\Login\\CheekRCode.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -14444,6 +14449,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditUsers.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\EditUsers.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\CheekPassword.cshtml",
+      "TargetPath": "Views\\Login\\CheekPassword.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14484,6 +14494,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\New.cshtml",
       "TargetPath": "Views\\Pazirande\\New.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\SetPass.cshtml",
+      "TargetPath": "Views\\Login\\SetPass.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14569,6 +14584,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\Irani_Hagigi.cshtml",
       "TargetPath": "Views\\Account\\Irani_Hagigi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\GoEdit.cshtml",
+      "TargetPath": "Views\\Pazirande\\GoEdit.cshtml",
       "FileKind": "mvc"
     },
     {

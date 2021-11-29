@@ -11,33 +11,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using faraboom.Models;
 using hampadco.Models;
-<<<<<<< HEAD
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using ViewModelLayer.Portal;
 using DataLayer.Entities.Portal;
-using faraboom.Models;
-using DataLayer.Context;
-using Microsoft.AspNetCore.Hosting;
-=======
->>>>>>> 2004aa085f5ef91c897d10410507eaa515041f49
+
+
+
+
 
 namespace hampadco.Controllers
 {
     [Authorize]
     public class HomeController : Controller
     {
-<<<<<<< HEAD
         public static string msg;
         public readonly HampadcoContext db;
         public readonly IWebHostEnvironment _env;
-=======
-        public readonly HampadcoContext db;
 
-        public readonly IWebHostEnvironment _env;
 
->>>>>>> 2004aa085f5ef91c897d10410507eaa515041f49
         public HomeController(HampadcoContext _db, IWebHostEnvironment env)
         {
             db = _db;
@@ -97,6 +89,23 @@ namespace hampadco.Controllers
 
         public IActionResult pazirande()
         {
+            //
+            var N = db.Tbl_Pazirandes.Where(a => a.Status == "0").Count();
+            ViewBag.A = N;
+
+            ///
+            var T = db.Tbl_Pazirandes.Where(a => a.Status == "1").Count();
+            ViewBag.B = T;
+
+            ///
+            ///
+            var R = db.Tbl_Pazirandes.Where(a => a.Status == "2").Count();
+            ViewBag.C = R;
+
+            ///
+            var K = db.Tbl_Pazirandes.Count();
+
+            ViewBag.koli = K;
             return View();
         }
 
@@ -107,8 +116,7 @@ namespace hampadco.Controllers
 
         public IActionResult support()
         {
-<<<<<<< HEAD
-            
+
          ViewBag.All=db.Tbl_Supports.Where(a=>a.User==User.Identity.GetId()).ToList();
           return View();
         }
@@ -125,13 +133,9 @@ namespace hampadco.Controllers
             db.SaveChanges();
             ViewBag.msg="تیکت با موفقیت ثبت شد";
             return View();
-        }
         
-=======
-            return View();
         }
 
->>>>>>> 2004aa085f5ef91c897d10410507eaa515041f49
         public IActionResult Learn()
         {
             return View();
@@ -139,13 +143,9 @@ namespace hampadco.Controllers
 
         public IActionResult Exit()
         {
-<<<<<<< HEAD
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "Login");
         } 
-=======
-            return View();
-        }
->>>>>>> 2004aa085f5ef91c897d10410507eaa515041f49
+
     }
 }
