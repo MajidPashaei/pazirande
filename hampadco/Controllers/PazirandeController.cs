@@ -8,16 +8,8 @@ using Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
-<<<<<<< HEAD
-
-using faraboom.Models;
-
-using System.Globalization;
-
-=======
 using faraboom.Models;
 using System.Globalization;
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
 
 namespace Namespace
 {
@@ -184,20 +176,10 @@ namespace Namespace
                     quser.Shomare_Shenasname = vp.Shomare_Shenasname;
                     quser.Name = vp.Name;
                     quser.Family = vp.Family;
-<<<<<<< HEAD
-
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
                     if (vp.tarikh_tavalod != null)
                     {
                         quser.Tarikh_Tavalod = vp.tarikh_tavalod.ToGeorgianDateTime();
                     }
-<<<<<<< HEAD
-                    quser.Tarikh_Tavalod =
-                        vp.tarikh_tavalod.ToGeorgianDateTime();
-
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
                     quser.Name_Pedar = vp.Name_Pedar;
                     quser.Jensiat = vp.Jensiat;
                     quser.Mobile = vp.Mobile;
@@ -211,13 +193,6 @@ namespace Namespace
                     {
                         quser.Tarikh_Tasis_sherkat = vp.tarikh_tasis_sherkat.ToGeorgianDateTime();
                     }
-
-<<<<<<< HEAD
-                    quser.Tarikh_Tasis_sherkat =
-                        vp.tarikh_tasis_sherkat.ToGeorgianDateTime();
-
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
                     quser.Name_EN_Sherkat = vp.Name_EN_Sherkat;
                     quser.Code_Egtesadi = vp.Code_Egtesadi;
                     quser.Name_Tejari = vp.Name_Tejari;
@@ -228,26 +203,12 @@ namespace Namespace
                     quser.Melyat = vp.Melyat;
                     quser.Code_Posti = vp.Code_Posti;
                     quser.TelePhone = vp.TelePhone;
-<<<<<<< HEAD
-
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
                     if (vp.tarikh_etbar != null)
                     {
                         quser.Tarikh_Etbar = vp.tarikh_etbar.ToGeorgianDateTime();
                     }
                     quser.Shenase_Onvan_Nemayandegi = vp.Shenase_Onvan_Nemayandegi;
                     quser.Shenase_Bazaryab_Nemayandegi = vp.Shenase_Bazaryab_Nemayandegi;
-<<<<<<< HEAD
-
-                    quser.Tarikh_Etbar = vp.tarikh_etbar.ToGeorgianDateTime();
-                    quser.Shenase_Onvan_Nemayandegi =
-                        vp.Shenase_Onvan_Nemayandegi;
-                    quser.Shenase_Bazaryab_Nemayandegi =
-                        vp.Shenase_Bazaryab_Nemayandegi;
-
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
                     quser.Shenase_Porojeh = vp.Shenase_Porojeh;
                     quser.Shenase_Switch = vp.Shenase_Switch;
                     quser.Shenase_Type_Dargah = vp.Shenase_Type_Dargah;
@@ -268,10 +229,6 @@ namespace Namespace
                     quser.Address_Latin = vp.Address_Latin;
                     quser.Shenase_Mahal_kasb = vp.Shenase_Mahal_kasb;
                     quser.Shomare_Javaz_kasb = vp.Shomare_Javaz_kasb;
-<<<<<<< HEAD
-
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
                     quser.Marja_Saderkonande_Mojavez = vp.Marja_Saderkonande_Mojavez;
                     if (vp.Tarikh_Sodor_Javaz != null)
                     {
@@ -286,20 +243,6 @@ namespace Namespace
                     {
                          quser.Tarikh_Etmam_Ejare = vp.Tarikh_Etmam_Ejare.ToGeorgianDateTime();
                     }
-
-<<<<<<< HEAD
-                    quser.Marja_Saderkonande_Mojavez =
-                        vp.Marja_Saderkonande_Mojavez;
-                    quser.Tarikh_Sodor_Javaz =
-                        vp.Tarikh_Sodor_Javaz.ToGeorgianDateTime();
-                    quser.Tarikh_Payan_Etebar =
-                        vp.Tarikh_Payan_Etebar.ToGeorgianDateTime();
-                    quser.Shomare_Garardad_Ejare = vp.Shomare_Garardad_Ejare;
-                    quser.Tarikh_Etmam_Ejare =
-                        vp.Tarikh_Etmam_Ejare.ToGeorgianDateTime();
-
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
                     quser.Code_Rahgiri = vp.Code_Rahgiri;
                     quser.Type_Garardad_Hesab = vp.Type_Garardad_Hesab;
                     quser.Shenase_Type_Vagozari = vp.Shenase_Type_Vagozari;
@@ -347,10 +290,7 @@ namespace Namespace
 
         public IActionResult Set_Pazirande(Vm_Pazirande vp)
         {
-<<<<<<< HEAD
 
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
             var quser = db.Tbl_PazirandeUsers.SingleOrDefault(a => a.National_Code == vp.Code_Meli);
                 Tbl_Pazirande tp = new Tbl_Pazirande();
                     tp.UserName = User.Identity.GetId();
@@ -424,15 +364,11 @@ namespace Namespace
                     tp.Shomare_Sanad = vp.Shomare_Sanad ;
                     tp.Mablag_Frosh = vp.Mablag_Frosh ;
                     tp.Moaref = vp.Moaref ;
-<<<<<<< HEAD
-                
-                db.Tbl_Pazirandes.Add (tp);
 
-                db.SaveChanges();
-=======
                     tp.Status="0";
-                db.Tbl_Pazirandes.Add(tp);                db.SaveChanges();
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
+                    tp.NameCreateUser=User.Identity.GetId();
+                db.Tbl_Pazirandes.Add(tp);
+                db.SaveChanges();
                 ViewBag.msg = "ثبت با موفقیت انجام شد . ";
             
             return View();

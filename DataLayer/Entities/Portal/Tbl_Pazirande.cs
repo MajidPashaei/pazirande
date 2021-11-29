@@ -9,7 +9,11 @@ namespace DataLayer.Entities.Portal
     public class Tbl_Pazirande
     {
         [Key]
+        
         public int Id { get; set; }
+        public string NameCreateUser { get; set; }
+        
+        
 
         public string Status { get; set; }
 
@@ -103,11 +107,7 @@ namespace DataLayer.Entities.Portal
         public string Onvan_Mahal_Kasb { get; set; }
 
         public string Onvan_Latin_Kasb { get; set; }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
         public string Shenase_Malekyat { get; set; }
         public string Address_Shaparaki { get; set; }
 

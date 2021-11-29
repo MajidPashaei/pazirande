@@ -1319,7 +1319,6 @@ e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\PersianDateTime.Core.dll
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Home\SetSupport.cshtml.g.cs
 >>>>>>> b48f9839fce176aaa213a6554d61bb251478391a
 >>>>>>> 2004aa085f5ef91c897d10410507eaa515041f49
-<<<<<<< HEAD
 d:\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.dll
 d:\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.pdb
 d:\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.csproj.AssemblyReference.cache
@@ -1764,7 +1763,6 @@ d:\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.RazorTargetAssemblyInfo.c
 d:\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.Views.pdb
 d:\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.csproj.CopyComplete
 d:\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.genruntimeconfig.cache
-=======
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\ViewDetails.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\ViewDetailsRad.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\GoEdit.cshtml.g.cs

@@ -1,36 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "d:\\pazirande\\hampadco\\hampadco.csproj": {}
+    "e:\\Hampadco-master\\hampadco\\hampadco.csproj": {}
   },
   "projects": {
-    "d:\\pazirande\\DataLayer\\DataLayer.csproj": {
+    "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "d:\\pazirande\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\nikatak-4\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande\\DataLayer\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nikatak-4\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,7 +35,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -78,43 +70,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\pazirande\\hampadco\\hampadco.csproj": {
+    "e:\\Hampadco-master\\hampadco\\hampadco.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande\\hampadco\\hampadco.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\hampadco\\hampadco.csproj",
         "projectName": "hampadco",
-        "projectPath": "d:\\pazirande\\hampadco\\hampadco.csproj",
-        "packagesPath": "C:\\Users\\nikatak-4\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande\\hampadco\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\hampadco\\hampadco.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\hampadco\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nikatak-4\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "d:\\pazirande\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "d:\\pazirande\\DataLayer\\DataLayer.csproj"
+              "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
               },
-              "d:\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj": {
-                "projectPath": "d:\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj"
+              "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj"
               }
             }
           }
@@ -127,7 +112,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -168,40 +152,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj": {
+    "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
         "projectName": "ViewModelLayer",
-        "projectPath": "d:\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
-        "packagesPath": "C:\\Users\\nikatak-4\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande\\ViewModelLayer\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\ViewModelLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nikatak-4\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "d:\\pazirande\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "d:\\pazirande\\DataLayer\\DataLayer.csproj"
+              "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -214,7 +191,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -236,7 +212,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
         }
       }
     }

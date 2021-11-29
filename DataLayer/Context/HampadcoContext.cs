@@ -15,6 +15,7 @@ namespace DataLayer.Context
         public DbSet<Tbl_PazirandeUser> Tbl_PazirandeUsers { get; set; }
         public DbSet<Tbl_Pazirande> Tbl_Pazirandes { get; set; }
         public DbSet<Tbl_Support> Tbl_Supports {get; set;}
+        public DbSet<Tbl_ClassCodes> Tbl_ClassCodess {get; set;}
     }
     public class ToDoContextFactory : IDesignTimeDbContextFactory<HampadcoContext>
     {

@@ -127,7 +127,7 @@ namespace hampadco.Controllers
                 db.SaveChanges();
 
                 var api = new KavenegarApi("3871353043697339486A70384F544A4A574C74612B51432F4C7A4B305076645457396F5267456F7A5A34383D");
-                api.VerifyLookup(vu.Phone, RandNum, "nikatakjob");
+                api.VerifyLookup(quser.Phone, RandNum, "nikatakjob");
 
                 return View();
             }
