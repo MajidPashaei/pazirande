@@ -49,20 +49,20 @@ namespace hampadco.Controllers
 
 
             //
-            var N = db.Tbl_Pazirandes.Where(a => a.Status == "0" && a.NameCreateUser==User.Identity.GetId()).Count();
+            var N = db.Tbl_Pazirandes.Where(a => a.Status == "0" && a.UserName==User.Identity.GetId()).Count();
             ViewBag.A = N;
 
             ///
-            var T = db.Tbl_Pazirandes.Where(a => a.Status == "1" && a.NameCreateUser==User.Identity.GetId()).Count();
+            var T = db.Tbl_Pazirandes.Where(a => a.Status == "1" && a.UserName==User.Identity.GetId()).Count();
             ViewBag.B = T;
 
             ///
             ///
-            var R = db.Tbl_Pazirandes.Where(a => a.Status == "2" && a.NameCreateUser==User.Identity.GetId()).Count();
+            var R = db.Tbl_Pazirandes.Where(a => a.Status == "2" && a.UserName==User.Identity.GetId()).Count();
             ViewBag.C = R;
 
             ///
-            var K = db.Tbl_Pazirandes.Count();
+            var K = db.Tbl_Pazirandes.Where(a=>a.UserName==User.Identity.GetId()).Count();
 
             ViewBag.koli = K;
 
@@ -131,8 +131,6 @@ namespace hampadco.Controllers
             return View();
 
         }
-
-
         public IActionResult Learn()
         {
             return View();
