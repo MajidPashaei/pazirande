@@ -39,7 +39,36 @@ namespace Namespace
         {
             return View();
         }
+         //فراموشی رمز
+        [HttpGet]
+        public IActionResult Forgotpassword()
+        { 
+        
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Forgotpassword (Vm_User pass)
+        {
+            var user = db.Tbl_Users.Where(a => a.UserName == User.Identity.GetId()).SingleOrDefault();
+            if (user.Password != pass.Code)
+            {
+                ViewBag.massage = "رمز عبور قبلی نادرست است .";
+            }
+            else if (pass.Password != pass.RCode)
+            {
+                ViewBag.massage = "رمز های ورودی جدید مطابقت ندارند .";
+            }
+            else
+            {
+                user.Password = pass.Password;
+                db.Tbl_Users.Update(user);
+                db.SaveChanges();
+                
+                ViewBag.massage1 = " رمزعبور با موفقیت تغییر یافت .";
+            }
 
+            return View();
+        }
         public IActionResult NewUser()
         {
             return View();
@@ -115,7 +144,7 @@ namespace Namespace
         ///ثبت شده های جدید
         public IActionResult NewRegistered()
         {
-            ViewBag.All = db.Tbl_Pazirandes.ToList();
+            ViewBag.All = db.Tbl_Pazirandes.Where(a=>a.Status=="0").ToList();
             return View();
         }
 

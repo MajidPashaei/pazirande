@@ -53,6 +53,7 @@
                                 <th>کد ملی</th>
                                 <th>نوع مشتری</th>
                                 <th>تبعه</th>
+                                <th>عملیات</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,6 +80,9 @@
                                         </td>
                                         <td>
                                             <p class="text-muted">@item.Customer_National</p>
+                                        </td>
+                                        <td>
+                                            <a href="/admin/home/Detail/@item.National_Code" class="btn btn-warning">جزئیات</a>
                                         </td>
                                     </tr>
                                 }

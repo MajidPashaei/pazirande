@@ -14637,6 +14637,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Forgotpassword.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Forgotpassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Wait.cshtml",
       "TargetPath": "Views\\Pazirande\\Wait.cshtml",
       "FileKind": "mvc"
@@ -14659,6 +14664,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\SetUser.cshtml",
       "TargetPath": "Views\\Account\\SetUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\Forgotpassword.cshtml",
+      "TargetPath": "Views\\Home\\Forgotpassword.cshtml",
       "FileKind": "mvc"
     },
     {
