@@ -87,20 +87,20 @@ namespace hampadco.Controllers
         public IActionResult pazirande()
         {
             //
-            var N = db.Tbl_Pazirandes.Where(a => a.Status == "0").Count();
+            var N = db.Tbl_Pazirandes.Where(a => a.Status == "0" && a.UserName==User.Identity.GetId()).Count();
             ViewBag.A = N;
 
             ///
-            var T = db.Tbl_Pazirandes.Where(a => a.Status == "1").Count();
+            var T = db.Tbl_Pazirandes.Where(a => a.Status == "1" && a.UserName==User.Identity.GetId()).Count();
             ViewBag.B = T;
 
             ///
             ///
-            var R = db.Tbl_Pazirandes.Where(a => a.Status == "2").Count();
+            var R = db.Tbl_Pazirandes.Where(a => a.Status == "2" && a.UserName==User.Identity.GetId()).Count();
             ViewBag.C = R;
 
             ///
-            var K = db.Tbl_Pazirandes.Count();
+            var K = db.Tbl_Pazirandes.Count( a => a.UserName==User.Identity.GetId());
 
             ViewBag.koli = K;
             return View();

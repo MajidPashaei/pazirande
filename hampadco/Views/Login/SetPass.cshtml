@@ -1,5 +1,6 @@
+@model ViewModelLayer.Portal.Vm_User;
 @{
-    ViewData["Title"] = "SetPass";
+    ViewData["Title"] = "ورود به حساب کاربری";
     Layout= null;
 }
 <!DOCTYPE html>
@@ -7,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>بازیابی رمز عبور</title>
+    <title>ورود به حساب کاربری</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="/font/iconsmind-s/css/iconsminds.css" />
@@ -17,9 +18,6 @@
     <link rel="stylesheet" href="/css/vendor/bootstrap-float-label.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/Css/dore.light.bluenavy.min.css" />
-
-    @model ViewModelLayer.Portal.Vm_User;
-
 </head>
 
 <body class="background show-spinner no-footer">
@@ -28,19 +26,21 @@
         <div class="container">
             <div class="row h-100">
                 <div class="col-12 col-md-10 mx-auto my-auto">
-                    <div class="card auth-card">
-                        <div class="position-relative image-side ">
-                            <p class=" text-white h2">جادوی کارِ ما توی جزئیاتشه</p>
-                            <p class="white mb-0">
-                                از ایمیلت میتونی برای پیداکردن رمز عبورت استفاده کنی
-                                <br>
-                                اگه حساب کاربری نداری نگران نباش، از <a class="white" href="Pages.Auth.Register.html">اینجا</a>
-                                میتونی تو سایت اسمتو بویسی
-                            </p>
+                    <div class="card auth-card ">
+                        <div class="col-4">
+                            <img src="~/img/login/logo png high quality.png" class="col-12 pt-3 " alt="">
                         </div>
-                        <div class="form-side">
+                        @* <div class="position-relative image-side ">
+
+                            <p class=" text-white h2"> پرتابل پذریندگان  </p>
+
+                            <p class="white mb-0">
+                                برای ورود به سیستم نام کاربری و رمز خود را وارد کنید
+                            </p>
+                        </div> *@
+                        <div class="form-side col-8">
                             <a href="Dashboard.Default.html">
-                                <span class="logo-single"></span>
+                                @* <img style="width: 100px; height: 100px; margin-right: 10px; margin-bottom: 10px;" src="~/img/login/logo png high quality.png" alt=""> *@
                             </a>
                             @if ( ViewBag.Ok != null )
                             {

@@ -1771,3 +1771,5 @@ e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Login\CheekPassw
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Login\CheekRCode.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Login\SetPass.cshtml.g.cs
 >>>>>>> 5a30f2e4957e08ebd1ecafd1a519d8e513925c8e
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Account\EditUser.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_layout_footer.cshtml.g.cs

@@ -2,6 +2,7 @@
     ViewData["Title"] = "کارتابل شخصی";
 }
 
+@model ViewModelLayer.Portal.VM_Support;
 <main>
         <div class="container-fluid">
             <div class="row">
@@ -51,7 +52,7 @@
                                         <a href="/Account/EditAccount" class="card">
                                             <div class="card-body text-center">
                                                 <i class="iconsminds-male mr-2 text-grey align-text-bottom d-inline-block"></i>
-                                                <p class="card-text mb-0">ویراش کاربر</p>
+                                                <p class="card-text mb-0">تغییر پسورد</p>
                                         
                                             </div>
                                         </a>
@@ -73,40 +74,39 @@
                                 <div class="card-body">
                                     <h5 class="card-title">ارتباط با پشتیبانی</h5>
                                     <div class="dashboard-quick-post">
-                                        <form>
-                                            <div class="form-group row">
-                                                <label class="col-sm-3 col-form-label">عنوان</label>
-                                                <div class="col-sm-9">
-                                                    <input type="email" class="form-control" placeholder="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-sm-3 col-form-label">محتوا</label>
-                                                <div class="col-sm-9">
-                                                    <textarea class="form-control" rows="3"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-sm-3 col-form-label">مجموعه</label>
-                                                <div class="col-sm-9">
-                                                    <label class="w-100">
-                                                        <select class="form-control select2-single" data-width="100%">
-                                                            <option label="&nbsp;">&nbsp;</option>
-                                                            <option>فنی</option>
-                                                            <option>مدیریت</option>
-                                                            <option>بازرگانی</option>
-                                                        </select>
-                                                    </label>
-                                                </div>
-                                            </div>
+                                         <form action="/Home/SetSupport" method="post">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">عنوان</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" asp-for="Title" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">محتوا</label>
+                                    <div class="col-sm-9">
+                                        <textarea class="form-control" asp-for="Description" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">مجموعه</label>
+                                    <div class="col-sm-9">
+                                        <label class="w-100">
+                                            <select asp-for="To" class="form-control select2-single" data-width="100%">
+                                                <option label="&nbsp;">&nbsp;</option>
+                                                <option>فنی</option>
+                                                <option>مدیریت</option>
+                                                <option>بازرگانی</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
 
-                                            <div class="form-group row mb-0">
-                                                <div class="col-sm-12">
-                                                    <button type="submit"
-                                                        class="btn btn-primary float-right">ارسال</button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                <div class="form-group row mb-0">
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn btn-primary float-right">ارسال</button>
+                                    </div>
+                                </div>
+                            </form>
                                     </div>
                                 </div>
                             </div>
@@ -165,7 +165,7 @@
   
         
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <a href="/Pazirande/New">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
@@ -184,7 +184,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <a href="/Pazirande/all">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
@@ -203,7 +203,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4">
+            @* <div class="col-lg-4">
                 <a href="/Pazirande/Edit">
                     <div class="card mb-4 progress-banner">
                         <div class="card-body justify-content-between d-flex flex-row align-items-center">
@@ -221,7 +221,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> *@
         </div>
 
 

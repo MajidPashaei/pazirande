@@ -89,7 +89,10 @@ namespace Namespace
                     tpu.Address = vpu.Address ;
                     tpu.Birth_Place = vpu.Birth_Place ;
                     tpu.Email = vpu.Email ;
-                    tpu.BirthDay = vpu.birthday.ToGeorgianDateTime() ;
+                    if (vpu.birthday != null)
+                    {
+                        tpu.BirthDay = vpu.birthday.ToGeorgianDateTime() ;
+                    }
                     tpu.Mobile = vpu.Mobile ;
                     tpu.Phone = vpu.Phone ;
                     tpu.Phone_Code = vpu.Phone_Code ;
@@ -277,9 +280,127 @@ namespace Namespace
 
             return View();
         }
-        public IActionResult EditUser( Vm_PazirandeUser vpu)
+
+        [HttpGet]
+        public IActionResult EditUser( int id )
         {
-            return View();
+            var quser = db.Tbl_PazirandeUsers.SingleOrDefault( a => a.Id == id );
+
+            Vm_PazirandeUser vp = new Vm_PazirandeUser();
+
+            vp.Id = quser.Id ;
+            vp.Name_fa = quser.Name_fa ;
+            vp.Name_en = quser.Name_en ;
+            vp.Family_fa = quser.Family_fa ;
+            vp.Family_en = quser.Family_en ;
+            vp.FatherName_fa = quser.FatherName_fa ;
+            vp.FatherName_en = quser.FatherName_en ;
+            vp.Gender = quser.Gender ;
+            vp.National_Code = quser.National_Code ;
+            vp.Certificate_Code = quser.Certificate_Code ;
+            vp.Certificate_Serial = quser.Certificate_Serial ;
+            vp.Certificate_NumSerial = quser.Certificate_NumSerial ;
+            vp.Certificate_Letters  = quser.Certificate_Letters  ;
+            vp.Education = quser.Education ;
+            vp.Address = quser.Address ;
+            vp.Birth_Place = quser.Birth_Place ;
+            vp.Email = quser.Email ;
+            if ( quser.BirthDay != null )
+            {
+                vp.birthday = quser.BirthDay.ToPersianDateString() ;
+            }
+            vp.Mobile = quser.Mobile ;
+            vp.Phone = quser.Phone ;
+            vp.Phone_Code = quser.Phone_Code ;
+            vp.State = quser.State ;
+            vp.City = quser.City ;
+            vp.Post = quser.Post ;
+            vp.Company_Id = quser.Company_Id ;
+            if ( quser.Establishing_Date != null )
+            {
+                vp.establishing_date = quser.Establishing_Date.ToPersianDateString() ;
+            }
+            vp.CompanyName_fa = quser.CompanyName_fa ;
+            vp.CompanyName_en = quser.CompanyName_en ;
+            vp.Brand_Name = quser.Brand_Name ;
+            vp.Company_Registration = quser.Company_Registration ;
+            vp.Economic_Code = quser.Economic_Code ;
+            vp.Comprehensive_Code = quser.Comprehensive_Code ;
+            vp.Passport_Code = quser.Passport_Code ;
+            if ( quser.Passport_Validity != null )
+            {
+                vp.passport_validity = quser.Passport_Validity.ToPersianDateString() ;
+            }
+            vp.Nationality = quser.Nationality ;
+
+            ViewBag.user = db.Tbl_PazirandeUsers.Where( a => a.Id == id ).ToList();
+
+            return View(vp);
+        }
+        [HttpPost]
+        public IActionResult EditUser( Vm_PazirandeUser vpu )
+        {
+            var quser = db.Tbl_PazirandeUsers.SingleOrDefault( a => a.Id == vpu.Id );
+
+            try
+            {
+                quser.Name_fa = vpu.Name_fa ;
+                quser.Name_en = vpu.Name_en ;
+                quser.Family_fa = vpu.Family_fa ;
+                quser.Family_en = vpu.Family_en ;
+                quser.FatherName_fa = vpu.FatherName_fa ;
+                quser.FatherName_en = vpu.FatherName_en ;
+                quser.Gender = vpu.Gender ;
+                quser.National_Code = vpu.National_Code ;
+                quser.Certificate_Code = vpu.Certificate_Code ;
+                quser.Certificate_Serial = vpu.Certificate_Serial ;
+                quser.Certificate_NumSerial = vpu.Certificate_NumSerial ;
+                quser.Certificate_Letters  = vpu.Certificate_Letters  ;
+                quser.Education = vpu.Education ;
+                quser.Address = vpu.Address ;
+                quser.Birth_Place = vpu.Birth_Place ;
+                quser.Email = vpu.Email ;
+                // if ( vpu.BirthDay != null )
+                // {
+                //     quser.BirthDay = vpu.birthday.ToGeorgianDateTime() ;
+                // }
+                quser.Mobile = vpu.Mobile ;
+                quser.Phone = vpu.Phone ;
+                quser.Phone_Code = vpu.Phone_Code ;
+                quser.State = vpu.State ;
+                quser.City = vpu.City ;
+                quser.Post = vpu.Post ;
+                quser.Company_Id = vpu.Company_Id ;
+                // if ( vpu.Establishing_Date != null )
+                // {
+                //     quser.Establishing_Date = vpu.establishing_date.ToGeorgianDateTime() ;
+                // }
+                quser.CompanyName_fa = vpu.CompanyName_fa ;
+                quser.CompanyName_en = vpu.CompanyName_en ;
+                quser.Brand_Name = vpu.Brand_Name ;
+                quser.Company_Registration = vpu.Company_Registration ;
+                quser.Economic_Code = vpu.Economic_Code ;
+                quser.Comprehensive_Code = vpu.Comprehensive_Code ;
+                quser.Passport_Code = vpu.Passport_Code ;
+                // if ( vpu.Passport_Validity != null )
+                // {
+                //     quser.Passport_Validity = vpu.passport_validity.ToGeorgianDateTime() ;
+                // }
+                quser.Nationality = quser.Nationality ;
+
+                db.Tbl_PazirandeUsers.Update(quser);
+                db.SaveChanges();
+                
+                ViewBag.ok = " ویرایش با موفقیت انجام شد . "  ;
+            }
+            catch (System.Exception ex)
+            {
+                ViewBag.ex = ex ;
+                ViewBag.er = " خطا در ویرایش . " ;
+            }
+
+
+            return View(vpu);
         }
     }
 }
