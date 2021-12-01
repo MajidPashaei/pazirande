@@ -16,7 +16,7 @@
                         <li class="breadcrumb-item">
                             <a href="#">صفحه اصلی</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">ثبت کاربر ایرانی حقیقی</li>
+                        <li class="breadcrumb-item active" aria-current="page"> ویرایش کاربر </li>
                     </ol>
                 </nav>
                 <div class="separator mb-5"></div>
@@ -51,9 +51,9 @@
                         {
                             foreach (var item in ViewBag.user)
                             {
+                                <input class="d-done" asp-for="Id" value="@item.Id" style="display: none !important;">
                                 @if ( item.Customer_Type == "حقیقی" )
                                 {
-                                    <input class="d-done" asp-for="Id" style="display: none !important;">
                                     <b class="text-secondary"> اطلاعات شخص حقیقی درخواست کننده : </b>
                                     <div class="form-row mt-2">
                                         <div class="form-group col-md-3">
@@ -114,7 +114,7 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-1">
                                             <label for="inputPassword4">محل تولد</label>
-                                            <input required type="text" class="form-control" asp-for="Birth_Place" 
+                                            <input required type="text" class="form-control"   asp-for="Birth_Place" 
                                                 placeholder="محل تولد">
                                         </div>
                                         <div class="form-group col-md-2">
@@ -220,10 +220,10 @@
                                                 placeholder="نام پدر">
                                         </div>
                                     </div>
+                                    <button type="submit" class="btn btn-primary  mt-3">ثبت</button>
                                 }
                                 else if ( item.Customer_Type == "حقوقی" )
                                 {
-                                    <input class="d-done" asp-for="Id">
                                     <b class="text-secondary"> اطلاعات شخص حقوقی درخواست کننده : </b>
                                     <div class="form-row mt-2">
                                         <div class="form-group col-md-3">
@@ -388,6 +388,7 @@
                                                 placeholder="نام پدر">
                                         </div>
                                     </div>
+                                    <button type="submit" class="btn btn-primary  mt-3">ثبت</button>
                                 }
                                 else
                                 {
@@ -395,10 +396,9 @@
                                 }
                             }
                         }
-                            <a href="/Account/NewAccount" class="btn btn-success  mt-3 " style="width: min-content;">
-				                بازگشت
-			                </a>
-                            <button type="submit" class="btn btn-primary  mt-3">ثبت</button>
+                        <a href="/home/users" class="btn btn-success  mt-3 " style="width: min-content;">
+                            بازگشت
+                        </a>
                         </form>
                     </div>
                 </div>

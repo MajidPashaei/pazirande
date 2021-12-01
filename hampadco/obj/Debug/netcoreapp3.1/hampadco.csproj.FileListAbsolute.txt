@@ -1315,7 +1315,6 @@ c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\View
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\ViewDetailsRad.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetails.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetailsRad.cshtml.g.cs
-e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\PersianDateTime.Core.dll
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Home\SetSupport.cshtml.g.cs
 >>>>>>> b48f9839fce176aaa213a6554d61bb251478391a
 >>>>>>> 2004aa085f5ef91c897d10410507eaa515041f49

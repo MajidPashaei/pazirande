@@ -144,7 +144,7 @@
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">شهرستان</label>
-                                                    <input type="text" class="form-control" asp-for="Code_Shaparaki_shahr">
+                                                    <input type="text" class="form-control" asp-for="Mantage_Shahri">
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">منطقه شهری</label>
@@ -540,7 +540,11 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">نوع مالکیت </label>
-                                                <input   class="form-control" asp-for="Shenase_Malekyat" >
+                                                <select required class="form-control" asp-for="Shenase_Malekyat" >
+                                                    <option></option>
+                                                    <option value="1361">شخصی</option>
+                                                    <option value="1362">استیجاری</option>
+                                                </select>
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">ادرس لاتین</label>
@@ -548,7 +552,11 @@
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">نوع محل کسب</label>
-                                                <input   class="form-control" asp-for="Shenase_Mahal_kasb" >
+                                                <select required class="form-control" asp-for="Shenase_Mahal_kasb" >
+                                                    <option></option>
+                                                    <option value="1359">تجاری</option>
+                                                    <option value="1360">مسکونی</option>
+                                                </select>
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">شماره جواز کسب</label>
@@ -590,7 +598,13 @@
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">نوع واگذاری دستگاه</label>
-                                                <input   class="form-control" asp-for="Shenase_Type_Vagozari" >
+                                                <select required class="form-control" asp-for="Shenase_Type_Vagozari" >
+                                                    <option></option>
+                                                    <option value="3412">قسطی</option>
+                                                    <option value="4624">امانی بدون ودیعه</option>
+                                                    <option value="4625">امانی با اخذ ودیعه</option>
+                                                    <option value="4626">قطعی (فروش)</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <hr>

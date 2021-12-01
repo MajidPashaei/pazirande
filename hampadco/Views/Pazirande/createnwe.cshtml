@@ -152,7 +152,6 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">تاریخ تولد </label>
-                                                    @* @{ string birthday = item.BirthDay.ToPersianDateString();} *@
                                                     <input required type="text" class="form-control" value="@item.BirthDay" asp-for="Tarikh_Tavalod" disabled>
                                                 </div>
                                                 <div class="form-group col-md-3">
@@ -244,7 +243,7 @@
                                             </div>
                                             <hr>
                                         }
-                                        else if (item.Customer_Type == "حقیقی" && item.Customer_National == "غیر ایرانی")
+                                        @* else if (item.Customer_Type == "حقیقی" && item.Customer_National == "غیر ایرانی")
                                         {
 		    				                <input class="d-none" asp-for="Code_Meli"  value="@item.National_Code">
 		    				                <input class="d-none" asp-for="Pazirande_Atba" value="1">
@@ -340,8 +339,8 @@
                                                 </div>
                                             </div>
                                             <hr>
-                                        }
-                                        else if (item.Customer_Type == "حقوقی" && item.Customer_National == "غیر ایرانی")
+                                        } *@
+                                        @* else if (item.Customer_Type == "حقوقی" && item.Customer_National == "غیر ایرانی")
                                         {
 		    				                <input class="d-none" asp-for="Code_Meli"  value="@item.National_Code">
 		    				                <input class="d-none" asp-for="Pazirande_Atba" value="1">
@@ -473,7 +472,7 @@
                                                 </div>
                                             </div>
                                             <hr>
-                                        }
+                                        } *@
 
                                         <div class="form-row">
                                             <div class="form-group col-md-3">

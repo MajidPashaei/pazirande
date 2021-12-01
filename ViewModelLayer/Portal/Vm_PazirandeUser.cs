@@ -7,6 +7,21 @@ namespace ViewModelLayer.Portal
     public class Vm_PazirandeUser
     {
         public int Id { get; set; }
+        public string Document_Garadad { get; set; }
+
+        public IFormFile Garadad_Image { get; set; }
+
+        public string Document_Esteshhad { get; set; }
+
+        public IFormFile Esteshhad_Image { get; set; }
+
+        public string Document_Soratjalase { get; set; }
+
+        public IFormFile Soratjalase_Image { get; set; }
+
+        public string Document_Masdig { get; set; }
+
+        public IFormFile Masdig_Image { get; set; }
         public string User_Name { get; set; }
         public string Customer_Number { get; set; }
         public string Customer_Group { get; set; }

@@ -10,6 +10,13 @@ namespace DataLayer.Entities.Portal
     {
         [Key]
         public int Id { get; set; }
+         public string Document_Garadad { get; set; }
+
+        public string Document_Esteshhad { get; set; }
+
+        public string Document_Soratjalase { get; set; }
+
+        public string Document_Masdig { get; set; }
         public string User_Name { get; set; }
         public string Customer_Number { get; set; }
         public string Customer_Group { get; set; }
