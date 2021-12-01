@@ -24,8 +24,6 @@ namespace hampadco.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-
-  
         public static string msg;
         public readonly HampadcoContext db;
         public readonly IWebHostEnvironment _env;
@@ -164,12 +162,6 @@ namespace hampadco.Controllers
         public IActionResult Learn()
         {
             return View();
-        }
-
-        public IActionResult Exit()
-        {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Login", "Login");
         }
 
 

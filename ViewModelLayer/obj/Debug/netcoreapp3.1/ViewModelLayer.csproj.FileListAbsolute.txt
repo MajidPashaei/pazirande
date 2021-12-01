@@ -48,3 +48,15 @@ d:\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.AssemblyInfoI
 d:\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.AssemblyInfo.cs
 d:\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CoreCompileInputs.cache
 d:\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CopyComplete
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.deps.json
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.dll
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\ViewModelLayer.pdb
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.AssemblyReference.cache
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.AssemblyInfoInputs.cache
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.AssemblyInfo.cs
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.csproj.CoreCompileInputs.cache
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.dll
+d:\nikatak\pazirande git\pazirande\ViewModelLayer\obj\Debug\netcoreapp3.1\ViewModelLayer.pdb
