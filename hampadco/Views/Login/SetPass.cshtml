@@ -47,16 +47,19 @@
                                 <p class="alert alert-success text-center">
                                     @ViewBag.Ok
                                 </p>
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <a class="btn btn-primary btn-lg btn-shadow" href="/Login/Exit" type="submit">ورود</a>
+                                </div>
                             }
                             @if ( ViewBag.Er != null )
                             {
                                 <p class="alert alert-danger text-center">
                                     @ViewBag.Er
                                 </p>
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <a class="btn btn-primary btn-lg btn-shadow" href="/Login/forgetpassword" type="submit">ورود</a>
+                                </div>
                             }
-                            <div class="d-flex justify-content-end align-items-center">
-                                <a class="btn btn-primary btn-lg btn-shadow" href="/Login/Login" type="submit">ورود</a>
-                            </div>
                         </div>
                     </div>
                 </div>

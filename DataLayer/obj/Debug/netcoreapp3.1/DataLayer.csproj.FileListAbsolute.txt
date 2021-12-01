@@ -47,3 +47,16 @@ d:\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
 d:\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
 d:\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
 d:\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+d:\nikatak\pazirande git\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\nikatak\pazirande git\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\nikatak\pazirande git\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\nikatak\pazirande git\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\nikatak\pazirande git\pazirande\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\nikatak\pazirande git\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+d:\nikatak\pazirande git\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+d:\nikatak\pazirande git\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\nikatak\pazirande git\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\nikatak\pazirande git\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\nikatak\pazirande git\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\nikatak\pazirande git\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\nikatak\pazirande git\pazirande\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache

@@ -69,10 +69,6 @@ namespace Namespace
 
             return View();
         }
-        public IActionResult NewUser()
-        {
-            return View();
-        }
 
         public IActionResult Disapproval(int id)
         {
@@ -155,8 +151,13 @@ namespace Namespace
             ViewBag.Pazirande = s;
             return View();
         }
-
-        public IActionResult AddUser(Vm_User user)
+        [HttpGet]
+        public IActionResult NewUser()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult NewUser(Vm_User user)
         {
             if (db.Tbl_Users.Any(a => a.NationalCode == user.NationalCode))
             {
@@ -164,19 +165,26 @@ namespace Namespace
                 return View();
             }
 
-            if (db.Tbl_Users.Any(a => a.Code == user.Code))
+            else if (db.Tbl_Users.Any(a => a.Code == user.Code))
             {
                 ViewBag.Msg = "کاربر با کد نمایندگی وارد شده موجود میباشد";
                 return View();
             }
 
-            if (db.Tbl_Users.Any(a => a.UserName == user.UserName))
+            else if (db.Tbl_Users.Any(a => a.UserName == user.UserName))
             {
                 ViewBag.Msg = "کاربر با نام کاربری  وارد شده موجود میباشد";
                 return View();
             }
-            Tbl_User users =
-                new Tbl_User()
+
+            else if (db.Tbl_Users.Any(a => a.Phone == user.Phone))
+            {
+                ViewBag.Msg = "کاربر با نام کاربری  وارد شده موجود میباشد";
+                return View();
+            }
+            else
+            {
+                Tbl_User users = new Tbl_User()
                 {
                     Name = user.Name,
                     Family = user.Family,
@@ -188,9 +196,11 @@ namespace Namespace
                     UserName = user.UserName,
                     Password = user.Password
                 };
-            db.Tbl_Users.Add (users);
-            db.SaveChanges();
-            ViewBag.Msg = "کاربر با کد ملی وارد شده با موفقیت ثبت شد";
+                db.Tbl_Users.Add(users);
+                db.SaveChanges();
+
+                ViewBag.ok = "کاربر با کد ملی وارد شده با موفقیت ثبت شد";
+            }
             return View();
         }
 
