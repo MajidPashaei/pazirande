@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h1>محتوا</h1>
+                
                 <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
                     <ol class="breadcrumb pt-0">
                         <li class="breadcrumb-item">
@@ -22,14 +22,14 @@
             </div>
         </div>
               @if (ViewBag.msg != null)
-  {
-      <span class="alert alert-success">@ViewBag.msg</span>
-  }
-  
-         @if (ViewBag.msg != null)
-  {
-      <span class="alert alert-success">@ViewBag.msg</span>
-  }
+                {
+                    <span class="alert alert-success">@ViewBag.msg</span>
+                }
+
+            @if (ViewBag.msg != null)
+                {
+                    <span class="alert alert-success">@ViewBag.msg</span>
+                }
   
         @if(ViewBag.msg != null)
         {
@@ -134,9 +134,9 @@
                                             </div>
                                             <hr>
                                         }
-                                        else if (item. Type_Moshtari == "حقوقی" && item.Pazirande_Atba == " 0")
+                                        else if (item.Type_Moshtari == "حقوقی" && item.Pazirande_Atba == false )
                                         {
-		    				                <input class="d-none"  value="@item.Code_Meli"  value="@item.National_Code">
+		    				                <input class="d-none"  value="@item.Code_Meli"  value="@item.Code_Meli">
 		    				                <input class="d-none"  value="@item.Pazirande_Atba" value= false>
                                             
                                             <div class="form-row">
@@ -235,7 +235,7 @@
                                                 <div class="form-group col-md-3">
                                                     <label for="inputPassword4">تاریخ تاسیس شرکت</label>
                                                     <input   type="text" class="form-control"  
-                                                        placeholder="تاریخ تاسیس شرکت (1378/10/01)"  value="@item.Tarikh_Tasis_Sherkat" disabled>
+                                                        placeholder="تاریخ تاسیس شرکت (1378/10/01)"  value="@item.Tarikh_Tasis_sherkat" disabled>
                                                 </div>
                                             </div>
                                             <hr>   

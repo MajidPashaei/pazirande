@@ -292,12 +292,12 @@ namespace Namespace
             return View();
         }
 
-        public IActionResult GoToEditAccount(Vm_PazirandeUser l)
+        public IActionResult GoToEditAccount(string l)
         {
             var c =
                 db
                     .Tbl_PazirandeUsers
-                    .Where(a => a.National_Code == l.National_Code)
+                    .Where(a => a.National_Code == l)
                     .SingleOrDefault();
             if (c != null)
             {

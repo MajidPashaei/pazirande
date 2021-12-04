@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj": {}
+    "e:\\Hampadco-master\\hampadco\\hampadco.csproj": {}
   },
   "projects": {
-    "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj": {
+    "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande git\\pazirande\\DataLayer\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -24,7 +24,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -36,7 +35,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -67,40 +65,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj": {
+    "e:\\Hampadco-master\\hampadco\\hampadco.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\hampadco\\hampadco.csproj",
         "projectName": "hampadco",
-        "projectPath": "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj",
-        "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande git\\pazirande\\hampadco\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\hampadco\\hampadco.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\hampadco\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -110,13 +94,12 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj"
+              "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
               },
-              "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj": {
-                "projectPath": "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj"
+              "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj"
               }
             }
           }
@@ -129,7 +112,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -158,24 +140,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.20, 3.1.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -184,21 +148,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj": {
+    "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
         "projectName": "ViewModelLayer",
-        "projectPath": "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
-        "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande git\\pazirande\\ViewModelLayer\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\ViewModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -208,10 +172,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj"
+              "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -224,7 +187,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -241,26 +203,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
         }
       }
     }
