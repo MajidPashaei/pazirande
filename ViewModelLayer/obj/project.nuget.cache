@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xijL42PqgSyK8BYkeK7CdtFffIVeFjerDKUINi+AZksY7x5shYmGmHAu0BkFxkjk0AnGnaLTlKLEVkgft7Pq7A==",
+  "dgSpecHash": "Mn7vHqQf4Pq05Wf0kGg+OmRb3Lz/gYgWDxmCeC34Hzacf/kYG2Y4ECgVjVbdLL3Mz+ZoWzOEvf2FcQVmrWZiFQ==",
   "success": true,
   "projectFilePath": "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
   "expectedPackageFiles": [
@@ -109,10 +109,7 @@
     "C:\\Users\\msi\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\msi\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\msi\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\msi\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\msi\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\msi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\msi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\msi\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
