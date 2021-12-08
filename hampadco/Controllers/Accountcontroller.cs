@@ -103,6 +103,8 @@ namespace Namespace
                     if (vpu.establishing_date != null)
                     {
                         tpu.Establishing_Date = vpu.establishing_date.ToGeorgianDateTime() ;
+                    }else{
+                       tpu.Establishing_Date =DateTime.Now; 
                     }
                     tpu.CompanyName_fa = vpu.CompanyName_fa ;
                     tpu.CompanyName_en = vpu.CompanyName_en ;
@@ -114,6 +116,8 @@ namespace Namespace
                     if (vpu.passport_validity != null)
                     {
                         tpu.Passport_Validity = vpu.passport_validity.ToGeorgianDateTime() ;
+                    }else{
+                      tpu.Passport_Validity =DateTime.Now; 
                     }
                     tpu.Nationality = vpu.Nationality ;
                     tpu.Set_Date = DateTime.Now;

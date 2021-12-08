@@ -2227,3 +2227,17 @@ d:\nikatak\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.csp
 d:\nikatak\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.dll
 d:\nikatak\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.pdb
 d:\nikatak\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.genruntimeconfig.cache
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\BotDetect.Web.Mvc.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\BotDetect.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_green.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.e_sqlite3.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\e_sqlite3.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\e_sqlite3.dll

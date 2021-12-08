@@ -45,10 +45,7 @@ namespace Namespace
             vp.Shomare_Shenasname = quser.Shomare_Shenasname;
             vp.Name = quser.Name;
             vp.Family = quser.Family;
-            if (quser.Tarikh_Tavalod != Convert.ToDateTime("0001-01-01 00:00:00.0000000"))
-            {
-                vp.tarikh_tavalod = quser.Tarikh_Tavalod.ToPersianDateString();
-            }
+            vp.tarikh_tavalod = quser.Tarikh_Tavalod.ToPersianDateString();
             vp.Name_Pedar = quser.Name_Pedar;
             vp.Jensiat = quser.Jensiat;
             vp.Mobile = quser.Mobile;
@@ -57,7 +54,7 @@ namespace Namespace
             vp.Family_EN = quser.Family_EN;
             vp.Pedar_EN = quser.Pedar_EN;
             vp.Name_Sherkat = quser.Name_Sherkat;
-            if (quser.Type_Moshtari == "حقوقی" )
+            if (quser.Tarikh_Tasis_sherkat != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
             {
                 vp.tarikh_tasis_sherkat =quser.Tarikh_Tasis_sherkat.ToPersianDateString();
             }
@@ -102,11 +99,11 @@ namespace Namespace
 
             vp.Shomare_Javaz_kasb = quser.Shomare_Javaz_kasb;
             vp.Marja_Saderkonande_Mojavez =quser.Marja_Saderkonande_Mojavez;
-            if (quser.Tarikh_Sodor_Javaz != null)
+            if (quser.Tarikh_Sodor_Javaz != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
             {
                 vp.Tarikh_Sodor_Javaz =quser.Tarikh_Sodor_Javaz.ToPersianDateString();
             }
-            if (quser.Tarikh_Payan_Etebar != null)
+            if (quser.Tarikh_Payan_Etebar != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
             {
                 vp.Tarikh_Payan_Etebar =quser.Tarikh_Payan_Etebar.ToPersianDateString();
             }
@@ -233,6 +230,25 @@ namespace Namespace
         {
             var s = db.Tbl_Pazirandes.Where(a => a.Id == id).ToList();
             ViewBag.Pazirande = s;
+
+            var A = db.Tbl_Pazirandes.SingleOrDefault(a => a.Id == id);
+            ViewBag.Tarikh_Tavalod = A.Tarikh_Tavalod.ToPersianDateString() ;
+            if ( A.Tarikh_Tasis_sherkat != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Tasis_sherkat = A.Tarikh_Tasis_sherkat.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Payan_Etebar != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Payan_Etebar = A.Tarikh_Payan_Etebar.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Sodor_Javaz != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Sodor_Javaz = A.Tarikh_Sodor_Javaz.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Etmam_Ejare != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Etmam_Ejare = A.Tarikh_Etmam_Ejare.ToPersianDateString() ;
+            }
 
             return View();
         }
@@ -460,6 +476,8 @@ namespace Namespace
             if (quser != null)
             {
                 ViewBag.User =  db.Tbl_PazirandeUsers.Where(b => b.National_Code == vpu.National_Code).ToList();
+                ViewBag.B_D = quser.BirthDay.ToPersianDateString() ;
+                ViewBag.T_Sh = quser.Establishing_Date.ToPersianDateString() ;
             }
             else
             {

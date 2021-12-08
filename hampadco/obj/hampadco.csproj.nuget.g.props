@@ -14,5 +14,6 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\MS\.nuget\packages\microsoft.codeanalysis.analyzers\2.9.3</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgCaptcha Condition=" '$(PkgCaptcha)' == '' ">C:\Users\MS\.nuget\packages\captcha\4.4.2</PkgCaptcha>
   </PropertyGroup>
 </Project>

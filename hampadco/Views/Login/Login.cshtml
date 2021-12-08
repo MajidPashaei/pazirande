@@ -55,6 +55,17 @@
                                     <input asp-for="Password" class="form-control" type="password" placeholder="" />
                                     <span>کلمه عبور</span>
                                 </label>
+                                    <div class="checkbox clearfix">
+                                        <div class="form-check checkbox-theme">
+                                            <div class="form-group">
+                                
+                                                <img src="/login/GetCaptchaImage" class="img-thumbnail" alt="">
+                                                <label class="form-group ">
+                                                    <input type="text" asp-for="Captcha"  placeholder=" کد امنیتی   " required />
+                                                 </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <a href="/login/forgetpassword">رمز عبورتان را فراموش کرده اید؟</a>
                                     <button class="btn btn-primary btn-lg btn-shadow" type="submit">ورود</button>
