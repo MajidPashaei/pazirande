@@ -210,6 +210,7 @@ namespace Namespace
                 tp.Mablag_Frosh = vp.Mablag_Frosh;
                 tp.Moaref = vp.Moaref;
                 tp.Status = "0" ;
+                tp.StatusExcel="0";
 
                 db.Tbl_Pazirandes.Update(tp);
                 db.SaveChanges();
@@ -491,7 +492,7 @@ namespace Namespace
         {
 
             var quser = db.Tbl_PazirandeUsers.SingleOrDefault(a => a.National_Code == vp.Code_Meli);
-
+            var coding =db.Tbl_ClassCodess.Where(a=>a.CategoryName == vp.Code_Takmily_Senf ).SingleOrDefault();
             Tbl_Pazirande tp = new Tbl_Pazirande();
             tp.UserName = User.Identity.GetId();
             tp.Type_Moshtari = quser.Customer_Type ;
@@ -535,7 +536,7 @@ namespace Namespace
             tp.Code_Shaparaki_shahr = vp.Code_Shaparaki_shahr ;
             tp.Mantage_Shahri = vp.Mantage_Shahri ;
             tp.Fax = vp.Fax ;
-            tp.Code_Takmily_Senf = vp.Code_Takmily_Senf ;
+            tp.Code_Takmily_Senf = coding.CategoryCode;
             tp.Onvan_Mahal_Kasb = vp.Onvan_Mahal_Kasb ;
             tp.Onvan_Latin_Kasb = vp.Onvan_Latin_Kasb ;
             tp.Shenase_Malekyat = vp.Shenase_Malekyat ;
@@ -565,6 +566,7 @@ namespace Namespace
             tp.Mablag_Frosh = vp.Mablag_Frosh ;
             tp.Moaref = vp.Moaref ;
             tp.Status="0";
+            tp.StatusExcel="0";
             tp.NameCreateUser=User.Identity.GetId();
 
             db.Tbl_Pazirandes.Add(tp);

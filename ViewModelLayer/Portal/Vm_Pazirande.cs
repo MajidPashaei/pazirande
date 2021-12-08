@@ -14,6 +14,7 @@ namespace ViewModelLayer.Portal
         public string NameCreateUser { get; set; }
 
         public string Status { get; set; }
+        public string StatusExcel { get; set; }
 
         public string Description { get; set; }
 

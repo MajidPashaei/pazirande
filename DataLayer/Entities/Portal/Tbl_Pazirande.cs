@@ -16,6 +16,7 @@ namespace DataLayer.Entities.Portal
         public string Status { get; set; }
         
         public string Description { get; set; }
+        public string StatusExcel { get; set; }
 
         public string UserName { get; set; }
 
