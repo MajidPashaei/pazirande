@@ -8,17 +8,17 @@ using Microsoft.AspNetCore.Mvc;
 using DataLayer.Context;
 using DataLayer.Entities.Portal;
 using ViewModelLayer.Portal;
-using Extensions;
 using faraboom.Models;
+using Extensions;
 
 namespace Namespace
 {
-    public class Accountcontroller : Controller
+    public class AccountController : Controller
     {
         public static string msg;
         public readonly HampadcoContext db;
         public readonly IWebHostEnvironment _env;
-        public Accountcontroller(HampadcoContext _db, IWebHostEnvironment env)
+        public AccountController(HampadcoContext _db, IWebHostEnvironment env)
         {
             db = _db;
             _env = env;
@@ -103,6 +103,8 @@ namespace Namespace
                     if (vpu.establishing_date != null)
                     {
                         tpu.Establishing_Date = vpu.establishing_date.ToGeorgianDateTime() ;
+                    }else{
+                       tpu.Establishing_Date =DateTime.Now; 
                     }
                     tpu.CompanyName_fa = vpu.CompanyName_fa ;
                     tpu.CompanyName_en = vpu.CompanyName_en ;
@@ -114,6 +116,8 @@ namespace Namespace
                     if (vpu.passport_validity != null)
                     {
                         tpu.Passport_Validity = vpu.passport_validity.ToGeorgianDateTime() ;
+                    }else{
+                      tpu.Passport_Validity =DateTime.Now; 
                     }
                     tpu.Nationality = vpu.Nationality ;
                     tpu.Set_Date = DateTime.Now;
@@ -267,7 +271,61 @@ namespace Namespace
                     }
                     tpu.workpermit_image = NewFileName9;
                 }
+                 ///
+                if (vpu.Esteshhad_Image != null)
+                {
+                    string FileExtension10 = Path.GetExtension(vpu.Esteshhad_Image.FileName);
+                    string NewFileName10 = String.Concat(Guid.NewGuid().ToString(), FileExtension10);
+                    var path10 = $"{_env.WebRootPath}\\fileupload\\{NewFileName10}";
+                    using (var stream = new FileStream(path10, FileMode.Create))
+                    {
+                        await vpu.Esteshhad_Image.CopyToAsync(stream);
+                    }
+                    tpu.Document_Esteshhad = NewFileName10;
+                
+                }
+                ///
+                 if (vpu.Garadad_Image != null)
+                {
+                    string FileExtension11 = Path.GetExtension(vpu.Garadad_Image.FileName);
+                    string NewFileName11 = String.Concat(Guid.NewGuid().ToString(), FileExtension11);
+                    var path11 = $"{_env.WebRootPath}\\fileupload\\{NewFileName11}";
+                    using (var stream = new FileStream(path11, FileMode.Create))
+                    {
+                        await vpu.Garadad_Image.CopyToAsync(stream);
+                    }
+                    tpu.Document_Garadad = NewFileName11;
+                
+                }
 
+                ///
+         
+                 if (vpu.Masdig_Image != null)
+                {
+                    string FileExtension12 = Path.GetExtension(vpu.Masdig_Image.FileName);
+                    string NewFileName12 = String.Concat(Guid.NewGuid().ToString(), FileExtension12);
+                    var path12 = $"{_env.WebRootPath}\\fileupload\\{NewFileName12}";
+                    using (var stream = new FileStream(path12, FileMode.Create))
+                    {
+                        await vpu.Masdig_Image.CopyToAsync(stream);
+                    }
+                    tpu.Document_Masdig = NewFileName12;
+                
+                }
+
+                ///
+                  if (vpu.Soratjalase_Image != null)
+                {
+                    string FileExtension13= Path.GetExtension(vpu.Soratjalase_Image.FileName);
+                    string NewFileName13 = String.Concat(Guid.NewGuid().ToString(), FileExtension13);
+                    var path13 = $"{_env.WebRootPath}\\fileupload\\{NewFileName13}";
+                    using (var stream = new FileStream(path13, FileMode.Create))
+                    {
+                        await vpu.Soratjalase_Image.CopyToAsync(stream);
+                    }
+                    tpu.Document_Soratjalase = NewFileName13;
+
+                }
                 db.Tbl_PazirandeUsers.Update(tpu);
                 db.SaveChanges();
                 ViewBag.msg = $"مدارک کاربر با کد ملی  { vpu.National_Code }  ثبت شد . ";
@@ -305,10 +363,7 @@ namespace Namespace
             vp.Address = quser.Address ;
             vp.Birth_Place = quser.Birth_Place ;
             vp.Email = quser.Email ;
-            if ( quser.BirthDay != null )
-            {
-                vp.birthday = quser.BirthDay.ToPersianDateString() ;
-            }
+            vp.birthday = quser.BirthDay.ToPersianDateString() ;
             vp.Mobile = quser.Mobile ;
             vp.Phone = quser.Phone ;
             vp.Phone_Code = quser.Phone_Code ;
@@ -316,7 +371,7 @@ namespace Namespace
             vp.City = quser.City ;
             vp.Post = quser.Post ;
             vp.Company_Id = quser.Company_Id ;
-            if ( quser.Establishing_Date != null )
+            if ( quser.Customer_Type == "حقوقی" )
             {
                 vp.establishing_date = quser.Establishing_Date.ToPersianDateString() ;
             }
@@ -327,7 +382,7 @@ namespace Namespace
             vp.Economic_Code = quser.Economic_Code ;
             vp.Comprehensive_Code = quser.Comprehensive_Code ;
             vp.Passport_Code = quser.Passport_Code ;
-            if ( quser.Passport_Validity != null )
+            if ( quser.Customer_National == "غیر ایرانی" )
             {
                 vp.passport_validity = quser.Passport_Validity.ToPersianDateString() ;
             }
@@ -360,10 +415,10 @@ namespace Namespace
                 quser.Address = vpu.Address ;
                 quser.Birth_Place = vpu.Birth_Place ;
                 quser.Email = vpu.Email ;
-                // if ( vpu.BirthDay != null )
-                // {
-                //     quser.BirthDay = vpu.birthday.ToGeorgianDateTime() ;
-                // }
+                if ( vpu.BirthDay != null )
+                {
+                    quser.BirthDay = vpu.birthday.ToGeorgianDateTime() ;
+                }
                 quser.Mobile = vpu.Mobile ;
                 quser.Phone = vpu.Phone ;
                 quser.Phone_Code = vpu.Phone_Code ;
@@ -371,10 +426,10 @@ namespace Namespace
                 quser.City = vpu.City ;
                 quser.Post = vpu.Post ;
                 quser.Company_Id = vpu.Company_Id ;
-                // if ( vpu.Establishing_Date != null )
-                // {
-                //     quser.Establishing_Date = vpu.establishing_date.ToGeorgianDateTime() ;
-                // }
+                if ( quser.Customer_Type == "حقوقی" )
+                {
+                    quser.Establishing_Date = vpu.establishing_date.ToGeorgianDateTime() ;
+                }
                 quser.CompanyName_fa = vpu.CompanyName_fa ;
                 quser.CompanyName_en = vpu.CompanyName_en ;
                 quser.Brand_Name = vpu.Brand_Name ;
@@ -382,10 +437,10 @@ namespace Namespace
                 quser.Economic_Code = vpu.Economic_Code ;
                 quser.Comprehensive_Code = vpu.Comprehensive_Code ;
                 quser.Passport_Code = vpu.Passport_Code ;
-                // if ( vpu.Passport_Validity != null )
-                // {
-                //     quser.Passport_Validity = vpu.passport_validity.ToGeorgianDateTime() ;
-                // }
+                if ( quser.Customer_National == "غیر ایرانی" )
+                {
+                    quser.Passport_Validity = vpu.passport_validity.ToGeorgianDateTime() ;
+                }
                 quser.Nationality = quser.Nationality ;
 
                 db.Tbl_PazirandeUsers.Update(quser);
@@ -398,7 +453,6 @@ namespace Namespace
                 ViewBag.ex = ex ;
                 ViewBag.er = " خطا در ویرایش . " ;
             }
-
 
             return View(vpu);
         }

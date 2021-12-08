@@ -38,16 +38,14 @@ namespace Namespace
             var quser = db.Tbl_Pazirandes.SingleOrDefault(a => a.Id == id);
 
             Vm_Pazirande vp = new Vm_Pazirande();
+
             vp.Type_Moshtari = quser.Type_Moshtari;
             vp.Code_Meli = quser.Code_Meli;
             vp.Shenase_Meli = quser.Shenase_Meli;
             vp.Shomare_Shenasname = quser.Shomare_Shenasname;
             vp.Name = quser.Name;
             vp.Family = quser.Family;
-            if (quser.Tarikh_Tavalod != null)
-            {
-                vp.tarikh_tavalod = quser.Tarikh_Tavalod.ToPersianDateString();
-            }
+            vp.tarikh_tavalod = quser.Tarikh_Tavalod.ToPersianDateString();
             vp.Name_Pedar = quser.Name_Pedar;
             vp.Jensiat = quser.Jensiat;
             vp.Mobile = quser.Mobile;
@@ -56,7 +54,7 @@ namespace Namespace
             vp.Family_EN = quser.Family_EN;
             vp.Pedar_EN = quser.Pedar_EN;
             vp.Name_Sherkat = quser.Name_Sherkat;
-            if (quser.Tarikh_Tasis_sherkat != null)
+            if (quser.Tarikh_Tasis_sherkat != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
             {
                 vp.tarikh_tasis_sherkat =quser.Tarikh_Tasis_sherkat.ToPersianDateString();
             }
@@ -70,7 +68,7 @@ namespace Namespace
             vp.Melyat = quser.Melyat;
             vp.Code_Posti = quser.Code_Posti;
             vp.TelePhone = quser.TelePhone;
-            if (quser.Tarikh_Etbar != null)
+            if (quser.Pazirande_Atba == true)
             {
                 vp.tarikh_etbar = quser.Tarikh_Etbar.ToPersianDateString();
             }
@@ -91,28 +89,34 @@ namespace Namespace
             vp.Code_Takmily_Senf = quser.Code_Takmily_Senf;
             vp.Onvan_Mahal_Kasb = quser.Onvan_Mahal_Kasb;
             vp.Onvan_Latin_Kasb = quser.Onvan_Latin_Kasb;
+
             vp.Shenase_Malekyat = quser.Shenase_Malekyat;
+
             vp.Address_Shaparaki = quser.Address_Shaparaki;
             vp.Address_Latin = quser.Address_Latin;
+
             vp.Shenase_Mahal_kasb = quser.Shenase_Mahal_kasb;
+
             vp.Shomare_Javaz_kasb = quser.Shomare_Javaz_kasb;
             vp.Marja_Saderkonande_Mojavez =quser.Marja_Saderkonande_Mojavez;
-            if (quser.Tarikh_Sodor_Javaz != null)
+            if (quser.Tarikh_Sodor_Javaz != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
             {
                 vp.Tarikh_Sodor_Javaz =quser.Tarikh_Sodor_Javaz.ToPersianDateString();
             }
-            if (quser.Tarikh_Payan_Etebar != null)
+            if (quser.Tarikh_Payan_Etebar != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
             {
                 vp.Tarikh_Payan_Etebar =quser.Tarikh_Payan_Etebar.ToPersianDateString();
             }
             vp.Shomare_Garardad_Ejare = quser.Shomare_Garardad_Ejare;
-            if (quser.Tarikh_Etmam_Ejare != null)
+            if (quser.Tarikh_Etmam_Ejare != Convert.ToDateTime("0001-01-01 00:00:00.0000000"))
             {
                 vp.Tarikh_Etmam_Ejare =quser.Tarikh_Etmam_Ejare.ToPersianDateString();
             }
             vp.Code_Rahgiri = quser.Code_Rahgiri;
             vp.Type_Garardad_Hesab = quser.Type_Garardad_Hesab;
+
             vp.Shenase_Type_Vagozari = quser.Shenase_Type_Vagozari;
+            
             vp.Type_Vadieh = quser.Type_Vadieh;
             vp.Shomare_Sanad = quser.Shomare_Sanad;
             vp.Mablag_Frosh = quser.Mablag_Frosh;
@@ -205,6 +209,7 @@ namespace Namespace
                 tp.Shomare_Sanad = vp.Shomare_Sanad;
                 tp.Mablag_Frosh = vp.Mablag_Frosh;
                 tp.Moaref = vp.Moaref;
+                tp.Status = "0" ;
 
                 db.Tbl_Pazirandes.Update(tp);
                 db.SaveChanges();
@@ -225,6 +230,25 @@ namespace Namespace
         {
             var s = db.Tbl_Pazirandes.Where(a => a.Id == id).ToList();
             ViewBag.Pazirande = s;
+
+            var A = db.Tbl_Pazirandes.SingleOrDefault(a => a.Id == id);
+            ViewBag.Tarikh_Tavalod = A.Tarikh_Tavalod.ToPersianDateString() ;
+            if ( A.Tarikh_Tasis_sherkat != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Tasis_sherkat = A.Tarikh_Tasis_sherkat.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Payan_Etebar != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Payan_Etebar = A.Tarikh_Payan_Etebar.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Sodor_Javaz != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Sodor_Javaz = A.Tarikh_Sodor_Javaz.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Etmam_Ejare != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Etmam_Ejare = A.Tarikh_Etmam_Ejare.ToPersianDateString() ;
+            }
 
             return View();
         }
@@ -448,22 +472,16 @@ namespace Namespace
 
         public IActionResult createnwe(Vm_PazirandeUser vpu)
         {
-            var quser =
-                db
-                    .Tbl_PazirandeUsers
-                    .SingleOrDefault(b => b.National_Code == vpu.National_Code);
+            var quser = db.Tbl_PazirandeUsers.SingleOrDefault(b => b.National_Code == vpu.National_Code);
             if (quser != null)
             {
-                ViewBag.User =
-                    db
-                        .Tbl_PazirandeUsers
-                        .Where(b => b.National_Code == vpu.National_Code)
-                        .ToList();
+                ViewBag.User =  db.Tbl_PazirandeUsers.Where(b => b.National_Code == vpu.National_Code).ToList();
+                ViewBag.B_D = quser.BirthDay.ToPersianDateString() ;
+                ViewBag.T_Sh = quser.Establishing_Date.ToPersianDateString() ;
             }
             else
             {
-                ViewBag.msg =
-                    $" کاربر با کد ملی  {vpu.National_Code}  یافت نشد . ";
+                ViewBag.msg = $" کاربر با کد ملی  {vpu.National_Code}  یافت نشد . ";
             }
 
             return View();
@@ -473,84 +491,86 @@ namespace Namespace
         {
 
             var quser = db.Tbl_PazirandeUsers.SingleOrDefault(a => a.National_Code == vp.Code_Meli);
-                Tbl_Pazirande tp = new Tbl_Pazirande();
-                    tp.UserName = User.Identity.GetId();
-                    tp.Type_Moshtari = quser.Customer_Type ;
-                    tp.Code_Meli = quser.National_Code ;
-                    tp.Shenase_Meli = quser.Company_Id ;
-                    tp.Shomare_Shenasname = quser.Certificate_Code ;
-                    tp.Name = quser.Name_fa ;
-                    tp.Family = quser.Family_fa ;
-                    tp.Tarikh_Tavalod = quser.BirthDay ;
-                    tp.Name_Pedar = quser.FatherName_fa ;
-                    tp.Jensiat = quser.Gender ;
-                    tp.Mobile = quser.Mobile ;
-                    tp.Address = quser.Address ;
-                    tp.Name_EN = quser.Name_en ;
-                    tp.Family_EN = quser.Family_en ;
-                    tp.Pedar_EN = quser.FatherName_en ;
-                    tp.Name_Sherkat = quser.CompanyName_fa ;
-                    tp.Tarikh_Tasis_sherkat = quser.Establishing_Date ;
-                    tp.Name_EN_Sherkat = quser.CompanyName_en ;
-                    tp.Code_Egtesadi = quser.Economic_Code ;
-                    tp.Name_Tejari = quser.Brand_Name ;
-                    tp.Shomare_Sabt = quser.Company_Registration ;
-                    tp.Pazirande_Atba = vp.Pazirande_Atba ;
-                    tp.Code_Faragir = quser.Comprehensive_Code ;
-                    tp.Code_Gozarname = quser.Passport_Code ;
-                    tp.Tarikh_Etbar = quser.Passport_Validity ;
-                    tp.Melyat = quser.Nationality ;
-                    tp.Code_Posti = quser.Post ;
-                    tp.TelePhone = quser.Phone ;
-                    tp.Shenase_Onvan_Nemayandegi = vp.Shenase_Onvan_Nemayandegi ;
-                    tp.Shenase_Bazaryab_Nemayandegi = vp.Shenase_Bazaryab_Nemayandegi ;
-                    tp.Shenase_Porojeh = vp.Shenase_Porojeh ;
-                    tp.Shenase_Switch = vp.Shenase_Switch ;
-                    tp.Shenase_Type_Dargah = "POS" ;
-                    tp.Shenase_Type_Dastgah = "POS" ;
-                    tp.Shenase_Model_Dastgah = "G2" ;
-                    tp.Shenase_Bank = vp.Shenase_Bank ;
-                    tp.Code_Shobe = vp.Code_Shobe ;
-                    tp.Shomare_Hesab = vp.Shomare_Hesab ;
-                    tp.Shomare_Sheba = vp.Shomare_Sheba ;
-                    tp.Code_Shaparaki_shahr = vp.Code_Shaparaki_shahr ;
-                    tp.Mantage_Shahri = vp.Mantage_Shahri ;
-                    tp.Fax = vp.Fax ;
-                    tp.Code_Takmily_Senf = vp.Code_Takmily_Senf ;
-                    tp.Onvan_Mahal_Kasb = vp.Onvan_Mahal_Kasb ;
-                    tp.Onvan_Latin_Kasb = vp.Onvan_Latin_Kasb ;
-                    tp.Shenase_Malekyat = vp.Shenase_Malekyat ;
-                    tp.Address_Shaparaki = vp.Address_Shaparaki ;
-                    tp.Address_Latin = vp.Address_Latin ;
-                    tp.Shenase_Mahal_kasb = vp.Shenase_Mahal_kasb ;
-                    tp.Shomare_Javaz_kasb = vp.Shomare_Javaz_kasb ;
-                    tp.Marja_Saderkonande_Mojavez = vp.Marja_Saderkonande_Mojavez ;
-                    if (vp.Tarikh_Sodor_Javaz != null)
-                    {
-                        tp.Tarikh_Sodor_Javaz = vp.Tarikh_Sodor_Javaz.ToGeorgianDateTime() ;
-                    }
-                    if (vp.Tarikh_Payan_Etebar != null)
-                    {
-                        tp.Tarikh_Payan_Etebar = vp.Tarikh_Payan_Etebar.ToGeorgianDateTime() ;
-                    }
-                    tp.Shomare_Garardad_Ejare = vp.Shomare_Garardad_Ejare ;
-                    if (vp.Tarikh_Etmam_Ejare != null)
-                    {
-                        tp.Tarikh_Etmam_Ejare = vp.Tarikh_Etmam_Ejare.ToGeorgianDateTime() ;
-                    }
-                    tp.Code_Rahgiri = vp.Code_Rahgiri ;
-                    tp.Type_Garardad_Hesab = vp.Type_Garardad_Hesab ;
-                    tp.Shenase_Type_Vagozari = vp.Shenase_Type_Vagozari ;
-                    tp.Type_Vadieh = vp.Type_Vadieh ;
-                    tp.Shomare_Sanad = vp.Shomare_Sanad ;
-                    tp.Mablag_Frosh = vp.Mablag_Frosh ;
-                    tp.Moaref = vp.Moaref ;
 
-                    tp.Status="0";
-                    tp.NameCreateUser=User.Identity.GetId();
-                db.Tbl_Pazirandes.Add(tp);
-                db.SaveChanges();
-                ViewBag.msg = "ثبت با موفقیت انجام شد . ";
+            Tbl_Pazirande tp = new Tbl_Pazirande();
+            tp.UserName = User.Identity.GetId();
+            tp.Type_Moshtari = quser.Customer_Type ;
+            tp.Code_Meli = quser.National_Code ;
+            tp.Shenase_Meli = quser.Company_Id ;
+            tp.Shomare_Shenasname = quser.Certificate_Code ;
+            tp.Name = quser.Name_fa ;
+            tp.Family = quser.Family_fa ;
+            tp.Tarikh_Tavalod = quser.BirthDay ;
+            tp.Name_Pedar = quser.FatherName_fa ;
+            tp.Jensiat = quser.Gender ;
+            tp.Mobile = quser.Mobile ;
+            tp.Address = quser.Address ;
+            tp.Name_EN = quser.Name_en ;
+            tp.Family_EN = quser.Family_en ;
+            tp.Pedar_EN = quser.FatherName_en ;
+            tp.Name_Sherkat = quser.CompanyName_fa ;
+            tp.Tarikh_Tasis_sherkat = quser.Establishing_Date ;
+            tp.Name_EN_Sherkat = quser.CompanyName_en ;
+            tp.Code_Egtesadi = quser.Economic_Code ;
+            tp.Name_Tejari = quser.Brand_Name ;
+            tp.Shomare_Sabt = quser.Company_Registration ;
+            tp.Pazirande_Atba = vp.Pazirande_Atba ;
+            tp.Code_Faragir = quser.Comprehensive_Code ;
+            tp.Code_Gozarname = quser.Passport_Code ;
+            tp.Tarikh_Etbar = quser.Passport_Validity ;
+            tp.Melyat = quser.Nationality ;
+            tp.Code_Posti = quser.Post ;
+            tp.TelePhone = quser.Phone ;
+            tp.Shenase_Onvan_Nemayandegi = vp.Shenase_Onvan_Nemayandegi ;
+            tp.Shenase_Bazaryab_Nemayandegi = vp.Shenase_Bazaryab_Nemayandegi ;
+            tp.Shenase_Porojeh = vp.Shenase_Porojeh ;
+            tp.Shenase_Switch = vp.Shenase_Switch ;
+            tp.Shenase_Type_Dargah = "POS" ;
+            tp.Shenase_Type_Dastgah = "POS" ;
+            tp.Shenase_Model_Dastgah = "G2" ;
+            tp.Shenase_Bank = vp.Shenase_Bank ;
+            tp.Code_Shobe = vp.Code_Shobe ;
+            tp.Shomare_Hesab = vp.Shomare_Hesab ;
+            tp.Shomare_Sheba = vp.Shomare_Sheba ;
+            tp.Code_Shaparaki_shahr = vp.Code_Shaparaki_shahr ;
+            tp.Mantage_Shahri = vp.Mantage_Shahri ;
+            tp.Fax = vp.Fax ;
+            tp.Code_Takmily_Senf = vp.Code_Takmily_Senf ;
+            tp.Onvan_Mahal_Kasb = vp.Onvan_Mahal_Kasb ;
+            tp.Onvan_Latin_Kasb = vp.Onvan_Latin_Kasb ;
+            tp.Shenase_Malekyat = vp.Shenase_Malekyat ;
+            tp.Address_Shaparaki = vp.Address_Shaparaki ;
+            tp.Address_Latin = vp.Address_Latin ;
+            tp.Shenase_Mahal_kasb = vp.Shenase_Mahal_kasb ;
+            tp.Shomare_Javaz_kasb = vp.Shomare_Javaz_kasb ;
+            tp.Marja_Saderkonande_Mojavez = vp.Marja_Saderkonande_Mojavez ;
+            if (vp.Tarikh_Sodor_Javaz != null)
+            {
+                tp.Tarikh_Sodor_Javaz = vp.Tarikh_Sodor_Javaz.ToGeorgianDateTime() ;
+            }
+            if (vp.Tarikh_Payan_Etebar != null)
+            {
+                tp.Tarikh_Payan_Etebar = vp.Tarikh_Payan_Etebar.ToGeorgianDateTime() ;
+            }
+            tp.Shomare_Garardad_Ejare = vp.Shomare_Garardad_Ejare ;
+            if (vp.Tarikh_Etmam_Ejare != null)
+            {
+                tp.Tarikh_Etmam_Ejare = vp.Tarikh_Etmam_Ejare.ToGeorgianDateTime() ;
+            }
+            tp.Code_Rahgiri = vp.Code_Rahgiri ;
+            tp.Type_Garardad_Hesab = vp.Type_Garardad_Hesab ;
+            tp.Shenase_Type_Vagozari = vp.Shenase_Type_Vagozari ;
+            tp.Type_Vadieh = vp.Type_Vadieh ;
+            tp.Shomare_Sanad = vp.Shomare_Sanad ;
+            tp.Mablag_Frosh = vp.Mablag_Frosh ;
+            tp.Moaref = vp.Moaref ;
+            tp.Status="0";
+            tp.NameCreateUser=User.Identity.GetId();
+
+            db.Tbl_Pazirandes.Add(tp);
+            db.SaveChanges();
+
+            ViewBag.msg = "ثبت با موفقیت انجام شد . ";
             
             return View();
         }

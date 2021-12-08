@@ -1,8 +1,7 @@
 @{
     ViewData["Title"] = "اپلود مدارک";
 }
-@using Extensions;
-@using hampadco.Models; 
+
 @model ViewModelLayer.Portal.Vm_Pazirande;
 
 <main>
@@ -21,15 +20,15 @@
                 <div class="separator mb-5"></div>
             </div>
         </div>
-              @if (ViewBag.msg != null)
-  {
-      <span class="alert alert-success">@ViewBag.msg</span>
-  }
-  
-         @if (ViewBag.msg != null)
-  {
-      <span class="alert alert-success">@ViewBag.msg</span>
-  }
+        @if (ViewBag.msg != null)
+        {
+            <span class="alert alert-success">@ViewBag.msg</span>
+        }
+
+        @if (ViewBag.msg != null)
+        {
+            <span class="alert alert-success">@ViewBag.msg</span>
+        }
   
         @if(ViewBag.msg != null)
         {
@@ -79,7 +78,7 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">تاریخ تولد </label>
-                                                    <input   type="text" class="form-control"  value="@item.Tarikh_Tavalod" disabled>
+                                                    <input   type="text" class="form-control"  value="@ViewBag.Tarikh_Tavalod" disabled>
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">نام پدر</label>
@@ -134,11 +133,8 @@
                                             </div>
                                             <hr>
                                         }
-                                        else if (item. Type_Moshtari == "حقوقی" && item.Pazirande_Atba == " 0")
+                                        else if (item. Type_Moshtari == "حقوقی" && item.Pazirande_Atba == false)
                                         {
-		    				                <input class="d-none"  value="@item.Code_Meli"  value="@item.National_Code">
-		    				                <input class="d-none"  value="@item.Pazirande_Atba" value= false>
-                                            
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">کد ملی</label>
@@ -161,8 +157,7 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">تاریخ تولد </label>
-                                                    @* @{ string birthday = item.BirthDay.ToPersianDateString();} *@
-                                                    <input   type="text" class="form-control"   value="@item.Tarikh_Tavalod" disabled>
+                                                    <input   type="text" class="form-control"   value="@ViewBag.Tarikh_Tavalod" disabled>
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">نام پدر</label>
@@ -235,7 +230,7 @@
                                                 <div class="form-group col-md-3">
                                                     <label for="inputPassword4">تاریخ تاسیس شرکت</label>
                                                     <input   type="text" class="form-control"  
-                                                        placeholder="تاریخ تاسیس شرکت (1378/10/01)"  value="@item.Tarikh_Tasis_Sherkat" disabled>
+                                                        placeholder="تاریخ تاسیس شرکت (1378/10/01)"  value="@ViewBag.Tarikh_Tasis_Sherkat" disabled>
                                                 </div>
                                             </div>
                                             <hr>   
@@ -253,7 +248,7 @@
                                             </div>
                                             <hr>
                                         }
-                                        else if (item. Type_Moshtari == "حقیقی" && item.Pazirande_Atba ==false)
+                                        @* else if (item. Type_Moshtari == "حقیقی" && item.Pazirande_Atba ==false)
                                         {
 		    				                <input class="d-none"  value="@item.Code_Meli"  >
 		    				                <input class="d-none"  value="@item.Pazirande_Atba" value="1">
@@ -280,7 +275,7 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">تاریخ تولد </label>
-                                                    <input   type="text" class="form-control"   value="@item.Tarikh_Tavalod" disabled>
+                                                    <input   type="text" class="form-control"   value="@ViewBag.Tarikh_Tavalod" disabled>
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">تلفن</label>
@@ -377,7 +372,7 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">تاریخ تولد </label>
-                                                    <input   type="text" class="form-control"  value="@item.Tarikh_Tavalod" disabled>
+                                                    <input   type="text" class="form-control"  value="@ViewBag.Tarikh_Tavalod" disabled>
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <label for="inputEmail4">تلفن</label>
@@ -465,7 +460,7 @@
                                                 <div class="form-group col-md-3">
                                                     <label for="inputPassword4">تاریخ تاسیس شرکت</label>
                                                     <input   type="text" class="form-control" 
-                                                        placeholder="تاریخ تاسیس شرکت (1378/10/01)"  value="@item.Tarikh_Tasis_Sherkat" disabled>
+                                                        placeholder="تاریخ تاسیس شرکت (1378/10/01)"  value="@ViewBag.Tarikh_Tasis_Sherkat" disabled>
                                                 </div>
                                             </div>
                                             <hr>
@@ -482,7 +477,7 @@
                                                 </div>
                                             </div>
                                             <hr>
-                                        }
+                                        } *@
 
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
@@ -550,11 +545,11 @@
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">تارخ صدور جواز کسب</label>
-                                                <input   type="text" class="form-control"  value="@item.Tarikh_Sodor_Javaz" disabled>
+                                                <input   type="text" class="form-control"  value="@ViewBag.Tarikh_Sodor_Javaz" disabled>
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">تاریخ پایان جواز کسب</label>
-                                                <input   type="text" class="form-control"  value="@item.Tarikh_Payan_Etebar" disabled >
+                                                <input   type="text" class="form-control"  value="@ViewBag.Tarikh_Payan_Etebar" disabled >
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">شماره قرارداد اجاره </label>
@@ -565,7 +560,7 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">تاریخ اتمام اجاره</label>
-                                                <input  type="text" class="form-control"  value="@item.Tarikh_Etmam_Ejare" disabled >
+                                                <input  type="text" class="form-control"  value="@ViewBag.Tarikh_Etmam_Ejare" disabled >
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="inputEmail4">کد رهگیری ثبت نام مالیاتی</label>

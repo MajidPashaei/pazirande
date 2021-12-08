@@ -404,6 +404,18 @@ namespace DataLayer.Migrations
                     b.Property<string>("Customer_Type")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Document_Esteshhad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Document_Garadad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Document_Masdig")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Document_Soratjalase")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Economic_Code")
                         .HasColumnType("nvarchar(max)");
 

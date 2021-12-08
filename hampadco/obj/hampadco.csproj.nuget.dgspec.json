@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj": {}
+    "e:\\Hampadco-master\\hampadco\\hampadco.csproj": {}
   },
   "projects": {
-    "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj": {
+    "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande git\\pazirande\\DataLayer\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 5156b046b909e2b0569bb4c7dda8ec01d537c17c
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,7 +30,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -74,22 +76,30 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
+>>>>>>> 5156b046b909e2b0569bb4c7dda8ec01d537c17c
         }
       }
     },
-    "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj": {
+    "e:\\Hampadco-master\\hampadco\\hampadco.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\hampadco\\hampadco.csproj",
         "projectName": "hampadco",
-        "projectPath": "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj",
-        "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande git\\pazirande\\hampadco\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\hampadco\\hampadco.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\hampadco\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 5156b046b909e2b0569bb4c7dda8ec01d537c17c
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -100,13 +110,12 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj"
+              "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
               },
-              "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj": {
-                "projectPath": "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj"
+              "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj"
               }
             }
           }
@@ -119,8 +128,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Captcha": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
@@ -132,10 +144,6 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.8, )"
-            },
-            "PersianDateTime.Core": {
-              "target": "Package",
-              "version": "[1.0.8, )"
             },
             "kavenegar": {
               "target": "Package",
@@ -160,22 +168,30 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
+>>>>>>> 5156b046b909e2b0569bb4c7dda8ec01d537c17c
         }
       }
     },
-    "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj": {
+    "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
+        "projectUniqueName": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
         "projectName": "ViewModelLayer",
-        "projectPath": "d:\\pazirande git\\pazirande\\ViewModelLayer\\ViewModelLayer.csproj",
-        "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-        "outputPath": "d:\\pazirande git\\pazirande\\ViewModelLayer\\obj\\",
+        "projectPath": "e:\\Hampadco-master\\ViewModelLayer\\ViewModelLayer.csproj",
+        "packagesPath": "C:\\Users\\MS\\.nuget\\packages\\",
+        "outputPath": "e:\\Hampadco-master\\ViewModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "C:\\Users\\MS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 5156b046b909e2b0569bb4c7dda8ec01d537c17c
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -186,10 +202,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "d:\\pazirande git\\pazirande\\DataLayer\\DataLayer.csproj"
+              "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "e:\\Hampadco-master\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -202,7 +217,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -224,7 +238,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.108\\RuntimeIdentifierGraph.json"
+>>>>>>> 5156b046b909e2b0569bb4c7dda8ec01d537c17c
         }
       }
     }

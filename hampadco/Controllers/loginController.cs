@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DataLayer.Context;
-using faraboom.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +15,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Kavenegar;
 using System.IO;
+using BotDetect.Web;
 
 namespace hampadco.Controllers
 {
@@ -34,9 +34,23 @@ namespace hampadco.Controllers
         {
             return View();
         }
+        //img captch
+        public FileStreamResult GetCaptchaImage()
+        {
+            int width = 100;
+            int height = 50;
+            var captchaCode = Models.Captcha.GenerateCaptchaCode();
+            var result = Models.Captcha.GenerateCaptchaImage(width, height, captchaCode);
+            HttpContext.Session.SetString("CaptchaCode", result.CaptchaCode);
+            string b = HttpContext.Session.GetString("CaptchaCode");
+            Stream s = new MemoryStream(result.CaptchaByteData);
+            return new FileStreamResult(s, "image/png");
+        }
         
         public IActionResult Check(Vm_User u)
         {
+            if (Models.Captcha.ValidateCaptchaCode(u.Captcha, HttpContext))
+            {
             var quser = db.Tbl_Users.SingleOrDefault( a => a.UserName == u.UserName && a.Password == u.Password );
             if (quser != null)
             {
@@ -89,6 +103,11 @@ namespace hampadco.Controllers
                     return RedirectToAction("index","home");
                     
                 }
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
             }
             else
             {

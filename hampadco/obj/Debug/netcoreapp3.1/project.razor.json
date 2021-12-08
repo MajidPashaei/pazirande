@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\hampadco.csproj",
+  "FilePath": "e:\\Hampadco-master\\hampadco\\hampadco.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -10266,6 +10266,402 @@
         }
       },
       {
+        "HashCode": 2113610302,
+        "Kind": "ITagHelper",
+        "Name": "BotDetect.Web.Mvc.CaptchaTagHelper",
+        "AssemblyName": "BotDetect.Web.Mvc",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "captcha"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "mvc-captcha",
+            "TypeName": "BotDetect.Web.Mvc.MvcCaptcha",
+            "Metadata": {
+              "Common.PropertyName": "MvcCaptcha"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "user-input-id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "UserInputId"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "code-length",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "CodeLength"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "code-style",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "CodeStyle"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "disallowed-code-substrings-csv",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "DisallowedCodeSubstringsCsv"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "code-timeout",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "CodeTimeout"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "image-style",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ImageStyle"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "image-width",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ImageWidth"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "image-height",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ImageHeight"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "image-format",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ImageFormat"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "image-color-mode",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ImageColorMode"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "custom-light-color",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "CustomLightColor"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "custom-dark-color",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "CustomDarkColor"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "sound-enabled",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "SoundEnabled"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "sound-style",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "SoundStyle"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "sound-format",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "SoundFormat"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "sound-regeneration-mode",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "SoundRegenerationMode"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "locale",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Locale"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "image-tooltip",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ImageTooltip"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "sound-tooltip",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "SoundTooltip"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "reload-tooltip",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ReloadTooltip"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "help-link-text",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "HelpLinkText"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "help-link-url",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "HelpLinkUrl"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "reload-enabled",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ReloadEnabled"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "use-small-icons",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "UseSmallIcons"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "use-horizontal-icons",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "UseHorizontalIcons"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "sound-icon-url",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "SoundIconUrl"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "reload-icon-url",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ReloadIconUrl"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "icons-div-width",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "IconsDivWidth"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "help-link-enabled",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "HelpLinkEnabled"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "help-link-mode",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "HelpLinkMode"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "tab-index",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "TabIndex"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "additional-css-classes",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "AdditionalCssClasses"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "additional-inline-css",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "AdditionalInlineCss"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "add-script-include",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "AddScriptInclude"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "auto-uppercase-input",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "AutoUppercaseInput"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "auto-focus-input",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "AutoFocusInput"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "auto-clear-input",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "AutoClearInput"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "auto-reload-expired-captchas",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "AutoReloadExpiredCaptchas"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "auto-reload-timeout",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "AutoReloadTimeout"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "sound-start-delay",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "SoundStartDelay"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "remote-script-enabled",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "RemoteScriptEnabled"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "javascript-required",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "JavascriptRequired"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "BotDetect.Web.Mvc.CaptchaTagHelper"
+        }
+      },
+      {
+        "HashCode": -1389578683,
+        "Kind": "ITagHelper",
+        "Name": "BotDetect.Web.Mvc.SimpleCaptchaTagHelper",
+        "AssemblyName": "BotDetect.Web.Mvc",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "simple-captcha"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "stylename",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Stylename"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "BotDetect.Web.Mvc.SimpleCaptchaTagHelper"
+        }
+      },
+      {
         "HashCode": -1492393726,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
@@ -14402,373 +14798,373 @@
   "RootNamespace": "hampadco",
   "Documents": [
     {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Shared\\_partial_Menu.cshtml",
-      "TargetPath": "Views\\Shared\\_partial_Menu.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\Forgotpassword.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\Forgotpassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Shared\\_partial_Menu.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Shared\\_partial_Menu.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\Khareji_Hogogi.cshtml",
-      "TargetPath": "Views\\Account\\Khareji_Hogogi.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\UploadImg.cshtml",
-      "TargetPath": "Views\\Account\\UploadImg.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\NewAccount.cshtml",
-      "TargetPath": "Views\\Account\\NewAccount.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\Wait.cshtml",
-      "TargetPath": "Views\\Pazirande\\Wait.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\Accounts.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\Accounts.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Home\\SetSupport.cshtml",
-      "TargetPath": "Views\\Home\\SetSupport.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\createnwe.cshtml",
-      "TargetPath": "Views\\Pazirande\\createnwe.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\Khareji_Hagigi.cshtml",
-      "TargetPath": "Views\\Account\\Khareji_Hagigi.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\Irani_Hagigi.cshtml",
-      "TargetPath": "Views\\Account\\Irani_Hagigi.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\No.cshtml",
-      "TargetPath": "Views\\Pazirande\\No.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\Irani_Hogogi.cshtml",
-      "TargetPath": "Views\\Account\\Irani_Hogogi.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\EditUser.cshtml",
-      "TargetPath": "Views\\Account\\EditUser.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\Account.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\Account.cshtml",
       "TargetPath": "Views\\Account\\Account.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Login\\Login.cshtml",
-      "TargetPath": "Views\\Login\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\GoToEdit.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\GoToEdit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\ShowDisapproval.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\ShowDisapproval.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\Set_Pazirande.cshtml",
-      "TargetPath": "Views\\Pazirande\\Set_Pazirande.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\NewUser.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\NewUser.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\ViewDetails.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\ViewDetails.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\DetailsRegistered.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\DetailsRegistered.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Shared\\_partial_Nav.cshtml",
-      "TargetPath": "Views\\Shared\\_partial_Nav.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\Edit.cshtml",
-      "TargetPath": "Views\\Pazirande\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\Ok.cshtml",
-      "TargetPath": "Views\\Pazirande\\Ok.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\UploadImg.cshtml",
+      "TargetPath": "Views\\Account\\UploadImg.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Login\\SetPass.cshtml",
-      "TargetPath": "Views\\Login\\SetPass.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Shared\\_layout_footer.cshtml",
-      "TargetPath": "Views\\Shared\\_layout_footer.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Shared\\_partial_Nav.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Shared\\_partial_Nav.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\AllPaZirandeh.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\AllPaZirandeh.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\EditUsers.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\EditUsers.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Home\\Forgotpassword.cshtml",
-      "TargetPath": "Views\\Home\\Forgotpassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\EditAccount.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\EditAccount.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\GoToUpload.cshtml",
-      "TargetPath": "Views\\Account\\GoToUpload.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Login\\CheekPassword.cshtml",
-      "TargetPath": "Views\\Login\\CheekPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\EditIraniHagigi.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\EditIraniHagigi.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\ViewDetailsRad.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\ViewDetailsRad.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\ViewDetailsRad.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Login\\ForgetPassword.cshtml",
-      "TargetPath": "Views\\Login\\ForgetPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Login\\CheekRCode.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\CheekRCode.cshtml",
       "TargetPath": "Views\\Login\\CheekRCode.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\SetUser.cshtml",
-      "TargetPath": "Views\\Account\\SetUser.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\EditIraniHogogi.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\EditIraniHogogi.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\Confirmed.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\Confirmed.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Home\\pazirande.cshtml",
-      "TargetPath": "Views\\Home\\pazirande.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\AllUser.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\AllUser.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\SearchToEdit.cshtml",
-      "TargetPath": "Views\\Account\\SearchToEdit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Home\\learn.cshtml",
-      "TargetPath": "Views\\Home\\learn.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\EditAccount.cshtml",
-      "TargetPath": "Views\\Account\\EditAccount.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\NewRegistered.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\NewRegistered.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\GoToEditAcoount.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\GoToEditAcoount.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\Set_Edit.cshtml",
-      "TargetPath": "Views\\Pazirande\\Set_Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\AddUser.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\AddUser.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\ViewDetails.cshtml",
-      "TargetPath": "Views\\Pazirande\\ViewDetails.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\All.cshtml",
-      "TargetPath": "Views\\Pazirande\\All.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\GoEdit.cshtml",
-      "TargetPath": "Views\\Pazirande\\GoEdit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\EditUser.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\EditUser.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\New.cshtml",
-      "TargetPath": "Views\\Pazirande\\New.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Areas\\Admin\\Views\\Home\\Disapproval.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\Disapproval.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Home\\Users.cshtml",
-      "TargetPath": "Views\\Home\\Users.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Pazirande\\ViewDetailsRad.cshtml",
-      "TargetPath": "Views\\Pazirande\\ViewDetailsRad.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Account\\SearchToUpload.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\SearchToUpload.cshtml",
       "TargetPath": "Views\\Account\\SearchToUpload.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\pazirande git\\pazirande\\hampadco\\Views\\Home\\support.cshtml",
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_partial_Menu.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_partial_Menu.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditUsers.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditUsers.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\CheekPassword.cshtml",
+      "TargetPath": "Views\\Login\\CheekPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\Khareji_Hogogi.cshtml",
+      "TargetPath": "Views\\Account\\Khareji_Hogogi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\NewRegistered.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\NewRegistered.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\GoToUpload.cshtml",
+      "TargetPath": "Views\\Account\\GoToUpload.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\DetailsRegistered.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\DetailsRegistered.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Shared\\_partial_Nav.cshtml",
+      "TargetPath": "Views\\Shared\\_partial_Nav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\New.cshtml",
+      "TargetPath": "Views\\Pazirande\\New.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\SetPass.cshtml",
+      "TargetPath": "Views\\Login\\SetPass.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Shared\\_partial_Menu.cshtml",
+      "TargetPath": "Views\\Shared\\_partial_Menu.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\AddUser.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\AddUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\All.cshtml",
+      "TargetPath": "Views\\Pazirande\\All.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\SearchToEdit.cshtml",
+      "TargetPath": "Views\\Account\\SearchToEdit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\AllUser.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\AllUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\createnwe.cshtml",
+      "TargetPath": "Views\\Pazirande\\createnwe.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Set_Edit.cshtml",
+      "TargetPath": "Views\\Pazirande\\Set_Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\Irani_Hogogi.cshtml",
+      "TargetPath": "Views\\Account\\Irani_Hogogi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\EditUser.cshtml",
+      "TargetPath": "Views\\Account\\EditUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\learn.cshtml",
+      "TargetPath": "Views\\Home\\learn.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\_partial_Nav.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_partial_Nav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\No.cshtml",
+      "TargetPath": "Views\\Pazirande\\No.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Set_Pazirande.cshtml",
+      "TargetPath": "Views\\Pazirande\\Set_Pazirande.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Shared\\_layout_footer.cshtml",
+      "TargetPath": "Views\\Shared\\_layout_footer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\NewAccount.cshtml",
+      "TargetPath": "Views\\Account\\NewAccount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\GoToEdit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\GoToEdit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\Irani_Hagigi.cshtml",
+      "TargetPath": "Views\\Account\\Irani_Hagigi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\GoEdit.cshtml",
+      "TargetPath": "Views\\Pazirande\\GoEdit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\support.cshtml",
       "TargetPath": "Views\\Home\\support.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\ViewDetails.cshtml",
+      "TargetPath": "Views\\Pazirande\\ViewDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Ok.cshtml",
+      "TargetPath": "Views\\Pazirande\\Ok.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditIraniHagigi.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditIraniHagigi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\AllPaZirandeh.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\AllPaZirandeh.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Forgotpassword.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Forgotpassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Wait.cshtml",
+      "TargetPath": "Views\\Pazirande\\Wait.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\Users.cshtml",
+      "TargetPath": "Views\\Home\\Users.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditAccount.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditAccount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\SetUser.cshtml",
+      "TargetPath": "Views\\Account\\SetUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\Forgotpassword.cshtml",
+      "TargetPath": "Views\\Home\\Forgotpassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\GoToEditAcoount.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\GoToEditAcoount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\Login.cshtml",
+      "TargetPath": "Views\\Login\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\Khareji_Hagigi.cshtml",
+      "TargetPath": "Views\\Account\\Khareji_Hagigi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\ViewDetailsRad.cshtml",
+      "TargetPath": "Views\\Pazirande\\ViewDetailsRad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Account\\EditAccount.cshtml",
+      "TargetPath": "Views\\Account\\EditAccount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Confirmed.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Confirmed.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditUser.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\NewUser.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\NewUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\pazirande.cshtml",
+      "TargetPath": "Views\\Home\\pazirande.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\SetSupport.cshtml",
+      "TargetPath": "Views\\Home\\SetSupport.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Accounts.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Accounts.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Login\\ForgetPassword.cshtml",
+      "TargetPath": "Views\\Login\\ForgetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\EditIraniHogogi.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\EditIraniHogogi.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\ViewDetails.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\ViewDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Edit.cshtml",
+      "TargetPath": "Views\\Pazirande\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Disapproval.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Disapproval.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\ShowDisapproval.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\ShowDisapproval.cshtml",
       "FileKind": "mvc"
     }
   ],

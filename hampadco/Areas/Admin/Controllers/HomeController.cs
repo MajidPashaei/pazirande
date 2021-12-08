@@ -80,6 +80,25 @@ namespace Namespace
         {
             var s = db.Tbl_Pazirandes.Where(a => a.Id == id).ToList();
             ViewBag.Pazirande = s;
+            
+            var A = db.Tbl_Pazirandes.SingleOrDefault(a => a.Id == id);
+            ViewBag.Tarikh_Tavalod = A.Tarikh_Tavalod.ToPersianDateString() ;
+            if ( A.Tarikh_Tasis_sherkat != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Tasis_sherkat = A.Tarikh_Tasis_sherkat.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Payan_Etebar != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Payan_Etebar = A.Tarikh_Payan_Etebar.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Sodor_Javaz != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Sodor_Javaz = A.Tarikh_Sodor_Javaz.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Etmam_Ejare != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Etmam_Ejare = A.Tarikh_Etmam_Ejare.ToPersianDateString() ;
+            }
 
             return View();
         }
@@ -88,6 +107,25 @@ namespace Namespace
         {
             var s = db.Tbl_Pazirandes.Where(a => a.Id == id).ToList();
             ViewBag.Pazirande = s;
+            
+            var A = db.Tbl_Pazirandes.SingleOrDefault(a => a.Id == id);
+            ViewBag.Tarikh_Tavalod = A.Tarikh_Tavalod.ToPersianDateString() ;
+            if ( A.Tarikh_Tasis_sherkat != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Tasis_sherkat = A.Tarikh_Tasis_sherkat.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Payan_Etebar != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Payan_Etebar = A.Tarikh_Payan_Etebar.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Sodor_Javaz != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Sodor_Javaz = A.Tarikh_Sodor_Javaz.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Etmam_Ejare != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Etmam_Ejare = A.Tarikh_Etmam_Ejare.ToPersianDateString() ;
+            }
 
             return View();
         }
@@ -149,6 +187,25 @@ namespace Namespace
         {
             var s = db.Tbl_Pazirandes.Where(a => a.Id == id).ToList();
             ViewBag.Pazirande = s;
+            
+            var A = db.Tbl_Pazirandes.SingleOrDefault(a => a.Id == id);
+            ViewBag.Tarikh_Tavalod = A.Tarikh_Tavalod.ToPersianDateString() ;
+            if ( A.Tarikh_Tasis_sherkat != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Tasis_sherkat = A.Tarikh_Tasis_sherkat.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Payan_Etebar != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Payan_Etebar = A.Tarikh_Payan_Etebar.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Sodor_Javaz != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Sodor_Javaz = A.Tarikh_Sodor_Javaz.ToPersianDateString() ;
+            }
+            if ( A.Tarikh_Etmam_Ejare != Convert.ToDateTime("0001-01-01 00:00:00.0000000") )
+            {
+                ViewBag.Tarikh_Etmam_Ejare = A.Tarikh_Etmam_Ejare.ToPersianDateString() ;
+            }
             return View();
         }
         [HttpGet]
@@ -292,12 +349,12 @@ namespace Namespace
             return View();
         }
 
-        public IActionResult GoToEditAccount(Vm_PazirandeUser l)
+        public IActionResult GoToEditAccount(string l)
         {
             var c =
                 db
                     .Tbl_PazirandeUsers
-                    .Where(a => a.National_Code == l.National_Code)
+                    .Where(a => a.National_Code == l)
                     .SingleOrDefault();
             if (c != null)
             {

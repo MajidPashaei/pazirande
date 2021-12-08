@@ -1315,7 +1315,6 @@ c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\View
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Pazirande\ViewDetailsRad.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetails.cshtml.g.cs
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewDetailsRad.cshtml.g.cs
-e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\PersianDateTime.Core.dll
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Home\SetSupport.cshtml.g.cs
 >>>>>>> b48f9839fce176aaa213a6554d61bb251478391a
 >>>>>>> 2004aa085f5ef91c897d10410507eaa515041f49
@@ -2228,6 +2227,7 @@ d:\nikatak\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.csp
 d:\nikatak\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.dll
 d:\nikatak\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.pdb
 d:\nikatak\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.genruntimeconfig.cache
+<<<<<<< HEAD
 d:\pazirande git\pazirande\hampadco\bin\Debug\netcoreapp3.1\appsettings.Development.json
 d:\pazirande git\pazirande\hampadco\bin\Debug\netcoreapp3.1\appsettings.json
 d:\pazirande git\pazirande\hampadco\bin\Debug\netcoreapp3.1\hampadco.exe
@@ -2681,3 +2681,19 @@ d:\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.csproj.Copy
 d:\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.dll
 d:\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.pdb
 d:\pazirande git\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.genruntimeconfig.cache
+=======
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\BotDetect.Web.Mvc.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\BotDetect.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_green.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.e_sqlite3.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\e_sqlite3.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\e_sqlite3.dll
+>>>>>>> 5156b046b909e2b0569bb4c7dda8ec01d537c17c
