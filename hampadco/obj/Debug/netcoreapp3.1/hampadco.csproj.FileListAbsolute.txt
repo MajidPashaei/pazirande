@@ -461,3 +461,7 @@ e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\staticwebassets\hampadco.Sta
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\staticwebassets\hampadco.StaticWebAssets.xml
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\hampadco.dll
 e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\hampadco.pdb
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\ClosedXML.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll

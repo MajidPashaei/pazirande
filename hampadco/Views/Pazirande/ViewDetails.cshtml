@@ -602,6 +602,84 @@
 
                                             
                                         </div>
+                                        @if (ViewBag.user != null)
+                                        {
+                                            foreach (var item1 in ViewBag.user)
+                                            {
+                                                
+                                                  <div class="form-row mt-4">    
+                                                        @if (item1.nationalcard_image1 !=null)
+                                                {
+                                                           <div class="form-group col-md-3">
+                                                             <label for="inputPassword4"> تصویر کارت ملی</label>
+                                                            <a href="/fileupload/@item1.nationalcard_image1" download="/fileupload/@item1.nationalcard_image1" > 
+                                                            <img src="/fileupload/@item1.nationalcard_image1" alt="..." class="img-thumbnail">
+                                                            </a> 
+                                                            </div>
+
+
+                                                }
+                                                          @if (item1.nationalcard_image2 !=null)
+                                                {
+                                                           <div class="form-group col-md-3">
+                                                             <label for="inputPassword4"> تصویر پشت کارت ملی</label>
+                                                           <a href="/fileupload/@item1.nationalcard_image2" download="/fileupload/@item1.nationalcard_image2" > 
+                                                            <img src="/fileupload/@item1.nationalcard_image2" alt="..." class="img-thumbnail">
+                                                            </a> 
+                                                            </div>
+
+
+                                                }
+                                                          @if (item1.certificate_image !=null)
+                                                {
+                                                           <div class="form-group col-md-3">
+                                                             <label for="inputPassword4"> تصویر شناسنامه</label>
+                                                            <a href="/fileupload/@item1.certificate_image" download="/fileupload/@item1.certificate_image" > 
+                                                            <img src="/fileupload/@item1.certificate_image" alt="..." class="img-thumbnail">
+                                                            </a> 
+                                                            </div>
+
+
+                                                }
+                                                @* /// *@
+                                                           @if (item1.newspaper_image !=null)
+                                                {
+                                                           <div class="form-group col-md-3">
+                                                             <label for="inputPassword4">تصویر آخرین روزنامه رسمی</label>
+                                                           <a href="/fileupload/@item1.newspaper_image" download="/fileupload/@item1.newspaper_image" > 
+                                                            <img src="/fileupload/@item1.newspaper_image" alt="..." class="img-thumbnail">
+                                                            </a> 
+                                                            </div>
+
+
+                                                }
+
+                                                           @if (item1.statute_image !=null)
+                                                {
+                                                           <div class="form-group col-md-3">
+                                                             <label for="inputPassword4">تصویر صفحات اساسنامه</label>
+                                                            <a href="/fileupload/@item1.statute_image" download="/fileupload/@item1.statute_image" > 
+                                                            <img src="/fileupload/@item1.statute_image" alt="..." class="img-thumbnail">
+                                                            </a> 
+                                                            </div>
+
+
+                                                }
+
+                                                           @if (item1.establishment_image !=null)
+                                                {
+                                                           <div class="form-group col-md-3">
+                                                             <label for="inputPassword4">تصویر آگهی تاسیس</label>
+                                                            <a href="/fileupload/@item1.establishment_image" download="/fileupload/@item1.establishment_image" > 
+                                                            <img src="/fileupload/@item1.establishment_image" alt="..." class="img-thumbnail">
+                                                            </a> 
+                                                            </div>
+
+
+                                                }
+                                                </div>
+                                            }
+                                        }
 
                                 
                                     }

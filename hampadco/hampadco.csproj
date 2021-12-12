@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Captcha" Version="4.4.2" />
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
     <PackageReference Include="kavenegar" Version="1.2.4" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.8" />

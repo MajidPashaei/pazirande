@@ -386,14 +386,89 @@
                                             <label for="inputPassword4">نام پدر لاتین</label>
                                             <input required type="text" class="form-control" asp-for="FatherName_en" 
                                                 placeholder="نام پدر">
-                                        </div>
-                                    </div>
+                                        </div> 
+                                         </div>
+                                         
+                                     
                                     <button type="submit" class="btn btn-primary  mt-3">ثبت</button>
                                 }
                                 else
                                 {
 
                                 }
+                                <p class="alert alert-danger mt-2 text-center">برای ویرایش فایل های اپلود شده به بخش آپلود مدارک مراجعه فرمایید.</p>   
+
+                                 <div class="form-row mt-4">    
+                                       @if (item.nationalcard_image1 !=null)
+                               {
+                                          <div class="form-group col-md-3">
+                                            <label for="inputPassword4"> تصویر کارت ملی</label>
+                                           <a href="/fileupload/@item.nationalcard_image1" download="/fileupload/@item.nationalcard_image1" > 
+                                           <img src="/fileupload/@item.nationalcard_image1" alt="..." class="img-thumbnail">
+                                           </a> 
+                                           </div>
+                             
+    
+                               }
+                                         @if (item.nationalcard_image2 !=null)
+                               {
+                                          <div class="form-group col-md-3">
+                                            <label for="inputPassword4"> تصویر پشت کارت ملی</label>
+                                          <a href="/fileupload/@item.nationalcard_image2" download="/fileupload/@item.nationalcard_image2" > 
+                                           <img src="/fileupload/@item.nationalcard_image2" alt="..." class="img-thumbnail">
+                                           </a> 
+                                           </div>
+                             
+    
+                               }
+                                         @if (item.certificate_image !=null)
+                               {
+                                          <div class="form-group col-md-3">
+                                            <label for="inputPassword4"> تصویر شناسنامه</label>
+                                           <a href="/fileupload/@item.certificate_image" download="/fileupload/@item.certificate_image" > 
+                                           <img src="/fileupload/@item.certificate_image" alt="..." class="img-thumbnail">
+                                           </a> 
+                                           </div>
+                             
+    
+                               }
+                               @* /// *@
+                                          @if (item.newspaper_image !=null)
+                               {
+                                          <div class="form-group col-md-3">
+                                            <label for="inputPassword4">تصویر آخرین روزنامه رسمی</label>
+                                          <a href="/fileupload/@item.newspaper_image" download="/fileupload/@item.newspaper_image" > 
+                                           <img src="/fileupload/@item.newspaper_image" alt="..." class="img-thumbnail">
+                                           </a> 
+                                           </div>
+                             
+    
+                               }
+
+                                          @if (item.statute_image !=null)
+                               {
+                                          <div class="form-group col-md-3">
+                                            <label for="inputPassword4">تصویر صفحات اساسنامه</label>
+                                           <a href="/fileupload/@item.statute_image" download="/fileupload/@item.statute_image" > 
+                                           <img src="/fileupload/@item.statute_image" alt="..." class="img-thumbnail">
+                                           </a> 
+                                           </div>
+                             
+    
+                               }
+                               
+                                          @if (item.establishment_image !=null)
+                               {
+                                          <div class="form-group col-md-3">
+                                            <label for="inputPassword4">تصویر آگهی تاسیس</label>
+                                           <a href="/fileupload/@item.establishment_image" download="/fileupload/@item.establishment_image" > 
+                                           <img src="/fileupload/@item.establishment_image" alt="..." class="img-thumbnail">
+                                           </a> 
+                                           </div>
+                             
+    
+                               }
+                               </div> 
                             }
                         }
                         <a href="/home/users" class="btn btn-success  mt-3 " style="width: min-content;">

@@ -343,6 +343,7 @@ namespace Namespace
         public IActionResult EditUser( int id )
         {
             var quser = db.Tbl_PazirandeUsers.SingleOrDefault( a => a.Id == id );
+            
 
             Vm_PazirandeUser vp = new Vm_PazirandeUser();
 
@@ -387,7 +388,6 @@ namespace Namespace
                 vp.passport_validity = quser.Passport_Validity.ToPersianDateString() ;
             }
             vp.Nationality = quser.Nationality ;
-
             ViewBag.user = db.Tbl_PazirandeUsers.Where( a => a.Id == id ).ToList();
 
             return View(vp);

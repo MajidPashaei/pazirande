@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ViewModelLayer.Portal;
 using faraboom.Models;
+using ClosedXML.Excel;
+using System.IO;
 
 namespace Namespace
 {
@@ -323,11 +325,6 @@ namespace Namespace
 
         public IActionResult EditUsers(Vm_User b)
         {
-            if (db.Tbl_Users.Any(a => a.Code == b.Code))
-            {
-                ViewBag.Msg = "کاربر با کد نمایندگی وارد شده موجود میباشد";
-                return View();
-            }
             var user = db.Tbl_Users.Where(a => a.Id == b.Id).SingleOrDefault();
             user.Name = b.Name;
             user.Family = b.Family;
@@ -528,5 +525,229 @@ namespace Namespace
 
             return View();
         }
+
+        public IActionResult Excel()
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                // ستون ها
+                var worksheet = workbook.Worksheets.Add("pepe");
+                var currentRow = 1;
+                worksheet.Cell(currentRow, 1).Value = "Id";
+                worksheet.Cell(currentRow, 2).Value = "NameCreateUser";
+                worksheet.Cell(currentRow, 3).Value = "Status";
+                worksheet.Cell(currentRow, 5).Value = "Description";
+                worksheet.Cell(currentRow, 6).Value = "UserName";
+                worksheet.Cell(currentRow, 7).Value = "Type_Moshtari";
+                worksheet.Cell(currentRow, 8).Value = "Code_Meli";
+                worksheet.Cell(currentRow, 9).Value = "Shenase_Meli";
+                worksheet.Cell(currentRow, 10).Value = "Shomare_Shenasname";
+                worksheet.Cell(currentRow, 11).Value = "Name ";
+                worksheet.Cell(currentRow, 12).Value = "Family";
+                worksheet.Cell(currentRow, 13).Value = "Tarikh_Tavalod";
+                worksheet.Cell(currentRow, 14).Value = "Name_Pedar";
+                worksheet.Cell(currentRow, 15).Value = "Jensiat";
+                worksheet.Cell(currentRow, 16).Value = "Mobile";
+                worksheet.Cell(currentRow, 17).Value = "Address";
+                worksheet.Cell(currentRow, 18).Value = "Name_EN";
+                worksheet.Cell(currentRow, 19).Value = "Family_EN";
+                worksheet.Cell(currentRow, 20).Value = "Pedar_EN";
+                worksheet.Cell(currentRow, 21).Value = "Name_Sherkat";
+                worksheet.Cell(currentRow, 22).Value = "Tarikh_Tasis_sherkat";
+                worksheet.Cell(currentRow, 23).Value = "Name_EN_Sherkat";
+                worksheet.Cell(currentRow, 24).Value = "Code_Egtesadi";
+                worksheet.Cell(currentRow, 25).Value = " Shomare_Sabt";
+                worksheet.Cell(currentRow, 26).Value = " Pazirande_Atba";
+                worksheet.Cell(currentRow, 27).Value = " Code_Faragir";
+                worksheet.Cell(currentRow, 28).Value = " Code_Gozarname";
+                worksheet.Cell(currentRow, 29).Value = " Tarikh_Etbar";
+                worksheet.Cell(currentRow, 30).Value = "Melyat";
+                worksheet.Cell(currentRow, 31).Value = " Shenase_Onvan_Nemayandegi";
+                worksheet.Cell(currentRow, 32).Value = " Shenase_Bazaryab_Nemayandegi";
+                worksheet.Cell(currentRow, 33).Value = " Shenase_Porojeh";
+                worksheet.Cell(currentRow, 34).Value = "Shenase_Switch";
+                worksheet.Cell(currentRow, 35).Value = "Shenase_Type_Dargah ";
+                worksheet.Cell(currentRow, 36).Value = "Shenase_Type_Dastgah ";
+                worksheet.Cell(currentRow, 37).Value = "Shenase_Model_Dastgah ";
+                worksheet.Cell(currentRow, 38).Value = " Shenase_Bank";
+                worksheet.Cell(currentRow, 39).Value = " Code_Shobe";
+                worksheet.Cell(currentRow, 40).Value = "Shomare_Hesab ";
+                worksheet.Cell(currentRow, 41).Value = "Shomare_Sheba ";
+                worksheet.Cell(currentRow, 42).Value = " Code_Shaparaki_shahr";
+                worksheet.Cell(currentRow, 43).Value = " Mantage_Shahri";
+                worksheet.Cell(currentRow, 44).Value = " Code_Posti";
+                worksheet.Cell(currentRow, 45).Value = " TelePhone";
+                worksheet.Cell(currentRow, 46).Value = "Fax ";
+                worksheet.Cell(currentRow, 47).Value = " Code_Takmily_Senf";
+                worksheet.Cell(currentRow, 48).Value = "Onvan_Mahal_Kasb ";
+                worksheet.Cell(currentRow, 49).Value = "Onvan_Latin_Kasb ";
+                worksheet.Cell(currentRow, 50).Value = "Shenase_Malekyat";
+                worksheet.Cell(currentRow, 51).Value = "Address_Shaparaki ";
+                worksheet.Cell(currentRow, 52).Value = " Address_Latin";
+                worksheet.Cell(currentRow, 53).Value = "Shenase_Mahal_kasb ";
+                worksheet.Cell(currentRow, 54).Value = " Shomare_Javaz_kasb";
+                worksheet.Cell(currentRow, 55).Value = "Marja_Saderkonande_Mojavez ";
+                worksheet.Cell(currentRow, 56).Value = " Tarikh_Sodor_Javaz";
+                worksheet.Cell(currentRow, 57).Value = "Tarikh_Payan_Etebar ";
+                worksheet.Cell(currentRow, 58).Value = "Shomare_Garardad_Ejare ";
+                worksheet.Cell(currentRow, 59).Value = "Tarikh_Etmam_Ejare ";
+                worksheet.Cell(currentRow, 60).Value = "Code_Rahgiri ";
+                worksheet.Cell(currentRow, 61).Value = "Type_Garardad_Hesab ";
+                worksheet.Cell(currentRow, 62).Value = " Shenase_Type_Vagozari";
+                worksheet.Cell(currentRow, 63).Value = "Type_Vadieh ";
+                worksheet.Cell(currentRow, 64).Value = " Shomare_Sanad";
+                worksheet.Cell(currentRow, 65).Value = " Mablag_Frosh";
+                worksheet.Cell(currentRow, 66).Value = " Moaref";
+                worksheet.Cell(currentRow, 67).Value = " Phone_Moaref";
+                worksheet.Cell(currentRow, 68).Value = " Tedad_Agsat";
+                worksheet.Cell(currentRow, 69).Value = " Mablag_Agsat";
+                worksheet.Cell(currentRow, 70).Value = "Mobail_Motasel ";
+                worksheet.Cell(currentRow, 71).Value = "Mobaile_Fani_Pos";
+                worksheet.Cell(currentRow, 72).Value = " Telephone_Fani_Pos";
+                worksheet.Cell(currentRow, 73).Value = " Shomare_Pazirande";
+                worksheet.Cell(currentRow, 74).Value = " Shomare_Terminal";
+                worksheet.Cell(currentRow, 75).Value = "Serial_Dastgah ";
+                worksheet.Cell(currentRow, 76).Value = "Tarikh_Nasb ";
+                worksheet.Cell(currentRow, 77).Value = " Shomare_Marja";
+                worksheet.Cell(currentRow, 78).Value = "Tarikh_Tarif_Switch ";
+                worksheet.Cell(currentRow, 79).Value = "Tarikh_Tarif_Shaparak ";
+                worksheet.Cell(currentRow, 80).Value = " Nemad_Elektroniki";
+                worksheet.Cell(currentRow, 81).Value = "Tarikh_Etmam_Etebar ";
+                worksheet.Cell(currentRow, 82).Value = "Tarikh_Sodor_Nemad ";
+                worksheet.Cell(currentRow, 83).Value = "Type_Nemad ";
+                worksheet.Cell(currentRow, 84).Value = "Server_Frosh ";
+                worksheet.Cell(currentRow, 85).Value = "IPGAccessPort ";
+                worksheet.Cell(currentRow, 86).Value = "IPGCallBackAddress ";
+                worksheet.Cell(currentRow, 87).Value = " Address_Post_Sherkat";
+                worksheet.Cell(currentRow, 88).Value = " Mahsolat_Frosh";
+                worksheet.Cell(currentRow, 89).Value = "Address_Post ";
+                worksheet.Cell(currentRow, 90).Value = "Family_Masol_Fani";
+                worksheet.Cell(currentRow, 91).Value = "Mobail_Masol_Fani";
+                worksheet.Cell(currentRow, 92).Value = "Name_Fani_Masol_Fani ";
+                worksheet.Cell(currentRow, 93).Value = " Code_Meli_Masol_Fani";
+                worksheet.Cell(currentRow, 94).Value = " Address_Site";
+                worksheet.Cell(currentRow, 95).Value = "Emkan_Lagv ";
+                worksheet.Cell(currentRow, 96).Value = " Zamine_Faliat";
+                ///
+
+                var users=db.Tbl_Pazirandes.Where(a=>a.StatusExcel=="0").ToList();
+                // تفکیک جدول و پرکردن اطلاعات
+                foreach (var user in users)
+                {
+                    //    اعضای ردیف
+                currentRow++;
+                worksheet.Cell(currentRow, 1).Value =user.Id;
+                worksheet.Cell(currentRow, 2).Value = user.NameCreateUser;
+                worksheet.Cell(currentRow, 3).Value =user.Status;
+                worksheet.Cell(currentRow,5).Value = user.Description;
+                worksheet.Cell(currentRow, 6).Value =user.UserName;
+                worksheet.Cell(currentRow, 7).Value =user.Type_Moshtari;
+                worksheet.Cell(currentRow, 8).Value =user.Code_Meli;
+                worksheet.Cell(currentRow, 9).Value =user.Shenase_Meli;
+                worksheet.Cell(currentRow, 10).Value =user.Shomare_Shenasname;
+                worksheet.Cell(currentRow, 11).Value =user.Name ;
+                worksheet.Cell(currentRow, 12).Value =user.Family;
+                worksheet.Cell(currentRow, 13).Value =user.Tarikh_Tavalod;
+                worksheet.Cell(currentRow, 14).Value =user.Name_Pedar;
+                worksheet.Cell(currentRow, 15).Value =user.Jensiat;
+                worksheet.Cell(currentRow, 16).Value =user.Mobile;
+                worksheet.Cell(currentRow, 17).Value =user.Address;
+                worksheet.Cell(currentRow, 18).Value =user.Name_EN;
+                worksheet.Cell(currentRow, 19).Value =user.Family_EN;
+                worksheet.Cell(currentRow, 20).Value =user.Pedar_EN;
+                worksheet.Cell(currentRow, 21).Value =user.Name_Sherkat;
+                worksheet.Cell(currentRow, 22).Value =user.Tarikh_Tasis_sherkat;
+                worksheet.Cell(currentRow, 23).Value =user.Name_EN_Sherkat;
+                worksheet.Cell(currentRow, 24).Value =user.Code_Egtesadi;
+                worksheet.Cell(currentRow, 25).Value =user. Shomare_Sabt;
+                worksheet.Cell(currentRow, 26).Value =user. Pazirande_Atba;
+                worksheet.Cell(currentRow, 27).Value =user. Code_Faragir;
+                worksheet.Cell(currentRow, 28).Value =user. Code_Gozarname;
+                worksheet.Cell(currentRow, 29).Value =user. Tarikh_Etbar;
+                worksheet.Cell(currentRow, 30).Value =user.Melyat;
+                worksheet.Cell(currentRow, 31).Value =user. Shenase_Onvan_Nemayandegi;
+                worksheet.Cell(currentRow, 32).Value =user. Shenase_Bazaryab_Nemayandegi;
+                worksheet.Cell(currentRow, 33).Value =user. Shenase_Porojeh;
+                worksheet.Cell(currentRow, 34).Value =user.Shenase_Switch;
+                worksheet.Cell(currentRow, 35).Value =user.Shenase_Type_Dargah ;
+                worksheet.Cell(currentRow, 36).Value =user.Shenase_Type_Dastgah ;
+                worksheet.Cell(currentRow, 37).Value =user.Shenase_Model_Dastgah ;
+                worksheet.Cell(currentRow, 38).Value =user. Shenase_Bank;
+                worksheet.Cell(currentRow, 39).Value =user. Code_Shobe;
+                worksheet.Cell(currentRow, 40).Value =user.Shomare_Hesab;
+                worksheet.Cell(currentRow, 41).Value =user.Shomare_Sheba ;
+                worksheet.Cell(currentRow, 42).Value =user. Code_Shaparaki_shahr;
+                worksheet.Cell(currentRow, 43).Value =user. Mantage_Shahri;
+                worksheet.Cell(currentRow, 44).Value =user. Code_Posti;
+                worksheet.Cell(currentRow, 45).Value =user. TelePhone;
+                worksheet.Cell(currentRow, 46).Value =user.Fax;
+                worksheet.Cell(currentRow, 47).Value =user. Code_Takmily_Senf;
+                worksheet.Cell(currentRow, 48).Value =user.Onvan_Mahal_Kasb;
+                worksheet.Cell(currentRow, 49).Value =user.Onvan_Latin_Kasb;
+                worksheet.Cell(currentRow, 50).Value =user.Shenase_Malekyat;
+                worksheet.Cell(currentRow, 51).Value =user.Address_Shaparaki ;
+                worksheet.Cell(currentRow, 52).Value =user. Address_Latin;
+                worksheet.Cell(currentRow, 53).Value =user.Shenase_Mahal_kasb ;
+                worksheet.Cell(currentRow, 54).Value =user. Shomare_Javaz_kasb;
+                worksheet.Cell(currentRow, 55).Value =user.Marja_Saderkonande_Mojavez;
+                worksheet.Cell(currentRow, 56).Value =user. Tarikh_Sodor_Javaz;
+                worksheet.Cell(currentRow, 57).Value =user.Tarikh_Payan_Etebar;
+                worksheet.Cell(currentRow, 58).Value =user.Shomare_Garardad_Ejare;
+                worksheet.Cell(currentRow, 59).Value =user.Tarikh_Etmam_Ejare;
+                worksheet.Cell(currentRow, 60).Value =user.Code_Rahgiri;
+                worksheet.Cell(currentRow, 61).Value =user.Type_Garardad_Hesab;
+                worksheet.Cell(currentRow, 62).Value =user. Shenase_Type_Vagozari;
+                worksheet.Cell(currentRow, 63).Value =user.Type_Vadieh;
+                worksheet.Cell(currentRow, 64).Value =user. Shomare_Sanad;
+                worksheet.Cell(currentRow, 65).Value =user. Mablag_Frosh;
+                worksheet.Cell(currentRow, 66).Value =user. Moaref;
+                worksheet.Cell(currentRow, 67).Value =user. Phone_Moaref;
+                worksheet.Cell(currentRow, 68).Value =user. Tedad_Agsat;
+                worksheet.Cell(currentRow, 69).Value =user. Mablag_Agsat;
+                worksheet.Cell(currentRow, 70).Value =user.Mobail_Motasel ;
+                worksheet.Cell(currentRow, 71).Value =user.Mobaile_Fani_Pos;
+                worksheet.Cell(currentRow, 72).Value =user. Telephone_Fani_Pos;
+                worksheet.Cell(currentRow, 73).Value =user. Shomare_Pazirande;
+                worksheet.Cell(currentRow, 74).Value =user. Shomare_Terminal;
+                worksheet.Cell(currentRow, 75).Value =user.Serial_Dastgah ;
+                worksheet.Cell(currentRow, 76).Value =user.Tarikh_Nasb ;
+                worksheet.Cell(currentRow, 77).Value =user. Shomare_Marja;
+                worksheet.Cell(currentRow, 78).Value =user.Tarikh_Tarif_Switch ;
+                worksheet.Cell(currentRow, 79).Value =user.Tarikh_Tarif_Shaparak ;
+                worksheet.Cell(currentRow, 80).Value =user. Nemad_Elektroniki;
+                worksheet.Cell(currentRow, 81).Value =user.Tarikh_Etmam_Etebar ;
+                worksheet.Cell(currentRow, 82).Value =user.Tarikh_Sodor_Nemad ;
+                worksheet.Cell(currentRow, 83).Value =user.Type_Nemad ;
+                worksheet.Cell(currentRow, 84).Value =user.Server_Frosh ;
+                worksheet.Cell(currentRow, 85).Value =user.IPGAccessPort ;
+                worksheet.Cell(currentRow, 86).Value =user.IPGCallBackAddress ;
+                worksheet.Cell(currentRow, 87).Value =user. Address_Post_Sherkat;
+                worksheet.Cell(currentRow, 88).Value =user. Mahsolat_Frosh;
+                worksheet.Cell(currentRow, 89).Value =user.Address_Post ;
+                worksheet.Cell(currentRow, 90).Value =user.Family_Masol_Fani;
+                worksheet.Cell(currentRow, 91).Value =user.Mobail_Masol_Fani;
+                worksheet.Cell(currentRow, 92).Value =user.Name_Fani_Masol_Fani ;
+                worksheet.Cell(currentRow, 93).Value =user. Code_Meli_Masol_Fani;
+                worksheet.Cell(currentRow, 94).Value =user. Address_Site;
+                worksheet.Cell(currentRow, 95).Value =user.Emkan_Lagv ;
+                worksheet.Cell(currentRow, 96).Value =user. Zamine_Faliat;
+                user.StatusExcel="1";
+                db.Tbl_Pazirandes.Update(user);
+                db.SaveChanges();
+                }
+                using (var stream = new MemoryStream())
+                {
+                    workbook.SaveAs(stream);
+                    var content = stream.ToArray();
+                    return File(
+                        content,
+                        // نام اکسل
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        "price.xlsx");
+
+                }
+            }
+        }
+
     }
 }

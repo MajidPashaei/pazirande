@@ -229,8 +229,10 @@ namespace Namespace
 
         public IActionResult ViewDetails(int id)
         {
-            var s = db.Tbl_Pazirandes.Where(a => a.Id == id).ToList();
-            ViewBag.Pazirande = s;
+            var s = db.Tbl_Pazirandes.Where(a => a.Id == id).SingleOrDefault();
+            var s1 = db.Tbl_Pazirandes.Where(a => a.Id == id).ToList();
+            ViewBag.user=db.Tbl_PazirandeUsers.Where(a => a.National_Code == s.Code_Meli).ToList();
+            ViewBag.Pazirande = s1;
 
             var A = db.Tbl_Pazirandes.SingleOrDefault(a => a.Id == id);
             ViewBag.Tarikh_Tavalod = A.Tarikh_Tavalod.ToPersianDateString() ;
