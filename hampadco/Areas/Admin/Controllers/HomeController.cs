@@ -173,7 +173,7 @@ namespace Namespace
             q.Status = "1";
             db.Tbl_Pazirandes.Update (q);
             db.SaveChanges();
-            ms = "پذیرنده مورد نظر تایید شد";
+            ms = "ترمینال مورد نظر تایید شد";
             return RedirectToAction("index", "home", new { Areas = "Admin" });
         }
 
@@ -220,25 +220,25 @@ namespace Namespace
         {
             if (db.Tbl_Users.Any(a => a.NationalCode == user.NationalCode))
             {
-                ViewBag.Msg = "کاربر با کد ملی وارد شده موجود میباشد";
+                ViewBag.Msg = "پذیرنده با کد ملی وارد شده موجود میباشد";
                 return View();
             }
 
             else if (db.Tbl_Users.Any(a => a.Code == user.Code))
             {
-                ViewBag.Msg = "کاربر با کد نمایندگی وارد شده موجود میباشد";
+                ViewBag.Msg = "پذیرنده با کد نمایندگی وارد شده موجود میباشد";
                 return View();
             }
 
             else if (db.Tbl_Users.Any(a => a.UserName == user.UserName))
             {
-                ViewBag.Msg = "کاربر با نام کاربری  وارد شده موجود میباشد";
+                ViewBag.Msg = "پذیرنده با نام کاربری  وارد شده موجود میباشد";
                 return View();
             }
 
             else if (db.Tbl_Users.Any(a => a.Phone == user.Phone))
             {
-                ViewBag.Msg = "کاربر با نام کاربری  وارد شده موجود میباشد";
+                ViewBag.Msg = "پذیرنده با نام کاربری  وارد شده موجود میباشد";
                 return View();
             }
             else
@@ -258,7 +258,7 @@ namespace Namespace
                 db.Tbl_Users.Add(users);
                 db.SaveChanges();
 
-                ViewBag.ok = "کاربر با کد ملی وارد شده با موفقیت ثبت شد";
+                ViewBag.ok = "پذیرنده با کد ملی وارد شده با موفقیت ثبت شد";
             }
             return View();
         }
@@ -318,7 +318,7 @@ namespace Namespace
             }
             else
             {
-                ViewBag.msg = "کاربر با مشخصات وارد شده یافت نشد";
+                ViewBag.msg = "پذیرنده با مشخصات وارد شده یافت نشد";
                 return View();
             }
         }
@@ -337,7 +337,7 @@ namespace Namespace
             user.Password = b.Password;
             db.Tbl_Users.Update (user);
             db.SaveChanges();
-            ViewBag.Msg = "کاربر با کد ملی وارد شده با موفقیت ویرایش شد";
+            ViewBag.Msg = "پذیرنده با کد ملی وارد شده با موفقیت ویرایش شد";
             return View();
         }
 
@@ -521,7 +521,7 @@ namespace Namespace
             db.Tbl_PazirandeUsers.Update (tpu);
             db.SaveChanges();
 
-            ViewBag.msg = $" کاربر با کد ملی  {vpu.National_Code}  آپدیت شد . ";
+            ViewBag.msg = $" پذیرنده با کد ملی  {vpu.National_Code}  آپدیت شد . ";
 
             return View();
         }

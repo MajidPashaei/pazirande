@@ -484,7 +484,7 @@ namespace Namespace
             }
             else
             {
-                ViewBag.msg = $" کاربر با کد ملی  {vpu.National_Code}  یافت نشد . ";
+                ViewBag.msg = $" پذیرنده با کد ملی  {vpu.National_Code}  یافت نشد . ";
             }
 
             return View();
