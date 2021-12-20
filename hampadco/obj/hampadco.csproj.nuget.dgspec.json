@@ -137,6 +137,14 @@
               "target": "Package",
               "version": "[3.1.8, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.15.0, )"
+            },
             "kavenegar": {
               "target": "Package",
               "version": "[1.2.4, )"
