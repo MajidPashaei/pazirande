@@ -14928,6 +14928,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Gabzino\\ShowWaterBillInquiry.cshtml",
+      "TargetPath": "Views\\Gabzino\\ShowWaterBillInquiry.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\createnwe.cshtml",
       "TargetPath": "Views\\Pazirande\\createnwe.cshtml",
       "FileKind": "mvc"
@@ -14950,6 +14955,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Home\\learn.cshtml",
       "TargetPath": "Views\\Home\\learn.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Gabzino\\ShowElectricity.cshtml",
+      "TargetPath": "Views\\Gabzino\\ShowElectricity.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15015,6 +15025,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Pazirande\\Ok.cshtml",
       "TargetPath": "Views\\Pazirande\\Ok.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Gabzino\\ShowGasBillInquiry.cshtml",
+      "TargetPath": "Views\\Gabzino\\ShowGasBillInquiry.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15160,6 +15175,11 @@
     {
       "FilePath": "e:\\Hampadco-master\\hampadco\\Areas\\Admin\\Views\\Home\\Disapproval.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\Disapproval.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Hampadco-master\\hampadco\\Views\\Gabzino\\getElectricity.cshtml",
+      "TargetPath": "Views\\Gabzino\\getElectricity.cshtml",
       "FileKind": "mvc"
     },
     {

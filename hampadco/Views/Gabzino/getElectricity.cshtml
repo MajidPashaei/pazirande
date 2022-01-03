@@ -1,0 +1,47 @@
+@model ViewModelLayer.Services.Vm_Gabz;
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه سرویس </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">استعلام قبوض برق</li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="card mb-4">
+                    <div class="card-body"> 
+                        <form action="/gabzino/ShowElectricity">
+
+                                    <div class="form-row mt-2">
+                                        <div class="form-group col-md-3">
+                                            <label for="inputEmail4">شناسه</label>
+                                            <input required type="text" class="form-control" asp-for="parameter" placeholder="شناسه">
+                                        </div>
+                                    </div>
+
+                                <button class="btn btn-primary" type="submit">send</button>
+                            
+                        </form>
+                                               
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+

@@ -27,7 +27,6 @@ namespace Namespace
         {
             var quser = db.Tbl_PazirandeUsers.Where(a => a.User_Name == User.Identity.GetId()).ToList();
             ViewBag.All = quser;
-            
             return View();
         }
         public IActionResult NewAccount()

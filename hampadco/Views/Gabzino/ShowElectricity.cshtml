@@ -1,0 +1,142 @@
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                    <ol class="breadcrumb pt-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page"> نتیجه استعلام قبض </li>
+                    </ol>
+                </nav>
+                <div class="separator mb-5"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="card mb-4">
+                    <div class="card-body">
+                    <div class="mb-2">
+                        <div class="row">
+                            <div class="col-12 mb-4 data-table-rows data-tables-hide-filter">
+                                <div class="table-responsive">
+                                    @if (ViewBag.er != null)
+                                    {
+                                        <p class="alert alert-danger"> @ViewBag.er </p>
+                                    }
+                                    else
+                                    {
+                                        @if (ViewBag.result != null)
+                                        {
+                                            <th class="text-info">نشانی مشترک :</th>
+                                                    <td>
+                                                        <h3 class="list-item-heading">@ViewBag.result.Address</h3>
+                                                    </td>
+                                            <table id="articles" class="container-fluid responsive nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>مبلغ قابل پرداخت</th>
+                                                        <th>متوسط مصرف ماهانه</th>
+                                                        <th>شناسه قبض</th>
+                                                        <th>تاریخ قرائت فعلی</th>
+                                                        <th>نوع مشترک</th>
+                                                        <th>تعداد کل روز ها</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.Amount</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.AverageConsumption</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.BillID</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.CurrentDate</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.CustomerType</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.TotalDays</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <thead>
+                                                    <tr>  
+                                                        <th> دوره فروش</th>
+                                                        <th>نام مشترک</th>
+                                                        <th>مبلغ بیمه</th>
+                                                        <th>مهلت پرداخت</th>
+                                                        <th>شناسه پرداخت</th>
+                                                        <th> مبلغ عوارض (درسهم ارزش افزوده) </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.Cycle</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.FullName</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.InsuranceAmount</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.PaymentDate</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.PaymentID</p>
+                                                        </td>
+
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.PaytollAmount</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <thead>
+                                                    <tr>  
+                                                        <th>مبلغ عوارض برق</th>
+                                                        <th>تاریخ قرائت پیشین</th>
+                                                        <th>سال فروش</th>
+                                                        <th>نوع تعرفه</th>
+                                                        <th>مبلغ مالیات(در سهم ارزش افزوده)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.PowerPaytollAmount</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.PreviousDate</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.SaleYear</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.TariffType</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="text-muted">@ViewBag.result.TaxAmount</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -935,3 +935,8 @@ c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.c
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.dll
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.pdb
 c:\Users\nikatak-4\Desktop\pazirande\hampadco\obj\Debug\netcoreapp3.1\hampadco.genruntimeconfig.cache
+e:\Hampadco-master\hampadco\bin\Debug\netcoreapp3.1\RestSharp.dll
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Gabzino\getElectricity.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Gabzino\ShowElectricity.cshtml.g.cs
+E:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Gabzino\ShowGasBillInquiry.cshtml.g.cs
+e:\Hampadco-master\hampadco\obj\Debug\netcoreapp3.1\Razor\Views\Gabzino\ShowWaterBillInquiry.cshtml.g.cs
